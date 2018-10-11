@@ -1,0 +1,165 @@
+[
+    {
+        "title": "IR Home"
+    },
+    {
+        "title": "Corporate Information",
+        "sub_pages": [
+            {
+                "title": "General Information"
+            },
+            {
+                "title": "Message from Chairman"
+            }
+        ]
+    },
+    {
+        "title": "Company Rating",
+        "sub_pages": [
+            {
+                "title": "TRIS Rating"
+            },
+            {
+                "title": "Moody's Rating"
+            },
+            {
+                "title": "Standard & Poor's Rating"
+            }
+        ]
+    },
+    {
+        "title": "Shareholder Information",
+        "sub_pages": [
+            {
+                "title": "Fact Sheets"
+            },
+            {
+                "title": "Major Shareholders"
+            },
+            {
+                "title": "Shareholders' Meeting"
+            },
+            {
+                "title": "Minutes of Shareholders' Meeting"
+            },
+            {
+                "title": "Dividend Policy & Payment"
+            },
+            {
+                "title": "Circular Notice"
+            },
+            {
+                "title": "Shareholder's Request Form"
+            }
+        ]
+    },
+    {
+        "title": "Stock Information",
+        "sub_pages": [
+            {
+                "title": "Stock Quotes"
+            },
+            {
+                "title": "Historical Price"
+            },
+            {
+                "title": "Investment Calculator"
+            }
+        ]
+    },
+    {
+        "title": "Financial Information",
+        "sub_pages": [
+            {
+                "title": "Financial Statements"
+            },
+            {
+                "title": "Financial Highlights"
+            },
+            {
+                "title": "MD & A"
+            }
+        ]
+    },
+    {
+        "title": "IR Presentation",
+        "sub_pages": [
+            {
+                "title": "Analyst Meeting"
+            },
+            {
+                "title": "Road Show"
+            }
+        ]
+    },
+    {
+        "title": "Events",
+        "sub_pages": [
+            {
+                "title": "AGM"
+            },
+            {
+                "title": "Domestic Plant Visit"
+            },
+            {
+                "title": "International Plant Visit"
+            }
+        ]
+    },
+    {
+        "title": "IR Calendar"
+    },
+    {
+        "title": "Publications",
+        "sub_pages": [
+            {
+                "title": "Annual Report"
+            },
+            {
+                "title": "Form 56-1"
+            },
+            {
+                "title": "Prospectus"
+            }
+        ]
+    },
+    {
+        "title": "Newsroom",
+        "sub_pages": [
+            {
+                "title": "SET Announcements"
+            },
+            {
+                "title": "Press Releases"
+            },
+            {
+                "title": "News Clippings"
+            }
+        ]
+    },
+    {
+        "title": "Analyst Coverage",
+        "sub_pages": [
+            {
+                "title": "Analyst Contact"
+            },
+            {
+                "title": "Analyst Reports"
+            }
+        ]
+    },
+    {
+        "title": "Information Request",
+        "sub_pages": [
+            {
+                "title": "Email Alert"
+            },
+            {
+                "title": "IR Contact"
+            },
+            {
+                "title": "FAQ"
+            }
+        ]
+    }
+]

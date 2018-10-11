@@ -1,0 +1,57 @@
+
+/*override bootstrap element */
+
+.text-default {
+  font-size: 1em;
+}
+
+.brand-logo h3 {
+  color: white;
+  margin-top: 0px !important;
+}
+
+.btn-flag {
+  width: 30px !important;
+}
+
+.flag-icon {
+  border: 1px solid lightgrey;
+}
+
+
+.brand-logo-collapsed {
+  color:white;
+}
+
+
+.img-fixed-height-125 {
+  width: 100%;
+  height: 125px;
+}
+
+/* workaround jquery ui sortable & bootstrap panel issue */
+.portlet-sortable-item {
+  border-top: 1px solid transparent;
+  margin-right:-1px;
+}
+
+
+.select2-container {
+  min-width: 200px!important;
+}
+
+
+
+/*audit modal */
+#audit-modal .modal{
+  display: block !important; /* I added this to see the modal, you don't need this */
+}
+
+/* Important part */
+#audit-modal .modal-dialog{
+  overflow-y: initial !important
+}
+#audit-modal .modal-body{
+  height: 600px;
+  overflow-y: auto;
+}

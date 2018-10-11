@@ -1,0 +1,40 @@
+{
+    "name": "Footer",
+    "order": 1,
+    "submenus": [
+        {
+            "name": "Home"
+        },
+        {
+            "name": "About Fund"
+        },
+        {
+            "name": "Fund Management"
+        },
+        {
+            "name": "Portfolio"
+        },
+        {
+            "name": "Financial Information"
+        },
+        {
+            "name": "NAV"
+        },
+        {
+            "name": "Stock Performance"
+        },
+        {
+            "name": "Shareholders"
+        },
+        {
+            "name": "Annual Reports"
+        },
+        {
+            "name": "Newsroom"
+        },
+        {
+            "name": "Contact Us"
+        }
+    ]
+}
+

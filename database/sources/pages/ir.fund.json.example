@@ -1,0 +1,101 @@
+[
+    {
+        "title": "Home"
+    },
+    {
+        "title": "About Fund",
+        "sub_pages": [
+            {
+                "title": "Overview"
+            },
+            {
+                "title": "Highlights"
+            },
+            {
+                "title": "History"
+            },
+            {
+                "title": "Structures"
+            },
+            {
+                "title": "Prospectus"
+            }
+        ]
+    },
+    {
+        "title": "Fund Management",
+        "sub_pages": [
+            {
+                "title": "Fund Manager"
+            },
+            {
+                "title": "Property Manager"
+            }
+        ]
+    },
+    {
+        "title": "Portfolio"
+    },
+    {
+        "title": "Financial Information",
+        "sub_pages": [
+            {
+                "title": "Fact Sheets"
+            },
+            {
+                "title": "Financial Statement"
+            },
+            {
+                "title": "MD & A"
+            },
+            {
+                "title": "Annual Reports"
+            },
+            {
+                "title": "Distribution"
+            }
+        ]
+    },
+    {
+        "title": "NAV"
+    },
+    {
+        "title": "Stock Performance",
+        "sub_pages": [
+            {
+                "title": "Interactive Charts"
+            },
+            {
+                "title": "History Price"
+            },
+            {
+                "title": "Investment Calculator"
+            }
+        ]
+    },
+    {
+        "title": "Shareholders"
+    },
+    {
+        "title": "Annual Reports"
+    },
+    {
+        "title": "Newsroom"
+    },
+    {
+        "title": "Contact Us",
+        "sub_pages": [
+            {
+                "title": "Email Alert"
+            },
+            {
+                "title": "IR Contact"
+            },
+            {
+                "title": "FAQ"
+            }
+        ]
+    }
+]
+
+

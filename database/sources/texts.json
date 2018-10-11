@@ -1,0 +1,577 @@
+[{
+        "name": "company.name",
+        "values": {
+            "en": "WP Energy Public Company Limited",
+            "th": "WP Energy Public Company Limited"
+        }
+    },
+    {
+        "name": "copyright",
+        "values": {
+            "en": "© Copyright 2018 WP Energy Public Company Limited",
+            "th": "© Copyright 2018 WP Energy Public Company Limited"
+        }
+    },
+
+
+    {
+        "name": "follow.us.on",
+        "values": {
+            "en": "Follow Us On",
+            "th": "Follow Us On"
+        }
+    },
+    {
+        "name": "menu",
+        "values": {
+            "en": "Menu",
+            "th": "Menu"
+        }
+    },
+    {
+        "name": "stock.quotes",
+        "values": {
+            "en": "Stock Quotes",
+            "th": "ราคาหลักทรัพย์"
+        }
+    },
+    {
+        "name": "set.symbol",
+        "values": {
+            "en": "SET Symbol",
+            "th": "ชื่อย่อหุ้น"
+        }
+    },
+    {
+        "name": "last.updated",
+        "values": {
+            "en": "Last Updated",
+            "th": "ปรับปรุงเมื่อ"
+        }
+    },
+    {
+        "name": "currency",
+        "values": {
+            "en": "Currency",
+            "th": "สกุลเงิน"
+        }
+    },
+    {
+        "name": "last.done",
+        "values": {
+            "en": "Last Done",
+            "th": "ราคาล่าสุด"
+        }
+    },
+    {
+        "name": "change",
+        "values": {
+            "en": "Change",
+            "th": "เปลี่ยนแปลง"
+        }
+    },
+    {
+        "name": "percent.change",
+        "values": {
+            "en": "% Change",
+            "th": "% เปลี่ยนแปลง"
+        }
+    },
+    {
+        "name": "volume.shares",
+        "values": {
+            "en": "Volume (Shares)",
+            "th": "ปริมาณซื้อขาย (หุ้น)"
+        }
+    },
+    {
+        "name": "value.baht",
+        "values": {
+            "en": "Value (Baht)",
+            "th": "มูลค่าการซื้อขาย (บาท)"
+        }
+    },
+    {
+        "name": "shares",
+        "values": {
+            "en": "Shares",
+            "th": "หุ้น"
+        }
+    },
+    {
+        "name": "baht",
+        "values": {
+            "en": "Baht",
+            "th": "บาท"
+        }
+    },
+    {
+        "name": "bid.price",
+        "values": {
+            "en": "Bid Price",
+            "th": "ราคาเสนอซื้อ"
+        }
+    },
+    {
+        "name": "sell.price",
+        "values": {
+            "en": "Sell Price",
+            "th": "ราคาเสนอขาย"
+        }
+    },
+    {
+        "name": "prior",
+        "values": {
+            "en": "Prior",
+            "th": "วันก่อนหน้า"
+        }
+    },
+    {
+        "name": "price.open",
+        "values": {
+            "en": "Open",
+            "th": "ราคาเปิด"
+        }
+    },
+    {
+        "name": "days.range",
+        "values": {
+            "en": "Day's Range",
+            "th": "ช่วงราคาระหว่างวัน"
+        }
+    },
+    {
+        "name": "52weeks.range",
+        "values": {
+            "en": "52 Weeks' Range",
+            "th": "ช่วงราคาใน 52 สัปดาห์"
+        }
+    },
+    {
+        "name": "filter.dates",
+        "values": {
+            "en": "Filter Dates",
+            "th": "เลือกช่วงวันที่"
+        }
+    },
+    {
+        "name": "from",
+        "values": {
+            "en": "From",
+            "th": "จาก"
+        }
+    },
+    {
+        "name": "to",
+        "values": {
+            "en": "To",
+            "th": "ถึง"
+        }
+    },
+    {
+        "name": "view.result",
+        "values": {
+            "en": "View Result",
+            "th": "ดูผล"
+        }
+    },
+    {
+        "name": "date",
+        "values": {
+            "en": "Date",
+            "th": "วันที่"
+        }
+    },
+    {
+        "name": "price.high",
+        "values": {
+            "en": "High",
+            "th": "สูงสุด"
+        }
+    },
+    {
+        "name": "price.low",
+        "values": {
+            "en": "Low",
+            "th": "ต่ำสุด"
+        }
+    },
+    {
+        "name": "price.close",
+        "values": {
+            "en": "Close",
+            "th": "ราคาปิด"
+        }
+    },
+    {
+        "name": "summary",
+        "values": {
+            "en": "Summary",
+            "th": "ข้อมูลสรุป"
+        }
+    },
+    {
+        "name": "previous.2weeks",
+        "values": {
+            "en": "Previous 2 weeks",
+            "th": "ก่อนหน้า 2 สัปดาห์"
+        }
+    },
+    {
+        "name": "previous.4weeks",
+        "values": {
+            "en": "Previous 4 weeks",
+            "th": "ก่อนหน้า 4 สัปดาห์"
+        }
+    },
+    {
+        "name": "daily.historical.data",
+        "values": {
+            "en": "Daily Historical Data",
+            "th": "ข้อมูลราคาย้อนหลัง"
+        }
+    },
+    {
+        "name": "no.data.available",
+        "values": {
+            "en": "No Data Available",
+            "th": "ไม่มีข้อมูล"
+        }
+    },
+    {
+        "name": "remark.historical.price",
+        "values": {
+            "en": "Remark : Volume from SET main board.",
+            "th": "หมายเหตุ: ปริมาณการซื้อขายบนกระดานหลัก (Main board) เท่านั้น"
+        }
+    },
+    {
+        "name": "year",
+        "values": {
+            "en": "Year",
+            "th": "ปี"
+        }
+    },
+    {
+        "name": "please.select",
+        "values": {
+            "en": "Please Select",
+            "th": "กรุณาเลือก"
+        }
+    },
+    {
+        "name": "select.year",
+        "values": {
+            "en": "Select Year",
+            "th": "เลือกปี"
+        }
+    },
+    {
+        "name": "all",
+        "values": {
+            "en": "All",
+            "th": "ทั้งหมด"
+        }
+    },
+    {
+        "name": "view",
+        "values": {
+            "en": "View",
+            "th": "ดู"
+        }
+    },
+    {
+        "name": "view.all",
+        "values": {
+            "en": "View All",
+            "th": "ดูทั้งหมด"
+        }
+    },
+    {
+        "name": "read.more",
+        "values": {
+            "en": "Read More",
+            "th": "อ่านเพิ่มเติม"
+        }
+    },
+    {
+        "name": "email.alerts",
+        "values": {
+            "en": "Email Alerts",
+            "th": "อีเมล์รับข่าวสาร"
+        }
+    },
+    {
+        "name": "subscribe",
+        "values": {
+            "en": "Subscribe",
+            "th": "สมัครสมาชิกรับข่าวสาร"
+        }
+    },
+    {
+        "name": "download",
+        "values": {
+            "en": "Download",
+            "th": "ดาวน์โหลด"
+        }
+    },
+    {
+        "name": "view.online",
+        "values": {
+            "en": "View Online",
+            "th": "ดูออนไลน์"
+        }
+    },
+    {
+        "name": "view.webcast",
+        "values": {
+            "en": "View Webcast",
+            "th": "ดูเว็บแคสต์"
+        }
+    },
+    {
+        "name": "latest.news",
+        "values": {
+            "en": "Latest News",
+            "th": "ข่าวสารล่าสุด"
+        }
+    },
+    {
+        "name": "set.announcements",
+        "values": {
+            "en": "Set Announcements",
+            "th": "ข่าวแจ้งตลาดหลักทรัพย์ฯ"
+        }
+    },
+    {
+        "name": "quick.download",
+        "values": {
+            "en": "Quick Download",
+            "th": "Quick Download"
+        }
+    },
+    {
+        "name": "home",
+        "values": {
+            "en": "Home",
+            "th": "หน้าหลัก"
+        }
+    },
+    {
+        "name": "call.center",
+        "values": {
+            "en": "Call Center",
+            "th": "Call Center"
+        }
+    },
+    {
+        "name": "share",
+        "values": {
+            "en": "Share",
+            "th": "Share"
+        }
+    },
+    {
+        "name": "back",
+        "values": {
+            "en": "Back",
+            "th": "ย้อนกลับ"
+        }
+    },
+    {
+        "name": "first.name",
+        "values": {
+            "en": "First Name",
+            "th": "ชื่อ"
+        }
+    },
+    {
+        "name": "last.name",
+        "values": {
+            "en": "Last Name",
+            "th": "นามสกุล"
+        }
+    },
+    {
+        "name": "email.address",
+        "values": {
+            "en": "Email Address",
+            "th": "อีเมล์"
+        }
+    },
+    {
+        "name": "address",
+        "values": {
+            "en": "Address",
+            "th": "ที่อยู่"
+        }
+    },
+    {
+        "name": "subject",
+        "values": {
+            "en": "Subject",
+            "th": "หัวข้อ"
+        }
+    },
+    {
+        "name": "detail",
+        "values": {
+            "en": "Detail",
+            "th": "รายละเอียด"
+        }
+    },
+    {
+        "name": "attachment",
+        "values": {
+            "en": "Attachment",
+            "th": "ไฟล์แนบ"
+        }
+    },
+    {
+        "name": "whistleblowing.attachment.maximum",
+        "values": {
+            "en": "Attach file (Maximum file: 2MB. The .doc, .docx, and .pnf and allowed.)",
+            "th": "Attach file (Maximum file: 2MB. The .doc, .docx, and .pnf and allowed.)"
+        }
+    },
+    {
+        "name": "position",
+        "values": {
+            "en": "Potision",
+            "th": "ตำแหน่ง"
+        }
+    },
+    {
+        "name": "title",
+        "values": {
+            "en": "Title",
+            "th": "คำนำหน้า"
+        }
+    },
+    {
+        "name": "date.of.birth",
+        "values": {
+            "en": "Date of Birth",
+            "th": "วันเกิด"
+        }
+    },
+    {
+        "name": "mobile.phone",
+        "values": {
+            "en": "Mobile Phone",
+            "th": "โทรศัพท์มือถือ"
+        }
+    },
+    {
+        "name": "picture",
+        "values": {
+            "en": "Pucture",
+            "th": "รูปภาพ"
+        }
+    },
+    {
+        "name": "application.attachment.maximum",
+        "values": {
+            "en": "Attach file (Maximum file: 2MB. The .jpeg, .png, .doc, .docx, and .pnf and allowed.)",
+            "th": "Attach file (Maximum file: 2MB. The .jpeg, .png, .doc, .docx, and .pnf and allowed.)"
+        }
+    },
+    {
+        "name": "application.attachment.recommend",
+        "values": {
+            "en": "* Recommend image resolution is 350x460",
+            "th": "* Recommend image resolution is 350x460"
+        }
+    },
+    {
+        "name": "submit",
+        "values": {
+            "en": "Submit",
+            "th": "ตกลง"
+        }
+    },
+    {
+        "name": "cancel",
+        "values": {
+            "en": "Cancel",
+            "th": "ยกเลิก"
+        }
+    },
+    {
+        "name": "upcoming.event",
+        "values": {
+            "en": "Upcoming Event",
+            "th": "Upcoming Event"
+        }
+    },
+    {
+        "name": "event",
+        "values": {
+            "en": "Event",
+            "th": "Event"
+        }
+    },
+    {
+        "name": "telephone",
+        "values": {
+            "en": "Telephone",
+            "th": "Telephone"
+        }
+    },
+    {
+        "name": "fax",
+        "values": {
+            "en": "Fax",
+            "th": "Fax"
+        }
+    },
+    {
+        "name": "company",
+        "values": {
+            "en": "Company",
+            "th": "Company"
+        }
+    },
+    {
+        "name": "department",
+        "values": {
+            "en": "Department",
+            "th": "Department"
+        }
+    },
+    {
+        "name": "question",
+        "values": {
+            "en": "Question",
+            "th": "Question"
+        }
+    },
+    {
+        "name": "menu.description.what.we.do",
+        "values": {
+            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
+            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+        }
+    },
+    {
+        "name": "menu.description.who.we.are",
+        "values": {
+            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
+            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+        }
+    },
+    {
+        "name": "menu.description.investor.relations",
+        "values": {
+            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
+            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+        }
+    },
+    {
+        "name": "menu.description.news.media",
+        "values": {
+            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
+            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+        }
+    }
+]

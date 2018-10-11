@@ -1,0 +1,104 @@
+{
+    "name": "Main",
+    "order": 0,
+    "submenus": [
+        {
+            "name": "Home"
+        },
+        {
+            "name": "About Fund",
+            "submenus": [
+                {
+                    "name": "Overview"
+                },
+                {
+                    "name": "Highlights"
+                },
+                {
+                    "name": "History"
+                },
+                {
+                    "name": "Structures"
+                },
+                {
+                    "name": "Prospectus"
+                }
+            ]
+        },
+        {
+            "name": "Fund Management",
+            "submenus": [
+                {
+                    "name": "Fund Manager"
+                },
+                {
+                    "name": "Property Manager"
+                }
+            ]
+        },
+        {
+            "name": "Portfolio"
+        },
+        {
+            "name": "Financial Information",
+            "submenus": [
+                {
+                    "name": "Fact Sheets"
+                },
+                {
+                    "name": "Financial Statement"
+                },
+                {
+                    "name": "MD & A"
+                },
+                {
+                    "name": "Annual Reports"
+                },
+                {
+                    "name": "Distribution"
+                }
+            ]
+        },
+        {
+            "name": "NAV"
+        },
+        {
+            "name": "Stock Performance",
+            "submenus": [
+                {
+                    "name": "Interactive Charts"
+                },
+                {
+                    "name": "History Price"
+                },
+                {
+                    "name": "Investment Calculator"
+                }
+            ]
+        },
+        {
+            "name": "Shareholders"
+        },
+        {
+            "name": "Annual Reports"
+        },
+        {
+            "name": "Newsroom"
+        },
+        {
+            "name": "Contact Us",
+            "submenus": [
+                {
+                    "name": "Email Alert"
+                },
+                {
+                    "name": "IR Contact"
+                },
+                {
+                    "name": "FAQ"
+                }
+            ]
+        }
+    ]
+}
+

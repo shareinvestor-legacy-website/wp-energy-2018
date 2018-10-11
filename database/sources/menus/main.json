@@ -1,0 +1,336 @@
+{
+    "name": "Main",
+    "order": 0,
+    "submenus": [{
+            "name": "Home"
+        },
+        {
+            "name": "What We Do",
+            "submenus": [{
+                    "name": "Product & Services",
+                    "submenus": [{
+                            "name": "LPG for Life"
+                        },
+                        {
+                            "name": "Automobile"
+                        },
+                        {
+                            "name": "Hosehold"
+                        },
+                        {
+                            "name": "Industry"
+                        },
+                        {
+                            "name": "Services"
+                        }
+                    ]
+                },
+                {
+                    "name": "Customer & Distribution",
+                    "submenus": [{
+                            "name": "Filling Plant"
+                        },
+                        {
+                            "name": "Auto Gas Station"
+                        },
+                        {
+                            "name": "Gas Retail Shop"
+                        },
+                        {
+                            "name": "Industrial Sector"
+                        },
+                        {
+                            "name": "Commercial Sector"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Who We Are",
+            "submenus": [{
+                    "name": "About Us",
+                    "submenu": [{
+                            "name": "Corporate Info"
+                        },
+                        {
+                            "name": "Vision & Mission and Corporate Value"
+                        },
+                        {
+                            "name": "Company Milestone"
+                        },
+                        {
+                            "name": "Message Form Chairman"
+                        },
+                        {
+                            "name": "Management Structure",
+                            "submenu": [{
+                                    "name": "Organization Chart"
+                                },
+                                {
+                                    "name": "Board of Director"
+                                },
+                                {
+                                    "name": "Audit Committee"
+                                },
+                                {
+                                    "name": "Nomination & Remuneration Committee"
+                                },
+                                {
+                                    "name": "Risk Management Committee"
+                                },
+                                {
+                                    "name": "Management Team"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Awards & Recognitions"
+                        },
+                        {
+                            "name": "Company Subsidiary"
+                        }
+                    ]
+                },
+                {
+                    "name": "Corporate Social Responsibility",
+                    "submenu": [{
+                            "name": "Corporate Social Responsibility Policy"
+                        },
+                        {
+                            "name": "CSR Activities"
+                        },
+                        {
+                            "name": "CSR / SD Report & Download"
+                        }
+                    ]
+                },
+                {
+                    "name": "Corporate Governance",
+                    "submenu": [{
+                            "name": "Corporate Governance Policy"
+                        },
+                        {
+                            "name": "CG Report and Download"
+                        },
+                        {
+                            "name": "Business Operation and Anti-Fraud Policy"
+                        },
+                        {
+                            "name": "Whistleblowing Channel Form"
+                        }
+                    ]
+                },
+                {
+                    "name": "Join Us",
+                    "submenu": [{
+                            "name": "Available Positions"
+                        },
+                        {
+                            "name": "Online Application Form"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Investor Relations",
+            "submenus": [{
+                    "name": "IR Home"
+                },
+                {
+                    "name": "Financial Information",
+                    "submenus": [{
+                            "name": "Financial Highlights"
+                        },
+                        {
+                            "name": "Financial Statements"
+                        },
+                        {
+                            "name": "Management Discussion and Analysis"
+                        }
+                    ]
+                },
+                {
+                    "name": "Stock Information",
+                    "submenus": [{
+                            "name": "Stock Quotes"
+                        },
+                        {
+                            "name": "Historical Price"
+                        },
+                        {
+                            "name": "Investment Calculator"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shareholder Information",
+                    "submenus": [{
+                            "name": "General Information"
+                        },
+                        {
+                            "name": "Major Shareholder"
+                        },
+                        {
+                            "name": "Dividend Information"
+                        },
+                        {
+                            "name": "Shareholders' Meeting"
+                        },
+                        {
+                            "name": "IR Calendar"
+                        }
+                    ]
+                },
+                {
+                    "name": "Publication",
+                    "submenus": [{
+                            "name": "Annual Report"
+                        },
+                        {
+                            "name": "Form 56-1"
+                        },
+                        {
+                            "name": "Factsheet"
+                        },
+                        {
+                            "name": "Investor Kits"
+                        }
+                    ]
+                },
+                {
+                    "name": "Webcasts and Presentations"
+                },
+
+                {
+                    "name": "Newsroom",
+                    "submenus": [{
+                            "name": "SET Announcements"
+                        },
+                        {
+                            "name": "Press Releases"
+                        },
+                        {
+                            "name": "IR Newsletters"
+                        }
+                    ]
+                },
+                {
+                    "name": "Company Rating",
+                    "submenus": [{
+                            "name": "TRIS Rating"
+                        },
+                        {
+                            "name": "Moody's Rating"
+                        },
+                        {
+                            "name": "Standard & Poor's Rating"
+                        }
+                    ]
+                },
+                {
+                    "name": "IR Presentation",
+                    "submenus": [{
+                            "name": "Analyst Meeting"
+                        },
+                        {
+                            "name": "Road Show"
+                        }
+                    ]
+                },
+                {
+                    "name": "Events",
+                    "submenus": [{
+                            "name": "AGM"
+                        },
+                        {
+                            "name": "Domestic Plant Visit"
+                        },
+                        {
+                            "name": "International Plant Visit"
+                        }
+                    ]
+                },
+                {
+                    "name": "IR Calendar"
+                },
+
+                {
+                    "name": "Newsroom",
+                    "submenus": [{
+                            "name": "SET Announcements"
+                        },
+                        {
+                            "name": "Press Releases"
+                        },
+                        {
+                            "name": "News Clippings"
+                        }
+                    ]
+                },
+                {
+                    "name": "Analyst Coverage",
+                    "submenus": [{
+                            "name": "Analyst Contact"
+                        },
+                        {
+                            "name": "Analyst Reports"
+                        }
+                    ]
+                },
+                {
+                    "name": "Information Request",
+                    "submenus": [{
+                            "name": "IR Contact"
+                        }, {
+                            "name": "Email Alerts"
+                        },
+                        {
+                            "name": "FAQ"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "News & Media",
+            "submenus": [{
+                    "name": "News",
+                    "submenus": [{
+                            "name": "Company News"
+                        },
+                        {
+                            "name": "Press Releases"
+                        }
+                    ]
+                },
+                {
+                    "name": "VDO"
+                },
+                {
+                    "name": "Article / Knowledge Sharing",
+                    "submenus": [{
+                            "name": "LPG for Life"
+                        },
+                        {
+                            "name": "Automobile"
+                        },
+                        {
+                            "name": "Household"
+                        },
+                        {
+                            "name": "Industry"
+                        },
+                        {
+                            "name": "Services"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Contact Us"
+        }
+    ]
+}

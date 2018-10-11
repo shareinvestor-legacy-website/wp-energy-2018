@@ -1,0 +1,16 @@
+{
+    "name": "Footer",
+    "order": 1,
+    "submenus": [
+        {
+            "name": "Privacy Policy"
+        },
+        {
+            "name": "Terms and Conditions"
+        },
+        {
+            "name": "Sitemap"
+        }
+    ]
+}
+

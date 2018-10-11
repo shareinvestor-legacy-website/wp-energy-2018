@@ -1,0 +1,170 @@
+{
+    "name": "Main",
+    "order": 0,
+    "submenus": [
+        {
+            "name": "IR Home"
+        },
+        {
+            "name": "Corporate Information",
+            "submenus": [
+                {
+                    "name": "General Information"
+                },
+                {
+                    "name": "Message from Chairman"
+                }
+            ]
+        },
+        {
+            "name": "Company Rating",
+            "submenus": [
+                {
+                    "name": "TRIS Rating"
+                },
+                {
+                    "name": "Moody's Rating"
+                },
+                {
+                    "name": "Standard & Poor's Rating"
+                }
+            ]
+        },
+        {
+            "name": "Shareholder Information",
+            "submenus": [
+                {
+                    "name": "Fact Sheets"
+                },
+                {
+                    "name": "Major Shareholders"
+                },
+                {
+                    "name": "Shareholders' Meeting"
+                },
+                {
+                    "name": "Minutes of Shareholders' Meeting"
+                },
+                {
+                    "name": "Dividend Policy & Payment"
+                },
+                {
+                    "name": "Circular Notice"
+                },
+                {
+                    "name": "Shareholder's Request Form"
+                }
+            ]
+        },
+        {
+            "name": "Stock Information",
+            "submenus": [
+                {
+                    "name": "Stock Quotes"
+                },
+                {
+                    "name": "Historical Price"
+                },
+                {
+                    "name": "Investment Calculator"
+                }
+            ]
+        },
+        {
+            "name": "Financial Information",
+            "submenus": [
+                {
+                    "name": "Financial Statements"
+                },
+                {
+                    "name": "Financial Highlights"
+                },
+                {
+                    "name": "MD & A"
+                }
+            ]
+        },
+        {
+            "name": "IR Presentation",
+            "submenus": [
+                {
+                    "name": "Analyst Meeting"
+                },
+                {
+                    "name": "Road Show"
+                }
+            ]
+        },
+        {
+            "name": "Events",
+            "submenus": [
+                {
+                    "name": "AGM"
+                },
+                {
+                    "name": "Domestic Plant Visit"
+                },
+                {
+                    "name": "International Plant Visit"
+                }
+            ]
+        },
+        {
+            "name": "IR Calendar"
+        },
+        {
+            "name": "Publications",
+            "submenus": [
+                {
+                    "name": "Annual Report"
+                },
+                {
+                    "name": "Form 56-1"
+                },
+                {
+                    "name": "Prospectus"
+                }
+            ]
+        },
+        {
+            "name": "Newsroom",
+            "submenus": [
+                {
+                    "name": "SET Announcements"
+                },
+                {
+                    "name": "Press Releases"
+                },
+                {
+                    "name": "News Clippings"
+                }
+            ]
+        },
+        {
+            "name": "Analyst Coverage",
+            "submenus": [
+                {
+                    "name": "Analyst Contact"
+                },
+                {
+                    "name": "Analyst Reports"
+                }
+            ]
+        },
+        {
+            "name": "Information Request",
+            "submenus": [
+                {
+                    "name": "Email Alert"
+                },
+                {
+                    "name": "IR Contact"
+                },
+                {
+                    "name": "FAQ"
+                }
+            ]
+        }
+    ]
+}
+
