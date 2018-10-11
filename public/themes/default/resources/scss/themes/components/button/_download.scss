@@ -1,0 +1,21 @@
+.btn {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--download {
+            @include set-font-family;
+            font-size: px-to-rem(14);
+            color: $green;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            &:after {
+                content: '\e913';
+                font-family: 'wp';
+                font-size: px-to-rem(22);
+                margin: 0 1rem;
+            }
+        }
+    }
+}

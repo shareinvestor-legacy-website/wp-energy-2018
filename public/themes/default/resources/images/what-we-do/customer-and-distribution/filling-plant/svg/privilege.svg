@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.52 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1a4783;
+      }
+    </style>
+  </defs>
+  <g id="gift" transform="translate(-26.2)">
+    <g id="Group_2639" data-name="Group 2639" transform="translate(42.569 18.616)">
+      <g id="Group_2638" data-name="Group 2638">
+        <rect id="Rectangle_13088" data-name="Rectangle 13088" class="cls-1" width="12.16" height="15.383"/>
+      </g>
+    </g>
+    <g id="Group_2641" data-name="Group 2641" transform="translate(28.191 18.616)">
+      <g id="Group_2640" data-name="Group 2640">
+        <rect id="Rectangle_13089" data-name="Rectangle 13089" class="cls-1" width="12.16" height="15.383"/>
+      </g>
+    </g>
+    <g id="Group_2643" data-name="Group 2643" transform="translate(26.2)">
+      <g id="Group_2642" data-name="Group 2642">
+        <path id="Path_13435" data-name="Path 13435" class="cls-1" d="M50.94,6.271A4.243,4.243,0,0,0,47.212,0a6.606,6.606,0,0,0-4.859,2.454,8.649,8.649,0,0,0-.894,1.232,8.65,8.65,0,0,0-.894-1.232A6.606,6.606,0,0,0,35.708,0,4.243,4.243,0,0,0,31.98,6.271H26.2V16.4H40.351V6.271h2.217V16.4H56.72V6.271Zm-15.233,0a2.027,2.027,0,0,1,0-4.053c2.012,0,3.925,2.058,4.482,4.053H35.708Zm11.5,0H42.731c.557-2,2.47-4.053,4.482-4.053a2.027,2.027,0,0,1,0,4.053Z" transform="translate(-26.2 0)"/>
+      </g>
+    </g>
+  </g>
+</svg>

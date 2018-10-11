@@ -1,0 +1,30 @@
+.btn {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &-secondary {
+            @include set-font-family;
+            font-size: 14px;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            color: $black;
+            transition: all .5s ease;
+    
+            &:focus {
+                box-shadow: none;
+            }
+    
+            &:hover {
+                color: $funblue;
+            }
+
+            &:active, &:not(.disabled):active {
+                color: $funblue;
+                box-shadow: none !important;
+                background-color: transparent !important;
+                border: none !important;
+            }
+        }
+    }
+}

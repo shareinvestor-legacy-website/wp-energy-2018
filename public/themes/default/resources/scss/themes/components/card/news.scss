@@ -1,0 +1,37 @@
+.card {
+    $grandparent: &;
+
+    &#{$grandparent} { 
+        &--news {                
+            border: 1px solid $lightgray;
+
+            #{$grandparent} {
+                &__image {
+                    height: 200px;
+                    overflow: hidden;
+                    text-align: center;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                &__body {
+                    padding: 0 1rem 1rem 1rem;        
+                }
+
+                &__title {
+                    height: 78px;
+                }
+            }
+
+            &:hover {
+                #{$grandparent} {
+                    &__title {
+                        color: $funblue;
+                    }
+                }
+            }
+        }    
+    }
+}

@@ -1,0 +1,77 @@
+.list-group {
+    $grandparent: &;
+
+    &--icon {
+        flex-direction: row;
+        @include media-breakpoint-down(xs) {
+            flex-wrap: wrap;
+        }
+
+        #{$grandparent} {
+            &-item {
+                width: 100%;
+                padding-top: 1rem;
+                flex-direction: column;    
+                text-align: center;
+                background-color: transparent;
+                color: $white !important;
+                border: none;
+        
+                &:not(:first-child) {
+                    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    
+                    /* Mobile: Vertical */
+                    @media only screen and (max-width: 414px) {
+                        border-left: none;
+                    }
+                } 
+    
+                [class^="icon-"] {
+                    position: relative;
+                    font-size: 2.5rem;
+                    margin-right: 0;
+                    line-height: initial;
+    
+                    @include media-breakpoint-down(xs) {
+                        font-size: 2rem;
+                    }
+                } 
+    
+                &.active, &:hover {
+                    color: $white;
+                    
+                    [class^="icon-"] {
+                        background: -webkit-linear-gradient($green 20%, $blue);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;     
+                        
+                        /* IE only */
+                        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                            color: $green;
+                        }
+                    }
+                }
+
+                /* Mobile: Vertical */
+                @media only screen and (max-width: 414px) {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                    padding-left: 0;
+                    padding-right: 0;
+                    flex: 1 1 50%;
+
+                    &:nth-child(2n) {
+                        border-left: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+                }
+
+                /* Mobile: Horizontal */
+                @media only screen and (max-height: 414px) {
+                    flex: 1 1 auto;
+                    width: 102px;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

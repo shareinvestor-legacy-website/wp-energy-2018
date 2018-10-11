@@ -1,0 +1,48 @@
+.card {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--people {
+            margin-top: 3.5rem;
+            transition: color 1s ease;
+
+            #{$grandparent} {
+                &__image {
+                    $man-height: 180px;
+                    $bg-height: 140px;
+
+                    background: linear-gradient(135deg, $blue, $green);
+                    height: $bg-height;
+                    text-align: center;
+                    margin-left: 0;
+                    margin-right: 0;                      
+
+                    .img-fluid {
+                        height: $man-height;
+                        max-width: 200px;
+                        width: auto;
+                        margin-top: $bg-height - $man-height;
+                    }
+                }
+
+                &__title {
+                    color: $black;
+                    font-weight: 500;
+                    font-size: px-to-rem(14);
+                    margin-bottom: 0;
+                    transition: color 1s ease;
+                }
+            }
+            
+            &:hover {
+                color: $funblue;
+
+                #{$grandparent} {
+                    &__title {
+                        color: $funblue;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.home {  
+    &__ir {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+        position: relative;
+        background-color: $white;
+        z-index: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 230px;
+            width: 100%;
+            background-color: $lightgray;
+            z-index: -1;
+
+            @include media-breakpoint-down(xs) {
+                height: 305px;
+            }
+
+            @include media-breakpoint-only(md) {
+                height: 235px;
+            }
+
+            @media only screen and (max-width: 320px) {
+                height: 336px;
+            }
+
+            @media only screen and (max-height: 414px) {
+                height: 282px;
+            }
+
+            @media only screen and (max-height: 414px) and (min-width: 812px) {
+                height: 235px;
+            }
+        }
+
+        .title {
+            color: $blue;
+            margin-bottom: 2.5rem;
+        }
+
+        .stock {
+            margin-bottom: 4.5rem;
+        }
+
+        .announcements {
+
+            @include media-breakpoint-down(md) {
+                .card__body {
+                    min-height: auto;
+                }
+            }
+        }
+    }
+}

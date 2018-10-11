@@ -1,0 +1,364 @@
+.content{
+    &-stock {
+        > p { color: $blue;}
+        >div{
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+            > div {
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+                border-bottom: solid 1px $white;
+                @include media-breakpoint-down(sm) {
+                    border-bottom: 0;
+                }
+                .card {
+                    background: $blue;
+                    width: 100%;
+                    &__stock {
+                        font-weight: 700;
+                        margin: 0;
+                        @include media-breakpoint-down(sm) {
+                            text-align: center;
+                        }
+                        > span {
+                            color: $green;
+                            padding-right: 10px;
+                        }
+                    }
+                    &-body{
+                        //padding: 1rem 2rem 1rem; 
+                        padding: 0;
+                        color: $white;
+                        >p {
+                            text-align: right;
+                        
+                            @include media-breakpoint-down(sm) {
+                                text-align: center;
+                            }
+                        }
+                        .stock-change {
+                            display: inline-block;
+                            width: 50%;
+                            border-right: solid 1px $white;
+                            @include media-breakpoint-down(sm) {
+                                width: 100%;
+                                border-right: 0;
+                            }
+                            p {
+                                margin: 0;
+                                padding: 20px 30px;
+                                border-bottom: solid 1px $white;
+                               
+                                span {
+                                    &:first-child {
+                                        padding-right: 10px;
+                                        color: $white;
+                                        //width: 55%;
+                                        display: inline-block;
+                                        @include media-breakpoint-down(sm) {
+                                            width: 100%;
+                                            font-weight: bold;
+                                            text-align: center;
+                                        }
+                                    }
+                                    &:last-child{
+                                        //width: 45%;
+                                        font-weight: 700;
+                                        font-size: 16px;
+                                        text-align:left;
+                                        display: inline-block;
+                                        @include media-breakpoint-down(sm) {
+                                            width: 100%;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+            
+            
+        }
+    }
+}
+.historical-price {
+    .bloc-form {
+        border-bottom: 3px #979a9c solid;
+        padding-bottom: 1rem;
+        h3 {
+            line-height: 1.3;
+            margin: 0;
+        }
+        .history_box {
+            @include media-breakpoint-down(xs) {
+                display: block;
+            }
+            p {
+                margin-bottom: 0;
+                @include media-breakpoint-down(xs) {
+                    margin-bottom: 0.5rem;
+                    padding: 0 .5rem;
+                }
+            }
+            >div {
+                display: table-cell;
+                vertical-align: middle;
+                position: relative;
+                padding: 0 0.5rem;
+                @include media-breakpoint-down(xs) {
+                    margin-bottom: 0.5rem;
+                }
+                input[type=submit] {
+                    position: relative;
+                    vertical-align: middle;
+                    @include media-breakpoint-down(xs) {
+                        margin-top: 1rem;
+                    }
+                }
+                &.datepicker-box {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        height: auto;
+                        padding: 0.5rem 75px;
+                        background-color: #fff;
+                        background-image: none;
+                        border: 1px solid #ccc;
+                        border-radius: 0;
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                        -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+                        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                        font-size: 20px;
+                        position: relative;
+                        @include media-breakpoint-down(md) {
+                            padding: 0.5rem 75px;
+                        }
+                    }
+                   
+                    &:after {
+                        position: absolute;
+                        right: 1rem;
+                        content: '\e911';
+                        font-family: 'wp';
+                        font-size: 20px;
+                        color: $funblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#ir_chart_container .highcharts-axis-labels+.highcharts-axis-labels {
+    display: none;
+}
+
+#ir_chart_setting {
+    position: relative;
+    z-index: 1;
+    fieldset {
+        padding: 5px 0;
+        border: none;
+        margin: 0;
+        > div {
+            display: inline-block;
+        }
+        .radio_group {
+            width: auto;
+            padding-top: 6px;
+        }
+        h6 {
+            margin: 0;
+        }
+        legend,
+        .ir_textMainHighlight {
+            // width: 100% !important;
+            // border-bottom: 3px solid $lightblue;
+            padding: 15px 20px;
+            margin: 20px 0;
+            color: $black;
+            font-weight: 700;
+            text-transform: uppercase;
+           
+        }
+        input {
+            vertical-align: middle;
+        }
+        input[type="radio"] {
+            left: 1px;
+            top: .4em;
+            cursor: pointer;
+        }
+    }
+    .custom-control {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+        margin-right: 1rem
+    }
+}
+
+
+.custom-control-input {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: $funblue;
+}
+
+.ir_chart_interactive_loading {
+    text-align: center;
+    #ir_loading_indicator {
+        display: inline-block;
+        border: 10px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 10px solid $funblue;
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.ir_chart_interval {
+    position: absolute;
+    // bottom: -31px;
+    // right: 300px;
+    bottom: 10px;
+    right: 14px;
+    .custom-select {
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+.ir_news_tooltip,
+.ir_insider_trades_tooltip {
+    white-space: normal;
+    display: block;
+    width: 400px;
+}
+
+.ir_corporate_actions_tooltip {
+    white-space: normal;
+    display: block;
+    width: 200px;
+}
+
+/* radio group style */
+
+.radio_group {
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+
+.radio_group *::after,
+.radio_group *::before {
+    -webkit-box-sizing: unset;
+    -moz-box-sizing: unset;
+    box-sizing: unset;
+}
+
+.radio_group label {
+    margin-right: 15px;
+}
+
+.radio_group input[type="radio"] {
+    display: none;
+}
+
+.radio_group input[type="radio"]+label span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    clear: both;
+    padding-left: 1.8em;
+}
+
+.radio_group input[type="radio"]+label span:before {
+    position: absolute;
+    content: "";
+    border: 6px solid #174088;
+    background: #174088;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    left: 0;
+    margin-top: -2px;
+}
+
+.radio_group input[type="radio"]:checked+label span:before {
+    border: 8px solid #174088;
+    background: white;
+}
+
+@media (max-width: 767px) and (min-width: 320px){
+    .ir_chart_interval {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        width: 100%;
+    }
+
+    #ir_chart_setting {
+        height: 180px;
+    }
+}

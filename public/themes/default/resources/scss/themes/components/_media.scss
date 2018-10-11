@@ -1,0 +1,23 @@
+.media {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--image {
+            img {
+                max-height: px-to-rem(120);
+                height: 100%;                
+                flex: 1 1 auto;
+                margin-bottom: 1rem;
+            }
+
+            @include media-breakpoint-down(sm)
+            {
+                flex-wrap: wrap;
+                img {
+                    flex: 1 1 50%;
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}

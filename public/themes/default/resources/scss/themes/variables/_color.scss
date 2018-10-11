@@ -1,0 +1,28 @@
+$white:         #FFFFFF;
+$lightgray:     #F4F4F4;
+$gray:          #e2e2e2;
+$black:         #000000;
+$funblue:       #178EF4;
+$blue:          #1A4783;
+$lightblue:     #034EA2;
+$green:         #85BA41;
+$darkgreen:     #487867;
+
+$colors: () !default;
+$colors: map-merge((
+    
+), $colors);
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+    'white':        $white,
+    'black':        $black,
+    'green':        $green,
+    'blue':         $blue,    
+), $theme-colors);
+
+$backgrounds: () !default;
+$backgrounds: map-merge((
+    'gray':         $gray,
+    'lightgray':    $lightgray
+), $backgrounds)

@@ -1,0 +1,115 @@
+
+.form-control {
+    height: 45px;
+    border-radius: 0 !important;
+    margin-bottom: 2rem
+}
+.form {
+    &--primary {
+        label {
+            font-weight: 500;
+        }
+        .form-group {
+            margin-bottom: 0;
+            .form-control {
+                box-shadow: none;
+                &::placeholder {
+                    color: $gray;
+                }
+                &:focus {
+                    border-color: $lightblue;
+                }
+            }
+            select {
+                &.form-control {
+                    box-shadow: none;
+                }
+                option{
+                    font-size: px-to-rem(14);
+                }
+            }
+        }
+    }
+
+    input[type="file"] {
+        background: transparent;
+        border: none;
+    }
+}
+.text-label {
+    > div {
+        text-align: right;
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+        }  
+        label {
+            font-weight: 700;
+        }
+    }
+}
+.filter {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        margin-right: 1rem;
+        font-weight: 700;
+    }
+    &__selection {
+        width: 100%;
+    }
+    &__select {
+        width: 100%;
+        background-color: $white;
+        border-radius: 0;
+        padding: .375rem 1.75rem;
+        transition: background-color .25s ease;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        margin-bottom: 0;
+        &:hover,
+        &:focus,
+        &:active,
+        .active {
+            outline: none;
+            box-shadow: none;
+            border: solid 1px $blue;
+        }
+    }
+    &__icon {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        height: 100%;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5px;
+        color: $black;
+    }
+    &__search {
+        width: 100%;
+        border-radius: 4px;
+        background-color: $white; // border: 1px solid $ci-lightblue;
+        transition: background-color 0.25s ease;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        &:hover,
+        &:focus,
+        &:active,
+        .active {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+.g-recaptcha {
+    > div {
+        margin: 0 auto;
+    }
+}

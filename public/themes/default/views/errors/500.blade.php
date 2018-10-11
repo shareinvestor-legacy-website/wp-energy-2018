@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Error</title>
-    <link rel="stylesheet" href="/assets/vendor.css"/>
-    <link rel="stylesheet" href="/assets/admin.css"/>
+    <link rel="stylesheet" href="/themes/default/assets/vendor.css"/>
+    <link rel="stylesheet" href="/themes/default/assets/admin.css"/>
 </head>
 
 <body>

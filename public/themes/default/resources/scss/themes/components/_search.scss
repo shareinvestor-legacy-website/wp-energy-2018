@@ -1,0 +1,29 @@
+.search{
+    display:flex;
+    font-weight: 700;
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+    .form-control{
+        margin-bottom:0;
+        @include media-breakpoint-down(sm) {
+            margin-bottom:20px;
+        }
+    }
+    &--historical{
+        display: block;
+        .search{
+            &__wrapper{
+                width: 100%;
+            }
+        }
+
+        .form-group{
+            display: flex;
+            align-items:center;
+            label{
+                margin-right:1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.page-navigation{
+    .pagination {
+        .page-item {
+            .page-link {
+                margin-right: 10px;
+                border-radius: 0;
+                
+               
+            }
+            &.active {
+                .page-link {
+                    z-index: 1;
+                    color: #fff;
+                    background-color: $funblue;
+                    border-color: $funblue;
+                }
+                &:hover {
+                    .page-link {
+                        z-index: 1;
+                        color: #fff;
+                        background-color: $funblue;
+                        border-color: $funblue;
+                    }
+                }
+            }
+            &:hover {
+                .page-link {
+                    z-index: 1;
+                    color: #fff;
+                    background-color: $blue;
+                    border-color: $blue;
+                }
+            }
+        }
+    }
+}

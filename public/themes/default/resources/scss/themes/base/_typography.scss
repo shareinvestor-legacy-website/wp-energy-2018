@@ -1,0 +1,13 @@
+@each $language, $font-family in $languages {
+    html[lang='#{$language}'] {
+        @include set-font-type ($language, $font-family);  
+    }
+
+    body {
+        font-size: px-to-rem(14);
+    }
+}
+
+.font-weight-medium {
+    font-weight: 500 !important;
+}

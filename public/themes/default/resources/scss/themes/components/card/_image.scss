@@ -1,0 +1,71 @@
+@mixin set-card-image($position) {
+    align-items: center;
+    padding: 2rem;
+    margin-#{$position}: 1.875rem;
+
+    @if ($position == right ) {
+        flex-direction: row-reverse;
+    } @else {
+        flex-direction: row;
+    }
+    
+    .card {
+        &__image {
+            flex: 1 1 33.33%;
+            margin-bottom: 0;  
+            margin-#{$position}: -3.875rem;           
+        }
+
+        &__body {
+            flex: 1 1 66.6666%;
+            padding-#{$position}: 2rem;
+        }
+    }
+
+    @include media-breakpoint-down(md)
+    {
+        display: block;
+        margin-top: 2rem;
+        margin-#{$position}: 0;
+        
+        .card__image {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -3.875rem;
+            margin-bottom: 1rem;
+            
+            +.card__body {
+                padding: 1rem 0 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xs)
+    {
+        .card__image {
+            width: 100%;
+        }
+    }
+}
+
+.card {
+
+    $grandparent: &;
+
+    &#{$grandparent} {
+
+        &--image {            
+                           
+            &-right {
+                @include set-card-image(right);
+            }
+
+            &-left {
+                @include set-card-image(left);
+            }
+            
+
+        }
+    }
+}

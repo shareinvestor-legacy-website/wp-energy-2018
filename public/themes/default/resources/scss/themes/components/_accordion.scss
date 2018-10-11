@@ -1,0 +1,194 @@
+.accordion {
+    &-header {
+        color: $funblue;
+        cursor: pointer;
+        padding: 1.5rem 1.5rem;
+        transition: all .3s;
+        margin-bottom: 1rem;
+        border-bottom: none;
+        &:hover {
+            background: $lightgray;
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    &-body {
+        display: none;
+        &__contents {
+            padding: 1.5em 1.5em;
+            background: $white;
+        }
+    }
+
+    &__item {
+        >.accordion {
+            &-header {
+                &:after {
+                    content: "\e903";
+                    font-family: 'wp';
+                    font-size: 0.5rem;
+                    float: right;
+                    position: relative;
+                    top: 5px;
+                    color: $blue;
+                }
+            }
+
+            &__item {
+                .accordion {
+                    &-header {
+                        background: #f1f1f1;
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            >.accordion {
+                &-header {
+                    background: $funblue;
+                    color: #fff;
+                    margin-bottom: 0;
+                    &:after {
+                        content: "\e90f";
+                        font-family: 'wp';
+                        font-size: 0.5rem;
+                        float: right;
+                        position: relative;
+                        top: 5px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        border:none;
+        &:not(:last-child) {
+            .card-header {
+                border-bottom: none;
+            }
+        }
+
+        &-header {
+            background: $white;
+            color: $blue;
+            cursor: pointer;
+            padding: 1rem 1.5rem;
+            transition: all .3s;
+            border: solid 1px $blue;
+            border-radius: 0;
+            &[aria-expanded=true]{
+                    background: $funblue;
+                    border:solid 1px $funblue;
+                    color: #fff;
+                    margin-bottom: 0;
+                    border-radius: 0;
+                    &:after {
+                        content: "\e90f";
+                        font-family: 'wp';
+                        font-size: 0.5rem;
+                        float: right;
+                        position: relative;
+                        top: 5px;
+                        color: #fff;
+                    }
+                    &:hover {
+                        background: $funblue;
+                        color: #fff;
+                        cursor: pointer;
+            }
+        }
+
+            &:hover {
+                background: $funblue;
+                border:solid 1px $funblue;
+                color: $white;
+                position: relative;
+                z-index: 5;
+                &:after {
+                    color: $white;
+                }
+            }
+            &:after {
+                content: "\e90a";
+                font-family: 'wp';
+                font-size: 0.5rem;
+                float: right;
+                position: relative;
+                top: 5px;
+                color: $blue;
+            }
+        }
+        &-body {
+            padding: 1.5em 1.5em;
+            background: $white;
+        }
+    }
+
+    &--column {
+        .card {
+            &-body {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                @include media-breakpoint-down(lg)
+                {
+                    flex-direction: column;
+                }
+                @include media-breakpoint-down(xs)
+                {
+                    flex-direction: column;
+                }
+            }
+
+            &__detail {
+                .h2 {
+                    color: $blue;
+                }
+                .h4 {
+                    color: $blue;
+                    font-weight: 500;
+                }
+                flex: 1 1 40%;
+                max-width: 40%;
+                border-right: 1px solid $gray;
+
+                @include media-breakpoint-down(lg)
+                {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    border-right: none;
+                }
+
+                @include media-breakpoint-down(xs)
+                {
+                    border-right: none;
+                }
+            }
+
+            &__figure {
+                flex: 1 1 60%;
+                max-width: 60%;
+                @include media-breakpoint-down(lg)
+                {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
+            }
+
+            &__detail, &__figure {
+                margin-bottom: 1rem;
+                padding: 0 1rem;
+                @include media-breakpoint-down(xs)
+                {
+                    flex: 1 1 auto;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

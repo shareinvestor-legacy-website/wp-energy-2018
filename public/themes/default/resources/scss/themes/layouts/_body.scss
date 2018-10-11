@@ -1,0 +1,26 @@
+.page {
+    $grandparent: &;
+    
+    margin-top: 92px;
+
+    @include media-breakpoint-up(xl)
+    {
+        margin-top: 83.39px;
+    }
+
+    #{$grandparent} {
+        &__breadcrumb {
+            display: none;
+            border-bottom: 1px solid $gray;
+
+            @include media-breakpoint-up(xl)
+            {
+                display: block;
+            } 
+        }
+
+        &__title {
+            padding-top: px-to-rem(63);
+        }
+    }
+}

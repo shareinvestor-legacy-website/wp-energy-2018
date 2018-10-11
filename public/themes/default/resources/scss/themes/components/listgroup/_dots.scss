@@ -1,0 +1,29 @@
+.list-group {
+    $grandparent: &;
+
+    &--dots {
+        padding-left: 1em;
+        text-indent: -1em;
+
+        #{$grandparent} {
+            &-item {
+                padding: 0 0 0.5rem 0;
+                color: $black;
+                border: none;
+    
+                &:before {
+                    content: "\2022";
+                    margin-right: .6rem;
+                    color: $green;
+                }
+    
+                &-action {
+                    &:hover, &.active {
+                        background: transparent;
+                        color: $funblue;
+                    }
+                }
+            }
+        }
+    }
+}

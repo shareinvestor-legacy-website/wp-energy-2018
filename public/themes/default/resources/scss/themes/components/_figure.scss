@@ -1,0 +1,40 @@
+.figure {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--circle {
+            padding-left: px-to-rem(28);
+            padding-right: px-to-rem(28);
+
+            #{$grandparent} {
+                &__image {
+                    width: 140px;
+                    height: 140px;
+                    border: 15px solid $green;
+                    border-radius: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                }
+                &__number {
+                    font-size: px-to-rem(30);
+                    color: $green;
+                }
+                &__value {
+                    @include set-font-family;
+                    font-size: px-to-rem(14);                    
+                }
+            }
+
+            figcaption {
+                text-align: center;
+                color: $blue;
+                font-weight: 500;
+                font-size: px-to-rem(15)
+            }
+
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.list-group {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--content {
+            #{$grandparent} {
+                &-item {
+                    border: none;  
+                    background-color: transparent;     
+                    margin-bottom: 1rem;            
+
+                    .h5 {
+                        font-weight: 500 !important;
+                    }
+
+                    dl {
+                        margin-bottom: 0;
+                    }                   
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $blue !important;
+                    }
+                }
+            }
+        }
+    }    
+}

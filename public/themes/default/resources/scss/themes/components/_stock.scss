@@ -1,0 +1,66 @@
+.stock {
+    display: flex;
+    flex-wrap: wrap;
+
+    [class^="stock__"] {
+        text-align: center;
+        flex: 1 1 auto;
+
+        @include media-breakpoint-down(sm) {
+            flex: 1 1 50%;
+        }
+    }
+
+    .stock {
+        &--datetime {
+            font-size: .9rem;
+        }
+
+        &__date {
+            text-align: left;
+        }
+
+        &__symbol {
+            @include set-font-family;
+            font-size: px-to-rem(20);
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+
+        &__text {
+            @include set-font-family;
+            font-size: px-to-rem(33);
+
+            &--bold {
+                font-weight: 500;
+            }
+
+            &--semibold {
+                font-weight: 600;
+            }
+        }
+        
+
+        &__value {            
+            @include media-breakpoint-down(sm) {
+                text-align: left;
+                flex: 1 1 50%;
+            }
+
+            .h3 {
+                font-size: 2.3rem;
+                font-weight: 500;
+            }
+        }
+
+        &__change {
+            @include set-font-family;
+            font-size: 16px;
+            @include media-breakpoint-down(sm) {
+                flex: 1 1 50%;
+            }
+        }
+    }
+}

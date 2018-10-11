@@ -1,0 +1,58 @@
+.home {
+    &__highlight {
+        background-color: $lightgray;
+        padding: 4rem 0;
+    
+        .border {
+            &--right {            
+                @include media-breakpoint-up(lg) {
+                    border-right: 1px solid #ccc;
+                }
+                
+            }
+    
+            &--top-right {
+                &:nth-child(2) {
+                    @include media-breakpoint-up(md) {
+                        border-right: 1px solid #ccc;
+                    }
+                }
+                &:not(:first-child) {
+                    border-top: 1px solid #ccc;
+                }
+            }            
+    
+            &--top {     
+                .card {
+                    height: 100%;
+                }    
+    
+                @include media-breakpoint-down(md) {
+                    border-top: 1px solid #ccc;
+    
+                    .card__image {
+                        max-height: 224px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        .card {
+            &--horizontal, &--vertical, &--highlight {
+                .card__image {
+                    overflow: hidden;
+                    .img-fluid {
+                        transition: all .5s ease;
+                    }
+                }
+
+                &:hover {
+                    .img-fluid {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                }
+            }
+        }
+    }
+}

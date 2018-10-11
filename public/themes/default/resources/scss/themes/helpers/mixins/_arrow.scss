@@ -1,0 +1,40 @@
+
+
+@mixin after-arrow ($size: null, $position: after) {
+    &:#{$position} {        
+        position: relative;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;        
+        border-radius: 100%;
+        background-color: $green;
+        color: $white;
+        float: right;
+        text-align: center;        
+        font-size: 0.9rem;
+        transition: all .5s ease;
+
+        /* default */
+        line-height: 1.1;
+        margin-top: 5px;
+        width: 16px;
+        height: 16px;
+
+        @if ($size == lg) {
+            font-size: 1.3rem;
+            line-height: 1;    
+            margin-top: 1px;
+            width: 20px;
+            height: 20px;
+        }
+
+        @if ($position == after) {
+            content: '\f105';
+            margin-left: 5px;
+            padding-left: 2px;
+        } @else {
+            content: '\f104';
+            margin-right: 5px;
+            padding-right: 2px;
+        }
+    }        
+}

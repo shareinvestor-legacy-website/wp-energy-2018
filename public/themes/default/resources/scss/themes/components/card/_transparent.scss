@@ -1,0 +1,27 @@
+.card {
+
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--transparent {
+            background-color: rgba(242, 242, 242, 0.35);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+            #{$grandparent} {
+                &__content {
+                    text-align: center;
+                    font-size: px-to-rem(20);
+    
+                    p {
+                        margin-bottom: 0;
+                    }
+    
+                    .text-blue {
+                        font-weight: 700;
+                        font-size: px-to-rem(40);                  
+                    }
+                }
+            }
+        }
+    }
+}

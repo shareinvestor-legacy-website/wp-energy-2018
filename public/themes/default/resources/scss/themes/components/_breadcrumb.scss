@@ -1,0 +1,28 @@
+.breadcrumb {
+    $grandparent: &;
+
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-left: 0; 
+    padding-right: 0; 
+
+    #{$grandparent} {
+        &-item {
+            font-size: 12px;
+            font-weight: 500;
+
+            &.active {
+                color: $lightblue;
+                font-weight: 700;
+            }
+
+            &+#{$grandparent}-item {
+                padding-left: .3rem;
+
+                &:before {
+                    padding-right: .3rem
+                }
+            }
+        }
+    }
+}

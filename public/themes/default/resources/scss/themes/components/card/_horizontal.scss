@@ -1,0 +1,29 @@
+.card {
+
+    $grandparent: &;
+
+    &--horizontal { 
+        padding: 0 1.5rem 1rem;
+                 
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            border-radius: 0;
+            padding: 2rem 0;
+
+            #{$grandparent} {
+                &__image {
+                    flex: 0 0 66.67%;
+                    max-width: 66.67%;
+                    margin-bottom: 0;
+                }
+                &__body {
+                    flex: 0 0 33.33%;
+                    max-width: 33.33%;
+                    padding: 1rem;
+                }
+            }         
+        } 
+    }
+}
+
+

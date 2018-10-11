@@ -1,0 +1,107 @@
+.navbar {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--blue {
+            padding: 0;
+            margin-bottom: 1rem;
+
+            .nav {
+                &-link {
+                    position: relative;
+                    @include set-font-family;
+                    font-size: px-to-rem(13);
+                    color: #5F5F5F;
+                    padding-bottom: px-to-rem(24);
+                    padding-left: px-to-rem(20);
+                    padding-right: px-to-rem(20);
+
+                    &.active {
+                        color: $funblue;
+                        font-weight: 500;
+
+                        &:after {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            bottom: 0;
+                            position: absolute;
+                            border-bottom: 7px solid $funblue;
+                        }
+                    }
+
+                    @include media-breakpoint-down(lg)
+                    {
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+
+                        &.active {
+                            &:after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #{$grandparent} {
+                &-collapse {
+                    border-bottom: 1px solid #707070;
+                }
+            }
+
+            @include media-breakpoint-down(lg)
+            {
+                #{$grandparent} {
+                    &-collapse {
+                        border-bottom: none;
+                    }
+                    &-toggler {
+                        border: 1px solid #ced4da;
+                        padding: 0.8rem 28px;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        border-radius: 0;
+    
+                        .fas {
+                            margin-left: 1rem;
+                            transition: all .3s ease;
+                        }
+                        
+                        &[aria-expanded="true"] {
+                            border-bottom: 0;
+                            background-color: $lightgray;                            
+    
+                            .fas {
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+
+                    &-nav {
+                        border: 1px solid #ced4da;
+
+                        .nav-link {
+                            border-bottom: 1px solid $lightgray;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm)
+            {
+                #{$grandparent} {
+                    &-toggler {
+                        width: 100%;
+                        margin-left: auto;
+
+                        .fas {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.circle {
+
+    $size: 40;
+    font-size: 0.9rem;
+    width: px-to-rem($size);
+    height: px-to-rem($size);
+
+    position: relative;
+    
+
+    @include set-font-family;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    &:after {
+        content: "";
+        width: px-to-rem($size);
+        height: px-to-rem($size);
+        border-radius: 100%;
+        display: block;
+        background-color: $green;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &--lg {
+        $size: 54;
+        font-size: 1.5rem;
+        width: px-to-rem($size);
+        height: px-to-rem($size);
+
+        &:after {
+            width: px-to-rem($size);
+            height: px-to-rem($size);
+        }
+    }
+}

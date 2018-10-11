@@ -1,0 +1,20 @@
+.img {
+    &-cover {
+        @include set-image;
+    }
+
+    &--mh {
+        max-height: 369px;
+    }
+
+    &-highlight {
+        text-align: center;
+        img {
+            @include media-breakpoint-up(xl) {
+                height: 300px;
+                width: auto;
+                max-width: auto;
+            }
+        }
+    }
+}

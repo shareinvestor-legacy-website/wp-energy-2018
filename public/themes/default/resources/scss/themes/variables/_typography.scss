@@ -1,0 +1,148 @@
+
+$languages: (
+    en: 'Fira Sans',
+    th: 'PSL Sirintr Pro'
+);
+
+$font-types: (
+    /* define font tags and class */
+    tags: (
+        h1: (
+            en: (
+                font-weight: 300,
+                font-size: 36,
+            ),
+            th: (
+                font-weight: 400,
+                font-size: 48,
+            )
+        ),
+        h2: (
+            en: (
+                font-weight: 300,
+                font-size: 34,
+            ),
+            th: (
+                font-weight: 400,
+                font-size: 45,
+            )
+        ),
+        h3: (
+            en: (
+                font-weight: 500,
+                font-size: 20,
+                line-height: 1.5,
+            ),
+            th: (
+                font-weight: 800,
+                font-size: 30,
+                line-height: 1.5,
+            )
+        ),
+        h4: (
+            en: (
+                font-weight: 400,
+                font-size: 18,
+            ),
+            th: (
+                font-weight: 700,
+                font-size: 28,
+            )
+        ),
+        h5: (
+            en: (
+                font-weight: 400,
+                font-size: 16,
+                line-height: 1.5,
+            ),
+            th: (
+                font-weight: 700,
+                font-size: 26,
+                line-height: 1.5,
+            )
+        ),       
+       /* h6: (
+            en: (
+                font-weight: 400,
+                font-size: 16,
+            ),
+            th: (
+                font-weight: 400,
+                font-size: 16,
+            )
+        ),*/
+    ),
+
+    /* define font class only */
+    class: (           
+        sub-title: (
+            en: (
+                font-weight: 400,
+                font-size: 14,               
+            ),
+            th: (
+                font-weight: 400,
+                font-size: 14,
+            )
+        ),
+        display-1: (
+            en: (
+                font-weight: 400,
+                font-size: 56,
+                line-height: 1.5,
+            ),
+            th: (
+                font-weight: 400,
+                font-size: 56,
+                line-height: 1.5,
+            )
+        ),
+        display-2: (
+            en: (
+                font-weight: 600,
+                font-size: 48,
+                line-height: 1.5,
+            ),
+            th: (
+                font-weight: 600,
+                font-size: 48,
+                line-height: 1.5,
+            )
+        ),
+        display-3: (
+            en: (
+                font-weight: 500,
+                font-size: 30,
+                line-height: 1.5,
+            ),
+            th: (
+                font-weight: 500,
+                font-size: 30,
+                line-height: 1.5,
+            )
+        ),
+        display-4: (
+            en: (
+                font-weight: 500,
+                font-size: 28,
+                line-height: 1.5,
+            ),
+            th: (
+                font-weight: 500,
+                font-size: 28,
+                line-height: 1.5,
+            )
+        ),
+        lead: (
+            en: (
+                font-weight: 400,
+                font-size: 20,
+            ),
+            th: (
+                font-weight: 400,
+                font-size: 20,              
+            )
+        ),
+    )
+);
+

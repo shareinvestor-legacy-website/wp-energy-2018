@@ -1,0 +1,12 @@
+.dashed {
+    margin: 0;
+    list-style-type: none;
+    padding-inline-start: .5rem;
+
+    li {
+        &:before {
+            content: "-";
+            margin-right: .5rem;
+        }
+    }
+}

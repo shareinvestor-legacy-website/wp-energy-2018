@@ -1,0 +1,12 @@
+.card {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--watermark {
+            @extend .card--image-left;
+            
+            @include set-image(right, contain);
+            background-image: url('/assets/static/images/watermark.png');
+        }
+    }
+}

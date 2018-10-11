@@ -1,0 +1,49 @@
+.btn {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &-outline {
+            &-success {
+                @include set-font-family;
+                font-size: 14px;
+                background-color: transparent;
+                padding: 10px 30px;
+                border: solid 1px $green;
+                color: $green !important;
+                transition: all .3s ease;
+                border-radius: 0;
+
+                &:focus {
+                    box-shadow: none;
+                }
+                &:hover {
+                    color: $white !important;
+                    background: $green;
+                    border: solid 1px $green;
+                }
+            }
+        }
+
+        &-success {
+            @include set-font-family;
+            font-size: 14px;
+            background-color: $green;
+            padding: 10px 30px;
+            border: solid 1px $green;
+            color: $white;
+            transition: all .3s ease;
+            border-radius: 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:hover {
+                color: $white;
+                background: $darkgreen;
+                border: solid 1px $darkgreen;
+            }
+        }
+
+    }
+}

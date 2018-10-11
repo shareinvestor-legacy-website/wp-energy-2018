@@ -1,0 +1,41 @@
+.btn {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &-primary {
+            @include set-font-family;
+            @include after-arrow(lg);            
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            color: $green;
+            transition: all .5s ease;
+            font-size: px-to-rem(14);
+            display: inline-flex;
+            
+            &:focus, &:focus:active {
+                box-shadow: none !important;
+            }
+
+            &:active, &:not(.disabled):active {
+                color: $funblue;
+                background-color: transparent !important;
+                border: none !important;
+            }
+
+            &:hover {
+                color: $funblue;
+                &:after, &:before {
+                    background-color: $funblue;
+                }
+            }
+        }
+
+        &--back {
+            &:after {
+                content: none;
+            }
+            @include after-arrow(lg, before);  
+        }
+    }
+}

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{locale()}}">
-
 <head>
-
 
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='google-site-verification' content='{{setting('general.website.verification')}}'>
-
 
     @yield('meta')
 
@@ -19,29 +16,27 @@
 
     <title>@yield('title')</title>
 
-
     @component('layouts.component.css') @endcomponent
-
 
     @stack('style')
 
 
 </head>
-
-
 <body>
 
 
 @component('layouts.component.header') @endcomponent
 
-@yield('banner')
-@yield('breadcrumb')
 
-
-@section('body')  @show
+<main class="main content">
+    @section('body')  @show
+</main>
 
 
 @component('layouts.component.footer') @endcomponent
+
+
+
 @component('layouts.component.script') @endcomponent
 @component('layouts.component.analytic') @endcomponent
 
@@ -55,7 +50,5 @@
         //]]></script>
 @endif
 
-
 </body>
-
 </html>

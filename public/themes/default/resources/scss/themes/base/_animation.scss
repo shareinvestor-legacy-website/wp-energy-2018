@@ -1,0 +1,21 @@
+.zoomNonStop {
+    -webkit-animation-name: zoomNonStop;
+    animation-name: zoomNonStop;
+}
+
+.animated.animated-10s {
+    -webkit-animation-duration: 12s;
+    animation-duration: 12s;
+}
+
+@-webkit-keyframes zoomNonStop {
+    from {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}

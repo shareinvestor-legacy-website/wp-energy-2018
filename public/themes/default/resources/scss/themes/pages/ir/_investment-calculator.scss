@@ -1,0 +1,409 @@
+ 
+  .ir_chart-select-wrap {
+    width: 100%;
+    float: left;
+  }
+  
+  .ir_chart_period-select {
+    float: right;
+    margin: 20px 0px;
+  }
+  
+  .ir_chart_type-select {
+    margin: 20px 0px;
+    padding: 0;
+    height: 33px;
+    list-style: none;
+    float: left;
+  }
+  
+  .ir_chart_type-select li {
+    float: left;
+    margin: 0;
+  }
+  
+  .ir_chart_type-select li a {
+    color: #fff;
+    background-color: #004a88;
+    text-decoration: none;
+    padding: 10px 10px 10px 44px;
+    display: inline-block;
+  }
+  
+  .ir_chart_type-select li a {
+    line-height: 1.5;
+  }
+  
+  .ir_chart_type-select li.selected_type a,
+  .ir_chart_type-select li.selected_type a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .chart_table thead tr {
+    // background: #006dc9;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  #table_container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  .chart_selection-title {
+    padding: 20px 0px 0px 25px;
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .chart_year-selection {
+    display: block;
+    height: auto;
+    width: 100%;
+    float: left;
+    padding: 0px 0px 10px 25px;
+  }
+  
+  .chart_year-selection li {
+    float: left;
+    cursor: pointer;
+    padding: 10px 10px 0px 0px;
+    list-style: none;
+  }
+  
+  .ir_chart_type-select li:nth-of-type(2) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  
+  .ir_chart-container,
+  .ir_chart-container-table {
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+  }
+  
+  .ir_chart-container-empty {
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto;
+    font-size: 200%;
+  }
+  
+  .ir_chart-container-table .tick-box {
+    display: none;
+  }
+  
+  .w100 {
+    width: 100%;
+  }
+  
+  .ir_chart-container-wrap,
+  .Chart_selection-accordion-wrap {
+    float: left;
+  }
+  
+  .ir_chart-container-wrap {
+    width: 65%;
+    box-sizing: border-box;
+    padding-right: 10px;
+  }
+  
+  .Chart_selection-accordion-wrap {
+    width: 35%;
+  }
+  
+  
+  /* Define the rest of the classes here */
+  
+  .chart_SelectYears-wrapper {
+    float: left;
+    width: 100%;
+    margin: 20px 0px;
+    background: #f4f4f4;
+  }
+  
+  ul.checkbox-list {
+    list-style: none;
+    padding-left: 0px;
+  }
+  
+  ul.checkbox-list li {
+    margin: 10px 0px;
+    color: #9e9e9e;
+    cursor: pointer;
+  }
+  
+  ul.checkbox-list li.selected_ratio {
+    color: #333333;
+    list-style: none;
+  }
+  
+  .chart_year-selection li.selected_period {
+    color: #333;
+  }
+  
+  li.selected_type {
+    background-color: yellow;
+  }
+  
+  .Chart_selection-accordion {
+    padding-left: 0px;
+    margin: 0px 0px 30px;
+    float: left;
+    width: 100%;
+    background: #f4f4f4;
+  }
+  
+  .Chart_selection-accordion>li {
+    list-style: none;
+    padding: 5px 0px 5px 20px;
+  }
+  
+  .Chart_selection-accordion>li a {
+    display: block;
+    padding: 5px 0px;
+    font-weight: bold;
+  }
+  
+  .Chart_selection-accordion>li.active {
+    background: #727272;
+  }
+  
+  .Chart_selection-accordion>li.active a {
+    color: #fff;
+  }
+  
+  .Chart_selection-accordion>li .checkbox-list li {
+    color: #fff;
+  }
+  
+  .tick-box {
+    float: left;
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+  }
+  
+  .ratio_group .ratio_group_title .arrow-updown {
+    float: right;
+    font-size: 1.375em;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  #category_type {
+    background-repeat: no-repeat, no-repeat;
+    background-position: 9px center, right 5px center;
+    background-color: #5676a3;
+    padding: 10px 20px 10px 30px;
+    border: none;
+    color: #fff;
+  }
+  
+  #category_type:after,
+  #figure_type:after {
+    width: 14px;
+  }
+  
+  #category_type.period {
+    background-repeat: no-repeat, no-repeat;
+    background-position: 9px center, right 5px center;
+    background-color: #5676a3;
+  }
+  
+  #figure_type {
+    background-repeat: no-repeat, no-repeat;
+    background-position: 9px center, right 5px center;
+    background-color: #5676a3;
+    padding: 10px 20px 10px 40px;
+    border: none;
+    color: #fff;
+  }
+  
+  #figure_type.absolute {
+    background-repeat: no-repeat, no-repeat;
+    background-position: 9px center, right 5px center;
+    background-color: #5676a3;
+  }
+  
+  .table-calculator-form {
+    border-collapse: collapse;
+    margin: 5px;
+  }
+  
+  .table-calculator-form tr td input {
+    padding: 3px;
+    line-height: 20px;
+    width: 90px;
+  }
+  
+  .table-calculator-form tr.first td {
+    padding-bottom: 10px;
+  }
+  
+  button.ui-datepicker-trigger {
+    background: none;
+    border: none;
+  }
+  
+  button.ui-datepicker-trigger img {
+    vertical-align: middle;
+  }
+  
+  .investment-calculator {
+    border: none;
+    width: 100%;
+    height: 900px;
+  }
+
+    .calculator {
+        display: table;
+        width: 100%;
+        margin-bottom: 1rem;
+        @media (max-width: 689px) {
+            display: block;
+        }
+        >div {
+            display: table-cell;
+            width: 50%;
+            @media (max-width: 689px) {
+                display: block;
+                width: 100%;
+            }
+            .calculator-box {
+                >div {
+                    &:first-child {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                input {
+                    padding: 5px 10px;
+                    height: 40px;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 0;
+                }
+                input[type="radio"] {
+                    left: 0;
+                    top: -0.5em;
+                    cursor: pointer;
+                    z-index: 1;
+                }
+            }
+        }
+        .calculator-left {
+            border-right: 1px #e6e6e6 solid;
+            padding-right: 3rem;
+            @media (max-width: 689px) {
+                border-bottom: 2px solid #e6e6e6;
+                border-right: 0;
+                padding-right: 0px;
+                padding-bottom: 30px;
+            }
+            .datepicker-box {
+                position: relative;
+                input {
+                   border: 1px solid #ccc;
+                   width: 100%;
+                   border-radius: 0;
+                }
+                &:after {
+                    content: '\e911';
+                    font-family: 'wp' !important;
+                    font-size: 20px;
+                    color: $funblue;
+                    position: absolute;
+                    line-height: 2.2;
+                    right: 0.8rem;
+                    top: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+        .calculator-right {
+            padding-left: 3rem;
+            div {
+                input[type=text] {
+                    width: 100%;
+                    border-radius: 0;
+                }
+            }
+            @media (max-width: 689px) {
+                padding-left: 0px;
+                padding-top: 20px;
+            }
+        }
+    }
+  
+  
+  .down_arrow {
+    background: url(/images/arrow_down.gif) no-repeat 0 bottom;
+    color: #9d0000;
+    background-size: 10px;
+    content: '';
+    text-indent: -9999px;
+    width: 10px;
+    margin-left: 5px;
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+  
+  .up_arrow {
+    background: url(/images/arrow_up.gif) no-repeat 0 bottom;
+    color: #317500;
+    background-size: 10px;
+    content: '';
+    text-indent: -9999px;
+    width: 10px;
+    margin-left: 5px;
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    .investment-calculator {
+        height: 1300px;
+    }
+        .calculator {
+            display: block;
+            width: 100%;
+            margin-bottom: 2rem;
+            >div {
+                display: table-cell;
+                .calculator-box {
+                    >div {
+                        &:first-child {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+            .calculator-left {
+                border-right: none;
+                padding-right: 0rem;
+                display: block;
+            }
+            .calculator-right {
+                padding-left: 0rem;
+                display: block;
+            }
+        }
+  }
+  
+.ir_boxCaptcha {
+    .g-recaptcha {
+        > div {
+            margin: 0 auto;
+        }
+    }
+}

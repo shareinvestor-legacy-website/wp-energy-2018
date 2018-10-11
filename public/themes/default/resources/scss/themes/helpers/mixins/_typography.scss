@@ -1,0 +1,34 @@
+@mixin set-font-type($language, $font-family) {
+    @each $types, $array in $font-types {
+        @if ($types == 'tags') {
+            /* define font tags and class */
+            @each $selector, $array-of-value in $array {                
+                .#{$selector}, #{$selector} {
+                   @include define-font-css($font-family, $array-of-value, $language);
+                }     
+            }
+        } @else {            
+            /* define font class only */
+            @each $selector, $array-of-value in $array {
+                .#{$selector}{
+                    @include define-font-css($font-family, $array-of-value, $language);
+                }     
+            }
+        }          
+    }
+}
+
+@mixin define-font-css($font-family, $array-of-value, $language) {
+    font-family: $font-family, sans-serif; 
+    font-weight: map-get(map-get($array-of-value, $language), font-weight);
+    font-size: (map-get(map-get($array-of-value, $language), font-size)/16)+rem;
+    line-height: map-get(map-get($array-of-value, $language), line-height);
+}
+
+@mixin set-font-family () {
+    @each $language, $font-family in $languages {
+        html[lang='#{$language}'] & {
+            font-family: $font-family, sans-serif;
+        }
+    }
+}

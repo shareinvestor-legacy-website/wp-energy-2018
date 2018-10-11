@@ -1,0 +1,59 @@
+.card {
+    border: none;
+    border-radius: 0;
+
+    $grandparent: &;
+
+    #{$grandparent} {    
+        &__image {
+            margin-bottom: 2rem;
+        }  
+
+        &__title {
+            @include set-font-family;
+            color: $blue;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: px-to-rem(18);
+            transition: all .15s ease-in-out;
+        }
+
+        &__body {
+            min-height: 120px;
+        }
+        
+        &__footer {
+            border-top: 1px solid #1a4783;
+            padding-top: 1rem;
+        }
+
+        &__image-group {
+            text-align: center;
+            img {
+                height: 8rem;
+                @include media-breakpoint-up(xl)
+                {
+                    height: 10rem;
+                }
+            }
+        }
+    }
+
+    &#{$grandparent} {
+        &--shadow {
+            box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.09);
+        }
+        &--over-bottom {
+            margin-bottom: -6rem;
+        }
+    }
+
+    &:hover {
+        .btn {
+            color: $funblue;
+            &:after {
+                background-color: $funblue;
+            }
+        }
+    }
+}

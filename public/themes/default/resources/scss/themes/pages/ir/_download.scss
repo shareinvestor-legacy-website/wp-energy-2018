@@ -1,0 +1,208 @@
+.investorKit {
+	margin-bottom: 0;
+	>h5 {
+        background: $lightblue;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px;
+        line-height: 1.5em;
+        margin: 0;
+	}
+	&__detail {
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        border-bottom: 3px solid $lightblue;
+		>.quarter {
+			border-top: 1px solid #dddfe0;
+			display: table;
+			padding: 5px 0;
+			width: 100%;
+			>div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			>.title {
+				width: 100%;
+				display: block;
+                padding: 5px 0;
+                text-align: left;
+			}
+			>.btn-checkbox {
+				width: 100%;
+				display: table;
+				text-align: center;
+				height: 50px;
+				>div {
+					display: table-cell;
+                    width: 25%;
+                    >.custom-checkbox{
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 auto;
+                        > input {
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            z-index: 10;
+                        }
+                        .custom-control-label {
+                            &::before, &::after {
+                                right: 0;
+                                margin: auto;                                
+                            }
+                        }
+                    }
+                }
+                
+			}
+		}
+		>.yearly {
+			border-top: 1px solid #dddfe0;
+			display: table;
+			padding: 5px 0;
+            width: 100%;
+            height: 80px;
+			>div {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			>.title {
+                width: 75%;
+                text-align: left;
+			}
+			>.btn-checkbox {
+				width: 25%;
+				text-align: center;
+                height: 50px;
+                >.custom-checkbox{
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 auto;
+                    > input {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        z-index: 10;
+                    }
+                    .custom-control-label {
+                        &::before {
+                            right: 0;
+                            margin: auto;
+                        }
+                        &::after {
+                            right: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                border-top: none;
+            }
+		}
+    }
+    .custom-control-label {
+        position: absolute;
+        margin-bottom: 0;
+        top: 0;
+        left: 30px;
+        &::after, &::before{
+            position: absolute;
+            top: .25rem;
+            left: -1.8rem;
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            content: "";
+        }
+    }
+   
+}
+.calculate {
+	div {
+		text-align: center;
+		width: 100%;
+		display: table;
+		>div {
+			display: table-cell;
+			width: 50%;
+			text-align: right;
+			padding-top: 20px;
+			padding-left: 5px;
+			&:last-child {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.sum_size {
+	text-align: center !important;
+	width: auto;
+	display: inline-block !important;
+}
+.ir_download {
+	.checkbox {
+		width: 24px;
+		height: 24px;
+		clear: both;
+		display: block;
+		padding: 0;
+		margin: 0 auto;
+        background: url("/themes/default/assets/static/images/content/download/btn-radio.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+	}
+	.radio {
+		width: 24px;
+		height: 24px;
+		clear: both;
+		display: block;
+		padding: 0;
+		margin: 0 auto;
+        background: url("/themes/default/assets/static/images/content/download/btn-radio.png") no-repeat scroll 0 0 transparent;
+        background-size: 100%;
+	}
+	.select {
+		background: url("/themes/default/assets/static/images/content/download/btn-radio.png") no-repeat scroll 0 0 transparent;
+		color: #fff;
+		font: 12px/21px arial,sans-serif;
+		height: 24px;
+		overflow: hidden;
+		padding: 0 10px;
+		position: absolute;
+	}
+}
+input.styled {
+	display: none;
+}
+select.styled {
+	position: relative;
+	opacity: 0;
+	z-index: 5;
+}
+.disabled {
+	opacity: .5;
+}
+@media screen and (max-width:767px) {
+	.calculate {
+		padding: 0;
+		>table {
+			width: 100% !important;
+			float: none !important;
+		}
+		div {
+			>div {
+				width: auto;
+				display: inline-block;
+				text-align: center !important;
+			}
+		}
+	}
+	.sum_size {
+		display: block !important;
+		margin: 0 auto !important;
+	}
+}
