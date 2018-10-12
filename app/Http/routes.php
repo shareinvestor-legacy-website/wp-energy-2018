@@ -43,6 +43,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //awards-recognitions
         Route::get('awards-recognitions', 'WebController@award');
 
+        //milestone
+        Route::get('company-milestone', 'WebController@milestone');
+
         //download
         Route::get('download/{page2}', 'WebController@download');
 

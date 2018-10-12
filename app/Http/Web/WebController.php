@@ -143,6 +143,20 @@ class WebController extends Controller
         return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts', 'title', 'sidebar'));
     }
 
+    //milestone
+    public function milestone($root)
+    {
+
+        $category = $this->categoryService->get("company-milestone")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+        $posts = $this->postService->getCoerciveOrder($category->path);
+
+        return view('web.milestone', compact('root', 'menu', 'category', 'highlights', 'posts', 'title', 'sidebar'));
+    }
+
     //download
     public function download(Request $request, $root, $page2)
     {
