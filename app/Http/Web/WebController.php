@@ -65,6 +65,7 @@ class WebController extends Controller
 
         view()->share('is_home', false);
         view()->share('menus', $this->menuService->get('main'));
+        view()->share('footer_menus', $this->menuService->get('footer'));
 
     }
 

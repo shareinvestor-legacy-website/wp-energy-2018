@@ -217,46 +217,6 @@
                     ]
                 },
                 {
-                    "name": "Company Rating",
-                    "submenus": [{
-                            "name": "TRIS Rating"
-                        },
-                        {
-                            "name": "Moody's Rating"
-                        },
-                        {
-                            "name": "Standard & Poor's Rating"
-                        }
-                    ]
-                },
-                {
-                    "name": "IR Presentation",
-                    "submenus": [{
-                            "name": "Analyst Meeting"
-                        },
-                        {
-                            "name": "Road Show"
-                        }
-                    ]
-                },
-                {
-                    "name": "Events",
-                    "submenus": [{
-                            "name": "AGM"
-                        },
-                        {
-                            "name": "Domestic Plant Visit"
-                        },
-                        {
-                            "name": "International Plant Visit"
-                        }
-                    ]
-                },
-                {
-                    "name": "IR Calendar"
-                },
-
-                {
                     "name": "Newsroom",
                     "submenus": [{
                             "name": "SET Announcements"
@@ -266,16 +226,6 @@
                         },
                         {
                             "name": "News Clippings"
-                        }
-                    ]
-                },
-                {
-                    "name": "Analyst Coverage",
-                    "submenus": [{
-                            "name": "Analyst Contact"
-                        },
-                        {
-                            "name": "Analyst Reports"
                         }
                     ]
                 },

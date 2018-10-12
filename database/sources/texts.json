@@ -365,6 +365,13 @@
         }
     },
     {
+        "name": "call.center.number",
+        "values": {
+            "en": "02 272 3333",
+            "th": "02 272 3333"
+        }
+    },
+    {
         "name": "share",
         "values": {
             "en": "Share",
@@ -549,29 +556,43 @@
     {
         "name": "menu.description.what.we.do",
         "values": {
-            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
-            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+            "en": "Update Menu Description in Text Translate [menu.description.what.we.do]",
+            "th": "Update Menu Description in Text Translate [menu.description.what.we.do]"
         }
     },
     {
         "name": "menu.description.who.we.are",
         "values": {
-            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
-            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+            "en": "Update Menu Description in Text Translate [menu.description.who.we.are]",
+            "th": "Update Menu Description in Text Translate [menu.description.who.we.are]"
         }
     },
     {
         "name": "menu.description.investor.relations",
         "values": {
-            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
-            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+            "en": "Update Menu Description in Text Translate [menu.description.investor.relations]",
+            "th": "Update Menu Description in Text Translate [menu.description.investor.relations]"
         }
     },
     {
         "name": "menu.description.news.media",
         "values": {
-            "en": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard.",
-            "th": "With the complete product and service, from upstream to downstream business activities, WP Energy can deliver high quality energy with excellent services for customers according to the international standard."
+            "en": "Update Menu Description in Text Translate [menu.description.news.media]",
+            "th": "Update Menu Description in Text Translate [menu.description.news.media]"
+        }
+    },
+    {
+        "name": "facebook.url",
+        "values": {
+            "en": "#",
+            "th": "#"
+        }
+    },
+    {
+        "name": "youtube.url",
+        "values": {
+            "en": "#",
+            "th": "#"
         }
     }
 ]
