@@ -128,6 +128,56 @@ class WebController extends Controller
 
     }
 
+    //download
+    public function download(Request $request, $root, $page2)
+    {
+
+        $posts = $this->apiService->getDownloads($page2);
+        $latest = $posts->first();
+
+        $menu = $this->menuService->get($root, $page2);
+
+        $years = $this->apiService->getYears($posts, 'en');
+        $year = $request->year ?? $years->first();
+        $years = locale_years_mapping($years);
+
+        $posts =  $this->apiService->queryByYear($year, $posts);
+
+        $view =  'index';
+        if($page2 == 'analyst-report'){
+            $view =  'analyst';
+            $posts = paginate($posts, 12);
+        }
+
+        return view("web.download.{$view}", compact('root', 'menu', 'posts', 'years', 'year', 'latest'));
+    }
+
+    //document
+    public function document(Request $request, $root, $category)
+    {
+
+        $category = $this->categoryService->get("document/{$category}")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $posts = $this->postService->get($category->path);
+        $years = $this->postService->getYears($category->path);
+        $year = $request->year ?? get_first_array($years, true);
+        $posts = $this->postService->queryByYear($year, $category->path);
+
+        return view('web.document', compact('root', 'menu', 'category', 'posts', 'years', 'year'));
+    }
+
+    //report
+    public function report($root, $page2)
+    {
+
+        $posts = $this->apiService->getDownloads($page2);
+
+        $menu = $this->menuService->get($root, $page2);
+        $posts =  $this->apiService->queryByYear(null, $posts);
+
+        return view('web.report.index', compact('root', 'menu', 'posts'));
+    }
+
     public function management($root, $category)
     {
 
@@ -152,8 +202,9 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("management/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
+        $title = $menu->present()->name;
 
-        return view('web.management.detail', compact('root', 'menu', 'category', 'post'));
+        return view('web.management.detail', compact('root', 'menu', 'category', 'post', 'title'));
 
     }
 

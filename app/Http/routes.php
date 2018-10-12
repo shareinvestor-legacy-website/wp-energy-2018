@@ -40,11 +40,28 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
     Route::group(['prefix' => '{root}'], function () {
 
+        //download
+        Route::get('download/{page2}', 'WebController@download');
+
+        //document
+        Route::get('document/{category}', 'WebController@document');
+
+        //document
+        Route::get('report/{category}', 'WebController@report');
+
+        //calendar
+        Route::get('ir-calendar/{subCategory?}', 'WebController@calendar');
+
         //management
         Route::get('management/{category}', 'WebController@management');
         Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
 
+        //news
+        Route::get('update/{slug}', 'WebController@update');
+        Route::get('update/{slug}/{id}/{title?}', 'WebController@showUpdate');
     });
+
+
 
 
     //post mail

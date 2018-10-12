@@ -10,7 +10,18 @@
 
 @section('body')
 
+    <div class="container">
 
+        <div class="row">
+
+            @foreach ($posts as $post)
+                @component('web.management.component.item', compact('root', 'post', 'category'))@endcomponent
+            @endforeach
+
+
+        </div>
+
+    </div>
 
 @stop
 
