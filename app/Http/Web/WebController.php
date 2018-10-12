@@ -87,7 +87,7 @@ class WebController extends Controller
 
         if (isset($page)) {
             $parent = $page->parent()->first();
-            $sidebar = $this->menuService->get($parent->slug);
+            $sidebar = $this->menuService->get($page1, $parent->slug);
             $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->title : $page->present()->title;
 
             //redirect to external url if exists
@@ -135,7 +135,7 @@ class WebController extends Controller
         $category = $this->categoryService->get("awards-recognitions")->first();
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($parent->slug);
+        $sidebar = $this->menuService->get($root, $parent->slug);
         $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
         $highlights = $this->postService->getCoerciveOrder("{$category->path}/highlights");
@@ -150,7 +150,7 @@ class WebController extends Controller
         $category = $this->categoryService->get("company-milestone")->first();
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($parent->slug);
+        $sidebar = $this->menuService->get($root, $parent->slug);
         $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
 
@@ -164,7 +164,7 @@ class WebController extends Controller
         $category = $this->categoryService->get("company-subsidiary")->first();
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($parent->slug);
+        $sidebar = $this->menuService->get($root, $parent->slug);
         $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
 
@@ -227,7 +227,7 @@ class WebController extends Controller
         $category = $this->categoryService->get("management/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($parent->slug);
+        $sidebar = $this->menuService->get($root, $parent->slug);
         $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
 
@@ -249,6 +249,45 @@ class WebController extends Controller
 
         return view('web.management.detail', compact('root', 'menu', 'category', 'post', 'title'));
 
+    }
+
+    //news update
+    public function update(Request $request, $root, $category)
+    {
+
+        $category = $this->categoryService->get("update/{$category}")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($root, $parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+
+        $years = $this->postService->getYears(null, $category->path);
+        $year = $request->year ?? get_first_array($years, true);
+
+        $posts = $this->postService->queryByYear(null, $year, $category->path);
+
+        return view('web.update.index', compact('root', 'menu', 'title', 'sidebar', 'category', 'years', 'year', 'posts'));
+
+    }
+
+    public function showUpdate($root, $category, $id, $title = null)
+    {
+        $post = $this->postService->find($id);
+
+        if ($post->present()->title(true) !== $title) {
+            return redirect(action('Web\WebController@showUpdate', ['root'=> $root, 'category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]));
+        }
+
+        $category = $this->categoryService->get("update/{$category}")->first();
+        $posts = $this->postService->queryByYear(null, null, $category->path);
+        $relates = $posts->except(['id' => $post->id])->take(4);
+
+        $gallery = $post->galleries()->first();
+
+        $root = $this->menuService->getBySlug($root);
+        $menu = $this->menuService->getBySlug($root->slug, $category->slug);
+
+        return view('web.update.detail', compact('root', 'menu', 'sidebar', 'category', 'post', 'gallery', 'relates'));
     }
 
 

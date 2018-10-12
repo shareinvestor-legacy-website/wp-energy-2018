@@ -488,7 +488,7 @@ if (!function_exists('paginate')) {
 }
 
 if (!function_exists('price_change')) {
-    
+
     function price_change($current, $previous)
     {
         try{
@@ -496,25 +496,25 @@ if (!function_exists('price_change')) {
         }catch(Exception $e){
             return 0;
         }
-        
+
 
     }
 
 }
 
 if (!function_exists('price_percent_change')) {
-    
+
     function price_percent_change($change, $previous)
     {
         try{
             $change = floatval($change);
             $previous = floatval($previous);
-      
+
             return number_format(($change * 100) / $previous , 2);
         }catch(Exception $e){
             return 0;
         }
-        
+
 
     }
 
@@ -584,6 +584,22 @@ if (!function_exists('utf8_to_html_entities')) {
 }
 
 
+if (!function_exists('get_first_array')) {
+
+    function get_first_array($years, $key = false)
+    {
+
+        $years = $years->toArray();
+
+        if($key)
+            $years = array_keys($years);
+
+        return array_first($years);
+
+    }
+}
+
+
 
 if (!function_exists('sanitize_utf8_string')) {
 
@@ -596,7 +612,7 @@ if (!function_exists('sanitize_utf8_string')) {
 
 
 if (!function_exists('locale_years_mapping')) {
-    
+
     function locale_years_mapping($years)
     {
         $keys = $years;
@@ -610,15 +626,15 @@ if (!function_exists('locale_years_mapping')) {
 }
 
 if (!function_exists('intl_last_years')) {
-    
+
     //accept intl date and return last xxx years if date is far beyond xxx years
     function intl_last_years($date, $years, $format_from,  $format_to = null, $locale_from = null, $locale_to = null)
     {
         $lastXYears =  Carbon::today(setting('general.timezone'))->subYears($years);
 
         $format_to = $format_to ?? $format_from;
-        
-        return  intl_parse($date, $format_from, $locale_from) < $lastXYears->timestamp 
+
+        return  intl_parse($date, $format_from, $locale_from) < $lastXYears->timestamp
                          ?  intl_date($lastXYears, $format_to) : $date;
     }
 }

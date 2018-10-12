@@ -72,10 +72,10 @@ class PostService
     }
 
 
-    public function queryByYear($year = null, ...$categoryPaths)
+    public function queryByYear($public = null, $year = null, ...$categoryPaths)
     {
 
-        $posts = Post::categoryPaths(...$categoryPaths)->public();
+        $posts = Post::categoryPaths(...$categoryPaths)->public($public);
 
 
         if (!empty($year)) {
