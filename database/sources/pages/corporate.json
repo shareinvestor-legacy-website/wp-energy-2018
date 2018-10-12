@@ -1,7 +1,20 @@
 [
 
     {
-        "title": "Home"
+        "title": "Home",
+        "sub_pages": [{
+                "title": "Hero Banner"
+            },
+            {
+                "title": "Corporate Information"
+            },
+            {
+                "title": "What's New"
+            },
+            {
+                "title": "IR Corner"
+            }
+        ]
     },
     {
         "title": "What We Do",

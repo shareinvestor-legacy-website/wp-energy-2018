@@ -3,5 +3,97 @@
     },
     {
         "name": "Intro Dialog"
+    },
+    {
+        "name": "Hero Banner"
+    },
+    {
+        "name": "Company Milestone"
+    },
+    {
+        "name": "Document",
+        "sub_categories": [{
+            "name": "Shareholders' Meeting"
+        }]
+    },
+    {
+        "name": "Download",
+        "sub_categories": [{
+                "name": "Corporate Governance"
+            },
+            {
+                "name": "Corporate Documents"
+            },
+            {
+                "name": "Charters"
+            }
+        ]
+    },
+    {
+        "name": "FAQ"
+    },
+    {
+        "name": "IR Calendar"
+    },
+    {
+        "name": "Management",
+        "sub_categories": [{
+                "name": "Board of Director"
+            },
+            {
+                "name": "Audit Committee"
+            },
+            {
+                "name": "Nomination & Remuneration Committee"
+            },
+            {
+                "name": "Risk Management Committee"
+            },
+            {
+                "name": "Management Team"
+            }
+        ]
+    },
+    {
+        "name": "Report",
+        "sub_categories": [{
+                "name": "SD Report"
+            },
+            {
+                "name": "CSR Report"
+            }
+        ]
+    },
+    {
+        "name": "Update",
+        "sub_categories": [{
+                "name": "CSR Activities"
+            },
+            {
+                "name": "Company News"
+            },
+            {
+                "name": "LPG for Life"
+            },
+            {
+                "name": "Automobile"
+            },
+            {
+                "name": "Household"
+            },
+            {
+                "name": "Industry"
+            },
+            {
+                "name": "Services"
+            }
+        ]
+    },
+    {
+        "name": "Video",
+        "sub_categories": [{
+            "name": "VDO & TVC"
+        }]
     }
+
 ]
