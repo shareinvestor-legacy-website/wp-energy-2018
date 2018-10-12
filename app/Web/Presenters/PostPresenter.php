@@ -31,6 +31,13 @@ class PostPresenter extends \BlazeCMS\Presenters\PostPresenter
         return "http://twitter.com/intent/tweet?status=$title+$url";
     }
 
+    public function lineUrl($action = null)
+    {
+        $url = isset($action) ? $action : $this->url();
+
+        return "https://social-plugins.line.me/lineit/share?url=$url";
+    }
+
     //custom methods here
 
 

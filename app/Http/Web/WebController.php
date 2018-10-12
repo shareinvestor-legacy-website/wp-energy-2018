@@ -274,8 +274,10 @@ class WebController extends Controller
     {
         $post = $this->postService->find($id);
 
+        $action = action('Web\WebController@showUpdate', ['root'=> $root, 'category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]);
+
         if ($post->present()->title(true) !== $title) {
-            return redirect(action('Web\WebController@showUpdate', ['root'=> $root, 'category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]));
+            return redirect($action);
         }
 
         $category = $this->categoryService->get("update/{$category}")->first();
@@ -286,7 +288,7 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $title = $menu->present()->name;
 
-        return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery'));
+        return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery', 'action'));
     }
 
 
