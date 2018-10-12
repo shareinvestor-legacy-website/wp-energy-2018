@@ -27,25 +27,21 @@
 
 @component('layouts.component.header') @endcomponent
 
-
 <main class="main content">
 
-    @if($is_home)
+    <article class="{{$is_home ? 'home' : 'page'}}">
 
-        @section('body')  @show
+        @if(!$is_home)
 
-    @else
+            @yield('breadcrumb')
+            @yield('titlePage')
 
-    <article class="page">
-
-        @yield('breadcrumb')
-        @yield('titlePage')
+        @endif
 
         @section('body')  @show
 
     </article>
 
-    @endif
 
 </main>
 

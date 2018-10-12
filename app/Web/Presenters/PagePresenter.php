@@ -16,4 +16,9 @@ class PagePresenter extends \BlazeCMS\Presenters\PagePresenter
 
     //custom methods here
 
+    public function getTitle(){
+
+        return $this->title();
+    }
+
 }

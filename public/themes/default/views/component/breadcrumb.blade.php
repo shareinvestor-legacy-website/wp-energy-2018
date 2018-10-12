@@ -3,10 +3,10 @@
 <nav class="page__breadcrumb" aria-label="breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
-            <li class="breadcrumb-item"><a href="javascript:;">Investor relations</a></li>
-            <li class="breadcrumb-item" aria-current="page"><a href="javascript:;">Financial Information</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Management Discussion and Analysiss </li>
+            <li class="breadcrumb-item"><a href="{{localized_url('home')}}">{{t('home')}}</a></li>
+            @foreach ($breadcrumbs as $breadcrumb)
+            <li class="breadcrumb-item{{$loop->last ? ' active' : ''}}"{{$loop->last ? ' aria-current="page"' : ''}} ><a href="javascript:;">{{$breadcrumb->present()->getTitle()}}</a></li>
+            @endforeach
         </ol>
     </div>
 </nav>

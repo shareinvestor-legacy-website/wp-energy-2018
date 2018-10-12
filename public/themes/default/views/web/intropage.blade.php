@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{locale()}}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,38 +11,22 @@
           rel="shortcut icon"/>
 
 
-    <title>{{$post->present()->title .' | '. 'Website'}}</title>
+    <title>{{$post->present()->title .' | '. t('company.name')}}</title>
 
-    @component('layouts.component.css') @endcomponent
+    {!! $post->present()->custom_css !!}
 
-    <style>
-        {!! $post->present()->custom_css !!}
-    </style>
 </head>
-
-
 <body>
-
-
 
 
 {!! $post->present()->body !!}
 
 
+ {!! $post->present()->custom_js !!}
 
-@component('layouts.component.script') @endcomponent
 @component('layouts.component.analytic') @endcomponent
 
 
 
-<script>
-    {!! $post->present()->custom_js !!}
-</script>
-
-
-
-
-
 </body>
-
 </html>

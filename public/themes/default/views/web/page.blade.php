@@ -3,8 +3,8 @@
 
 @section('title', title($page->present()->title, t('company.name')))
 
-@component('component.breadcrumb') @endcomponent
-@component('component.titlepage') @endcomponent
+@component('component.breadcrumb', ['breadcrumbs'=>$page->breadcrumbs()]) @endcomponent
+@component('component.titlepage', ['title'=>$page->present()->title]) @endcomponent
 
 
 @section('body')

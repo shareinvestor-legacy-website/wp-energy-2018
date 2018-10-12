@@ -50,7 +50,7 @@
             "name": "Who We Are",
             "submenus": [{
                     "name": "About Us",
-                    "submenu": [{
+                    "submenus": [{
                             "name": "Corporate Info"
                         },
                         {
@@ -64,7 +64,7 @@
                         },
                         {
                             "name": "Management Structure",
-                            "submenu": [{
+                            "submenus": [{
                                     "name": "Organization Chart"
                                 },
                                 {
@@ -94,7 +94,7 @@
                 },
                 {
                     "name": "Corporate Social Responsibility",
-                    "submenu": [{
+                    "submenus": [{
                             "name": "Corporate Social Responsibility Policy"
                         },
                         {
@@ -107,7 +107,7 @@
                 },
                 {
                     "name": "Corporate Governance",
-                    "submenu": [{
+                    "submenus": [{
                             "name": "Corporate Governance Policy"
                         },
                         {
@@ -123,7 +123,7 @@
                 },
                 {
                     "name": "Join Us",
-                    "submenu": [{
+                    "submenus": [{
                             "name": "Available Positions"
                         },
                         {

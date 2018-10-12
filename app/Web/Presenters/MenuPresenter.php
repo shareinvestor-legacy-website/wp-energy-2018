@@ -14,5 +14,9 @@ class MenuPresenter extends \BlazeCMS\Presenters\MenuPresenter
 
     //custom methods here
 
+    public function getTitle(){
+
+        return $this->name();
+    }
 
 }
