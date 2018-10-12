@@ -43,7 +43,7 @@
 
                                 @foreach($menu->getChildren(true) as $child)
 
-                                    @if($child->isLeaf())
+                                    @if($child->isLeaf() || $child->hasTag('has-sidebar'))
 
                                     <li class="nav-item">
                                         <a class="nav-link{{$child->present()->isActive ? ' active' : ''}}" href="{{$child->present()->url}}" target="{{$child->present()->external_url_target}}">

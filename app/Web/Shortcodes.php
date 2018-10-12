@@ -55,4 +55,17 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
 
         return view('shortcode.home.hero-banner', compact('posts'));
     }
+
+    public function download(ShortcodeInterface $s)
+    {
+
+        $slug = $s->getParameter('slug');
+        $limit = $s->getParameter('limit');
+        $posts = $this->postService->getCoerciveOrder("download/{$slug}");
+
+        if($limit)
+            $posts = $posts->take($limit);
+
+        return view('shortcode.download', compact('posts'));
+    }
 }

@@ -210,15 +210,16 @@ class WebController extends Controller
     }
 
     //report
-    public function report($root, $page2)
+    public function report($root, $category)
     {
+        $category = $this->categoryService->get("report/{$category}")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($root, $parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+        $posts = $this->postService->get($category->path);
 
-        $posts = $this->apiService->getDownloads($page2);
-
-        $menu = $this->menuService->get($root, $page2);
-        $posts =  $this->apiService->queryByYear(null, $posts);
-
-        return view('web.report.index', compact('root', 'menu', 'posts'));
+        return view('web.report.index', compact('root', 'menu', 'category', 'posts', 'title', 'sidebar'));
     }
 
     public function management($root, $category)
