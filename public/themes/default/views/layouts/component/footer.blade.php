@@ -6,10 +6,10 @@
                 <div class="footer__copyright">
 
                     <p class="footer__copyright--title">
-                        {{t('copyright')}}
+                        {!! t('copyright') !!}
                     </p>
 
-                    @component('component.menu.header', ['menus'=> $footer_menus]) @endcomponent
+                    @component('component.menu.footer', ['menus'=> $footer_menus]) @endcomponent
 
                 </div>
             </div>
