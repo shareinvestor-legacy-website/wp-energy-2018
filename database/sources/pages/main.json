@@ -76,12 +76,6 @@
                     },
                     {
                         "title": "Management Structure"
-                    },
-                    {
-                        "title": "Awards & Recognitions"
-                    },
-                    {
-                        "title": "Company Subsidiary"
                     }
                 ]
             },
@@ -160,19 +154,6 @@
                 }]
             },
             {
-                "title": "Newsroom",
-                "sub_pages": [{
-                        "title": "SET Announcements"
-                    },
-                    {
-                        "title": "Press Releases"
-                    },
-                    {
-                        "title": "News Clippings"
-                    }
-                ]
-            },
-            {
                 "title": "Information Request",
                 "sub_pages": [{
                         "title": "IR Contact"
@@ -184,19 +165,6 @@
                         "title": "FAQ"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "title": "News & Media",
-        "sub_pages": [{
-                "title": "News"
-            },
-            {
-                "title": "VDO"
-            },
-            {
-                "title": "Article / Knowledge Sharing"
             }
         ]
     },

@@ -280,14 +280,13 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("update/{$category}")->first();
         $posts = $this->postService->queryByYear(null, null, $category->path);
-        $relates = $posts->except(['id' => $post->id])->take(4);
 
         $gallery = $post->galleries()->first();
 
-        $root = $this->menuService->getBySlug($root);
-        $menu = $this->menuService->getBySlug($root->slug, $category->slug);
+        $menu = $this->menuService->get($root, $category->slug);
+        $title = $menu->present()->name;
 
-        return view('web.update.detail', compact('root', 'menu', 'sidebar', 'category', 'post', 'gallery', 'relates'));
+        return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery'));
     }
 
 
