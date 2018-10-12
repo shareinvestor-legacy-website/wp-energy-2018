@@ -128,6 +128,21 @@ class WebController extends Controller
 
     }
 
+    //award
+    public function award($root)
+    {
+
+        $category = $this->categoryService->get("awards-recognitions")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+        $posts = $this->postService->getCoerciveOrder($category->path);
+        $highlights = $this->postService->getCoerciveOrder("{$category->path}/highlights");
+
+        return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts', 'title', 'sidebar'));
+    }
+
     //download
     public function download(Request $request, $root, $page2)
     {

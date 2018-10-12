@@ -40,6 +40,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
     Route::group(['prefix' => '{root}'], function () {
 
+        //awards-recognitions
+        Route::get('awards-recognitions', 'WebController@award');
+
         //download
         Route::get('download/{page2}', 'WebController@download');
 
