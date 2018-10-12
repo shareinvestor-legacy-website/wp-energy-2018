@@ -36,9 +36,15 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
     'middleware' => ['web', 'redirectToLocale', 'localeSessionRedirect', 'localizationRedirect', 'rebuildingThemeAssets', 'onlyThailandVisitor']], function () {
 
     Route::get('', 'WebController@index');
-    Route::get('home', 'WebController@home');
+    Route::get('home/{page2?}', 'WebController@home');
 
+    Route::group(['prefix' => '{root}'], function () {
 
+        //management
+        Route::get('management/{category}', 'WebController@management');
+        Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
+
+    });
 
 
     //post mail

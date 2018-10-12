@@ -34,7 +34,8 @@
         @if(!$is_home)
 
             @yield('breadcrumb')
-            @yield('titlePage')
+            @yield('titlepage')
+            @yield('sidebar')
 
         @endif
 

@@ -11,9 +11,18 @@ namespace BlazeCMS\Web\Services;
 
 use BlazeCMS\Models\Menu;
 use BlazeCMS\Supports\HttpClient;
+use BlazeCMS\IR\QueryService;
 
 class ApiService
 {
+
+    private $irService;
+
+    public function __construct(QueryService $irService)
+    {
+
+        $this->irService = $irService;
+    }
 
     public function menu($irmenu = null, $sources = null)
     {
@@ -59,5 +68,120 @@ class ApiService
         return $years;
     }
 
+    public function queryByYear($year, $posts)
+    {
+        if($year)
+        {
+            $posts = $posts->filter(function ($item, $key) use ($year) {
+                return $item->datetime('yyyy', 'en') == $year;
+            });
+        }
 
+        return $posts;
+    }
+
+    public function getDownloadByYear($year, $results)
+    {
+        $posts = $results->filter(function ($item, $key) use ($year) {
+            return $item->datetime('yyyy') == intl_convert_format($year, 'yyyy', 'yyyy', 'en');
+        });
+
+        return $posts;
+    }
+
+    public function groupDownloadByQuater($results, $year = null)
+    {
+        $results = $results->filter(function ($item) use ($year) {
+            return $item->datetime('yyyy') == intl_convert_format($year, 'yyyy', 'yyyy', 'en');
+        });
+
+        // group by year
+        $posts = $results->groupBy(function ($item, $key) {
+            return $item->datetime('yyyy');
+        });
+
+        return $posts;
+    }
+
+
+    public function groupByYear($results)
+    {
+        $posts = $results->groupBy(function ($item, $key) {
+            return $item->datetime('yyyy');
+        });
+
+        return $posts;
+    }
+
+
+    public function getNews($slug = null)
+    {
+        switch ($slug) {
+            case 'set-announcements':
+                return $this->irService->getSetAnnouncements();
+                break;
+
+            case 'press-releases':
+                return $this->irService->getPressReleases();
+                break;
+
+            case 'news-clippings':
+                return $this->irService->getNewsClippings();
+                break;
+        }
+
+    }
+
+    public function getDownloads($slug = null)
+    {
+        switch ($slug) {
+            case 'financial-statements':
+                return $this->irService->getFinancialStatements();
+                break;
+
+            case 'management-discussion-and-analysis':
+                return $this->irService->getMdna();
+                break;
+
+            case 'form-56-1':
+                return $this->irService->getForm561();
+                break;
+
+            case 'webcast':
+                return $this->irService->getWebcasts();
+                break;
+
+            case 'presentation':
+                return $this->irService->getPresentations();
+                break;
+
+            case 'annual-report':
+                return $this->irService->getAnnualReports();
+                break;
+
+            case 'company-snapshot':
+                return $this->irService->getCompanySnapshots();
+                break;
+
+            case 'investor-newsletter':
+                return $this->irService->getNewsletters();
+                break;
+
+            case 'analyst-report':
+                return $this->irService->getAnalyses();
+                break;
+
+        }
+    }
+
+    public function getMatchingPosts($posts, ...$keys)
+    {
+        return $posts->filter(function($item) use ($keys){
+
+            foreach($keys as $key){
+
+                return str_contains($item->remarks, $key);
+            }
+        });
+    }
 }

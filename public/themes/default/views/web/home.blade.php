@@ -23,7 +23,7 @@
                     <div class="col-12">
                         <a class="card card--horizontal" href="/who-we-are/about-us/corporate-info.html">
                             <div class="card__image">
-                                <img src="/themes/default/assets/static/images/home/corporate-info.jpg" alt="" class="img-fluid">
+                                <img src="/storage/home/corporate-info.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="card__body">
                                 <h3 class="card__title">Corporate Info</h3>
@@ -35,7 +35,7 @@
                     <div class="col-12 col-sm-6 border--top-right">
                         <a class="card card--highlight" href="/who-we-are/about-us/award.html">
                             <div class="card__image">
-                                <img src="/themes/default/assets/static/images/home/award.jpg" alt="" class="img-fluid">
+                                <img src="/storage/home/award.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="card__body">
                                 <h3 class="card__title">Award & Recognitions</h3>
@@ -47,7 +47,7 @@
                     <div class="col-12 col-sm-6 border--top-right">
                         <a class="card card--highlight" href="/who-we-are/join-us/positions.html">
                             <div class="card__image">
-                                <img src="/themes/default/assets/static/images/home/join-with-us.jpg" alt="" class="img-fluid">
+                                <img src="/storage/home/join-with-us.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="card__body">
                                 <h3 class="card__title">Join with us</h3>
@@ -61,7 +61,7 @@
             <div class="col-12 col-lg-4 border--top">
                 <div class="card card--vertical">
                     <div class="card__image">
-                        <img src="/themes/default/assets/static/images/home/customer-distribution.jpg" alt="" class="img-fluid">
+                        <img src="/storage/home/customer-distribution.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="card__body">
                         <h3 class="card__title">Customer & Distribution</h3>
@@ -91,7 +91,7 @@
                     <div class="item">
                         <a class="card card--overlap" href="/who-we-are/csr/activities/index.html">
                             <div class="card__image">
-                                <img src="/themes/default/assets/static/images/home/news-1.jpg" alt="" class="img-fluid">
+                                <img src="/storage/home/news-1.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="card__body">
                                 <p class="card__category">CSR Activities</p>
@@ -107,7 +107,7 @@
                     <div class="item">
                         <a class="card card--overlap" href="/news-and-media/news/index.html">
                             <div class="card__image">
-                                <img src="/themes/default/assets/static/images/home/news-2.jpg" alt="" class="img-fluid">
+                                <img src="/storage/home/news-2.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="card__body">
                                 <p class="card__category">Press Release</p>
@@ -122,7 +122,7 @@
                     <div class="item">
                         <a class="card card--overlap" href="/news-and-media/video/index.html">
                             <div class="card__image">
-                                <img src="/themes/default/assets/static/images/home/news-3.jpg" alt="" class="img-fluid">
+                                <img src="/storage/home/news-3.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="card__body">
                                 <p class="card__category">VDO</p>
@@ -199,7 +199,7 @@
             <div class="col-12 col-md-8 col-lg-4">
                 <div class="card card--overlap">
                     <div class="card__image">
-                        <img src="/themes/default/assets/static/images/home/quick-download.jpg" alt="" class="img-fluid">
+                        <img src="/storage/home/quick-download.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="card__body">
                         <h3 class="card__title">Quick Download</h3>

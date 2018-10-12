@@ -136,7 +136,10 @@ class Menu extends Node implements AuditableContract
         return $query->whereIn('path', $paths);
     }
 
-
+    public function breadcrumbs()
+    {
+        return $this->getAncestorsAndSelfWithoutRoot();
+    }
 
     /**
      * lookup children faster with cache

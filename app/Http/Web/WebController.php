@@ -85,14 +85,16 @@ class WebController extends Controller
     {
         $page = $this->pageService->get($page1, $page2, $page3, $page4, $page5);
 
-
         if (isset($page)) {
+            $parent = $page->parent()->first();
+            $sidebar = $this->menuService->get($parent->slug);
+            $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->title : $page->present()->title;
 
             //redirect to external url if exists
             if (!empty($page->external_url)) {
                 return redirect($page->external_url);
             }
-            return view('web.page', compact('page'));
+            return view('web.page', compact('page', 'sidebar', 'title'));
         }
 
         return redirect('home');
@@ -123,6 +125,35 @@ class WebController extends Controller
         $dialog = $this->postService->get('intro-dialog')->first();
 
         return view('web.home', compact('is_home', 'pages', 'page', 'dialog'));
+
+    }
+
+    public function management($root, $category)
+    {
+
+        $category = $this->categoryService->get("management/{$category}")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+        $posts = $this->postService->getCoerciveOrder($category->path);
+
+        return view('web.management.index', compact('root', 'menu', 'category', 'posts', 'title', 'sidebar'));
+    }
+
+    public function showManagement($root, $category, $id, $title = null)
+    {
+
+        $post = $this->postService->find($id);
+
+        if ($post->present()->title(true) !== $title) {
+            return redirect(action('Web\WebController@showManagement', ['root'=> $root, 'category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]));
+        }
+
+        $category = $this->categoryService->get("management/{$category}")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+
+        return view('web.management.detail', compact('root', 'menu', 'category', 'post'));
 
     }
 
