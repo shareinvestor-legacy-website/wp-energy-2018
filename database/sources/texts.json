@@ -8,8 +8,8 @@
     {
         "name": "copyright",
         "values": {
-            "en": "© Copyright 2018 WP Energy Public Company Limited",
-            "th": "© Copyright 2018 WP Energy Public Company Limited"
+            "en": "© copyright 2018 <span class=\"d-inline-block\">wp energy public company limited</span>",
+            "th": "© copyright 2018 <span class=\"d-inline-block\">wp energy public company limited</span>"
         }
     },
 

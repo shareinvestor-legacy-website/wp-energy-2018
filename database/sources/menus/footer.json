@@ -1,11 +1,7 @@
 {
     "name": "Footer",
     "order": 1,
-    "submenus": [
-        {
-            "name": "Privacy Policy"
-        },
-        {
+    "submenus": [{
             "name": "Terms and Conditions"
         },
         {
@@ -13,4 +9,3 @@
         }
     ]
 }
-
