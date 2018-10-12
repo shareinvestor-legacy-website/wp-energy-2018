@@ -8,7 +8,16 @@
         "name": "Hero Banner"
     },
     {
+        "name": "Awards & Recognitions",
+        "sub_categories": [{
+            "name": "Highlights"
+        }]
+    },
+    {
         "name": "Company Milestone"
+    },
+    {
+        "name": "Company Subsidiary"
     },
     {
         "name": "Document",

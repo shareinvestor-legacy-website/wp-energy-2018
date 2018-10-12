@@ -46,6 +46,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //milestone
         Route::get('company-milestone', 'WebController@milestone');
 
+        //milestone
+        Route::get('company-subsidiary', 'WebController@subsidiary');
+
         //download
         Route::get('download/{page2}', 'WebController@download');
 
