@@ -29,7 +29,24 @@
 
 
 <main class="main content">
-    @section('body')  @show
+
+    @if($is_home)
+
+        @section('body')  @show
+
+    @else
+
+    <article class="page">
+
+        @yield('breadcrumb')
+        @yield('titlePage')
+
+        @section('body')  @show
+
+    </article>
+
+    @endif
+
 </main>
 
 
