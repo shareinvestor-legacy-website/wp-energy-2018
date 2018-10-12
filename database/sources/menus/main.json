@@ -202,7 +202,6 @@
                 {
                     "name": "Webcasts and Presentations"
                 },
-
                 {
                     "name": "Newsroom",
                     "submenus": [{
@@ -213,19 +212,6 @@
                         },
                         {
                             "name": "IR Newsletters"
-                        }
-                    ]
-                },
-                {
-                    "name": "Newsroom",
-                    "submenus": [{
-                            "name": "SET Announcements"
-                        },
-                        {
-                            "name": "Press Releases"
-                        },
-                        {
-                            "name": "News Clippings"
                         }
                     ]
                 },

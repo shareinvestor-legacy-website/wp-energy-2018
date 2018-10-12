@@ -62,7 +62,7 @@
         "title": "Who We Are",
         "sub_pages": [{
                 "title": "About Us",
-                "submenu": [{
+                "sub_pages": [{
                         "title": "Corporate Info"
                     },
                     {
@@ -87,13 +87,13 @@
             },
             {
                 "title": "Corporate Social Responsibility",
-                "submenu": [{
+                "sub_pages": [{
                     "title": "Corporate Social Responsibility Policy"
                 }]
             },
             {
                 "title": "Corporate Governance",
-                "submenu": [{
+                "sub_pages": [{
                         "title": "Corporate Governance Policy"
                     },
                     {
@@ -109,7 +109,7 @@
             },
             {
                 "title": "Join Us",
-                "submenu": [{
+                "sub_pages": [{
                         "title": "Available Positions"
                     },
                     {
