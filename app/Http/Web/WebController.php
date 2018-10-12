@@ -110,11 +110,7 @@ class WebController extends Controller
 
         } else {
 
-            $is_home = true;
-            $page = $this->pageService->get('home');
-            $dialog = $this->postService->get('intro-dialog')->first();
-
-            return view('web.home', compact('is_home', 'page', 'dialog'));
+            return $this->home();
         }
     }
 
@@ -122,10 +118,11 @@ class WebController extends Controller
     {
         $is_home = true;
         $page = $this->pageService->get('home');
+        $pages = $this->pageService->get('home')->children()->public()->get();
 
         $dialog = $this->postService->get('intro-dialog')->first();
 
-        return view('web.home', compact('is_home', 'page', 'dialog'));
+        return view('web.home', compact('is_home', 'pages', 'page', 'dialog'));
 
     }
 

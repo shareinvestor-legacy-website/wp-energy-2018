@@ -48,4 +48,11 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
     }
 
 
+    public function hero_banner()
+    {
+
+        $posts = $this->postService->getCoerciveOrder('hero-banner');
+
+        return view('shortcode.home.hero-banner', compact('posts'));
+    }
 }

@@ -16,7 +16,7 @@
 
             <div class="col-4 col-md-2 col-lg-1 order-lg-4">
                 <div class="ml-auto footer__mascot">
-                    <img src="{{theme_url('assets/static/images/home/charactor.png')}}" alt="">
+                    <img src="{{theme_url('assets/static/images/default/charactor.png')}}" alt="">
                 </div>
             </div>
 
