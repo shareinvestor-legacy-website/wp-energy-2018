@@ -190,20 +190,17 @@ class ApiService
 
             foreach ($ends as $post)
             {
-                if(str_contains($post->present()->title, $item->present()->title) || str_contains($item->present()->title, $post->present()->title))
+                if($item->title == $post->title)
                 {
-                    $post->file = $item->file ?? $post->file;
-                    $post->url = $item->url ?? $post->url;
-
-                    return $post;
-                }else{
-
-                    $item->file = $item->file ?? null;
-                    $item->url = $item->url ?? null;
-
-                    return $item;
+                    $item->file = $item->file ?? $post->file;
+                    $item->url = $item->url ?? $post->url;
+                    $item->title = $item->title ?? $post->title;
+                    $item->image = $item->image ?? $post->image;
+                    $item->filesize = $item->filesize ?? $post->filesize;
                 }
             }
+
+            return  $item;
         });
     }
 }

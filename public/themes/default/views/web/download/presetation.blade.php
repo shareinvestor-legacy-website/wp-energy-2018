@@ -12,7 +12,7 @@
 <section>
     <div class="container mb-5">
 
-        @component('component.filter.year-all', compact('years', 'year', 'root', 'category')) @endcomponent
+        @component('component.filter.year', compact('years', 'year', 'root', 'category')) @endcomponent
 
         <div class="row">
             @foreach ($posts as $post)
@@ -29,12 +29,14 @@
                             {{t('download')}} <i class="icon-download"></i>
                         </a>
                         @endif
-
-                        @if($post->present()->url != null)
                         <hr>
+                        @if($post->present()->url != null)
+
                         <a href="{{$post->present()->url}}" target="_blank" class="btn btn-secondary">
                             {{t('view.online')}} <i class="icon-book"></i>
                         </a>
+                        @else
+                        <span>&nbsp;</span>
                         @endif
 
                     </div>
