@@ -190,11 +190,16 @@ class ApiService
 
             foreach ($ends as $post)
             {
-                if(str_contains($post->present()->title, $item->present()->title))
+                if(str_contains($post->present()->title, $item->present()->title) || str_contains($item->present()->title, $post->present()->title))
                 {
+                    $post->file = $item->file ?? $post->file;
+                    $post->url = $item->url ?? $post->url;
 
                     return $post;
                 }else{
+
+                    $item->file = $item->file ?? null;
+                    $item->url = $item->url ?? null;
 
                     return $item;
                 }

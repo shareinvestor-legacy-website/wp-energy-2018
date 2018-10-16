@@ -24,13 +24,13 @@
                     <div class="card__body">
                         <h4 class="card__title pb-3">{{$post->present()->title}}</h4>
 
-                        @if(isset($post->present()->file))
+                        @if($post->present()->file != null)
                         <a href="{{$post->present()->file}}" target="_blank" class="btn btn-secondary">
                             {{t('download')}} <i class="icon-download"></i>
                         </a>
                         @endif
 
-                        @if(isset($post->present()->url))
+                        @if($post->present()->url != null)
                         <hr>
                         <a href="{{$post->present()->url}}" target="_blank" class="btn btn-secondary">
                             {{t('view.online')}} <i class="icon-book"></i>

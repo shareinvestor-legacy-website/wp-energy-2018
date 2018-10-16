@@ -51,13 +51,13 @@ class Download extends Presenter
     public function file()
     {
 
-        return $this->entity->file;
+        return isset($this->entity->file) ? $this->entity->file : null;
     }
 
     public function url()
     {
 
-        return $this->entity->url;
+        return isset($this->entity->url) ? $this->entity->url : null;
     }
 
     public function image()
