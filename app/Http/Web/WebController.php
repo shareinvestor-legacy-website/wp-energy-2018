@@ -63,9 +63,10 @@ class WebController extends Controller
     {
 
 
-        view()->share('is_home', false);
+        view()->share('isHome', false);
+        view()->share('hasFilterAll', true);
         view()->share('menus', $this->menuService->get('main'));
-        view()->share('footer_menus', $this->menuService->get('footer'));
+        view()->share('footerMenus', $this->menuService->get('footer'));
 
     }
 
@@ -118,13 +119,13 @@ class WebController extends Controller
 
     public function home()
     {
-        $is_home = true;
+        $isHome = true;
         $page = $this->pageService->get('home');
         $pages = $this->pageService->get('home')->children()->public()->get();
 
         $dialog = $this->postService->get('intro-dialog')->first();
 
-        return view('web.home', compact('is_home', 'pages', 'page', 'dialog'));
+        return view('web.home', compact('isHome', 'pages', 'page', 'dialog'));
 
     }
 
@@ -292,6 +293,44 @@ class WebController extends Controller
         return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery', 'action'));
     }
 
+
+    //download
+    public function irDownload(Request $request, $page2, $page3)
+    {
+
+        $posts = $this->apiService->getDownloads($page3);
+        $view = $this->apiService->getDownloadView($page3);
+
+        $menu = $this->menuService->get('investor-relations', $page3);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get('investor-relations', $parent->slug);
+        $title = $menu->present()->name;
+
+        $years = $this->apiService->getYears($posts, 'en');
+        $year = $request->year ?? $years->first();
+        $years = locale_years_mapping($years);
+
+        $latest = $posts->first();
+
+        if($menu->slug != 'form-56-1')
+            $posts =  $this->apiService->queryByYear($year, $posts);
+
+        $hasFilterAll = false;
+
+        return view("web.ir.download.{$view}", compact('menu', 'title', 'sidebar', 'posts', 'years', 'year', 'latest', 'hasFilterAll'));
+    }
+
+    //report
+    public function irReport($root, $page2)
+    {
+
+        $posts = $this->apiService->getDownloads($page2);
+
+        $menu = $this->menuService->get($root, $page2);
+        $posts =  $this->apiService->queryByYear(null, $posts);
+
+        return view('web.report.index', compact('root', 'menu', 'posts'));
+    }
 
 
 }

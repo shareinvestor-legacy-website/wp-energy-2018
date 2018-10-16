@@ -9,7 +9,7 @@
                         {!! t('copyright') !!}
                     </p>
 
-                    @component('component.menu.footer', ['menus'=> $footer_menus]) @endcomponent
+                    @component('component.menu.footer', ['menus'=> $footerMenus]) @endcomponent
 
                 </div>
             </div>

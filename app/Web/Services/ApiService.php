@@ -174,6 +174,17 @@ class ApiService
         }
     }
 
+    public function getDownloadView($slug = null)
+    {
+        if ($slug == 'form-56-1') {
+
+            return 'form561';
+        } else {
+
+            return 'index';
+        }
+    }
+
     public function getMatchingPosts($posts, ...$keys)
     {
         return $posts->filter(function($item) use ($keys){

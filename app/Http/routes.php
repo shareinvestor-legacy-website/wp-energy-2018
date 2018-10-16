@@ -70,7 +70,13 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::get('update/{slug}/{id}/{title?}', 'WebController@showUpdate');
     });
 
+    Route::group(['prefix' => 'investor-relations'], function () {
 
+        //download
+        Route::get('{page2}/download/{page3}', 'WebController@irDownload');
+        //report
+        Route::get('{page2}/report/{page3}', 'WebController@irReport');
+    });
 
 
     //post mail

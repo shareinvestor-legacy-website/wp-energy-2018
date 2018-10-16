@@ -29,9 +29,9 @@
 
 <main class="main content">
 
-    <article class="{{$is_home ? 'home' : 'page'}}">
+    <article class="{{$isHome ? 'home' : 'page'}}">
 
-        @if(!$is_home)
+        @if(!$isHome)
 
             @yield('breadcrumb')
             @yield('titlepage')
