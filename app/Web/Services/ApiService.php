@@ -159,18 +159,9 @@ class ApiService
                 return $this->irService->getAnnualReports();
                 break;
 
-            case 'company-snapshot':
-                return $this->irService->getCompanySnapshots();
+            case 'factsheet':
+                return $this->irService->getFactsheets();
                 break;
-
-            case 'investor-newsletter':
-                return $this->irService->getNewsletters();
-                break;
-
-            case 'analyst-report':
-                return $this->irService->getAnalyses();
-                break;
-
         }
     }
 
@@ -185,13 +176,28 @@ class ApiService
         }
     }
 
-    public function getMatchingPosts($posts, ...$keys)
+    public function getMatchingPosts($posts, $posts2)
     {
-        return $posts->filter(function($item) use ($keys){
+        $starts = $posts;
+        $ends = $posts2;
 
-            foreach($keys as $key){
+        if($posts->count() < $posts2->count()){
+            $starts = $posts2;
+            $ends = $posts;
+        }
 
-                return str_contains($item->remarks, $key);
+        return $starts->map(function($item) use ($ends){
+
+            foreach ($ends as $post)
+            {
+                if(str_contains($post->present()->title, $item->present()->title))
+                {
+
+                    return $post;
+                }else{
+
+                    return $item;
+                }
             }
         });
     }

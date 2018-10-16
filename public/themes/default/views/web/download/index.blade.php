@@ -13,7 +13,7 @@
 <section>
     <div class="container mb-5">
 
-        @component('component.filter.year', compact('years', 'year', 'root', 'category', 'hasFilterAll'))
+        @component('component.filter.year-all', compact('years', 'year', 'root', 'category'))
         @endcomponent
 
         <div class="row">

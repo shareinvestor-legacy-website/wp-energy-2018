@@ -64,7 +64,6 @@ class WebController extends Controller
 
 
         view()->share('isHome', false);
-        view()->share('hasFilterAll', true);
         view()->share('menus', $this->menuService->get('main'));
         view()->share('footerMenus', $this->menuService->get('footer'));
 
@@ -315,21 +314,41 @@ class WebController extends Controller
         if($menu->slug != 'form-56-1')
             $posts =  $this->apiService->queryByYear($year, $posts);
 
-        $hasFilterAll = false;
-
-        return view("web.ir.download.{$view}", compact('menu', 'title', 'sidebar', 'posts', 'years', 'year', 'latest', 'hasFilterAll'));
+        return view("web.download.{$view}", compact('menu', 'title', 'sidebar', 'posts', 'years', 'year', 'latest'));
     }
 
     //report
-    public function irReport($root, $page2)
+    public function irReport($page2, $page3)
     {
 
-        $posts = $this->apiService->getDownloads($page2);
+        $posts = $this->apiService->getDownloads($page3);
 
-        $menu = $this->menuService->get($root, $page2);
-        $posts =  $this->apiService->queryByYear(null, $posts);
+        $menu = $this->menuService->get('investor-relations', $page3);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get('investor-relations', $parent->slug);
+        $title = $menu->present()->name;
 
-        return view('web.report.index', compact('root', 'menu', 'posts'));
+        return view('web.report.index', compact('menu', 'sidebar', 'title', 'posts'));
+    }
+
+    //presentation
+    public function presentation(Request $request)
+    {
+
+        $webcasts = $this->apiService->getDownloads('webcast');
+        $presentations = $this->apiService->getDownloads('presentation');
+        $posts = $this->apiService->getMatchingPosts($webcasts, $presentations);
+
+        $menu = $this->menuService->get('investor-relations', 'webcasts-and-presentations');
+        $title = $menu->present()->name;
+
+        $years = $this->apiService->getYears($webcasts, 'en');
+        $year = $request->year ?? $years->first();
+        $years = locale_years_mapping($years);
+
+        $posts =  $this->apiService->queryByYear($year, $posts);
+
+        return view("web.download.presetation", compact('menu', 'title', 'posts', 'years', 'year'));
     }
 
 

@@ -6,6 +6,7 @@
                 <div class="filter__selection">
                     <div class="filter__icon"><i class="icon-arrow-down"></i></div>
                     <select name="year" class="form-control filter__select" onchange="this.form.submit()">
+                        <option value="">{{t('all')}}</option>
                         @foreach ($years as $key => $value)
                         <option value="{{$key}}"{{$key == $year ? ' selected' : ''}}>
                             {{$value}}
