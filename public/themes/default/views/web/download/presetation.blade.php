@@ -12,7 +12,7 @@
 <section>
     <div class="container mb-5">
 
-        @component('component.filter.year', compact('years', 'year', 'root', 'category')) @endcomponent
+        @component('component.filter.year', compact('years', 'year', 'category')) @endcomponent
 
         <div class="row">
             @foreach ($posts as $post)

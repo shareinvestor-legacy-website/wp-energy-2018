@@ -66,18 +66,22 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
 
         //news
-        Route::get('update/{slug}', 'WebController@update');
-        Route::get('update/{slug}/{id}/{title?}', 'WebController@showUpdate');
+        Route::get('update/{category}', 'WebController@update');
+        Route::get('update/{category}/{id}/{title?}', 'WebController@showUpdate');
     });
 
+    //ir
     Route::group(['prefix' => 'investor-relations'], function () {
 
         //download
-        Route::get('{page2}/download/{page3}', 'WebController@irDownload');
+        Route::get('{page2}/download/{slug}', 'WebController@irDownload');
         //report
-        Route::get('{page2}/report/{page3}', 'WebController@irReport');
+        Route::get('{page2}/report/{slug}', 'WebController@irReport');
         //webcast & presentation
         Route::get('webcasts-and-presentations', 'WebController@presentation');
+        //news
+        Route::get('newsroom/update/{slug}', 'WebController@irUpdate');
+        Route::get('newsroom/update/{slug}/{id}/{title?}', 'WebController@showIrUpdate');
     });
 
 

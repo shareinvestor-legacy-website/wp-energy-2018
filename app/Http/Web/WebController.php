@@ -294,13 +294,13 @@ class WebController extends Controller
 
 
     //download
-    public function irDownload(Request $request, $page2, $page3)
+    public function irDownload(Request $request, $page2, $slug)
     {
 
-        $posts = $this->apiService->getDownloads($page3);
-        $view = $this->apiService->getDownloadView($page3);
+        $posts = $this->apiService->getDownloads($slug);
+        $view = $this->apiService->getDownloadView($slug);
 
-        $menu = $this->menuService->get('investor-relations', $page3);
+        $menu = $this->menuService->get('investor-relations', $slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get('investor-relations', $parent->slug);
         $title = $menu->present()->name;
@@ -318,12 +318,12 @@ class WebController extends Controller
     }
 
     //report
-    public function irReport($page2, $page3)
+    public function irReport($page2, $slug)
     {
 
-        $posts = $this->apiService->getDownloads($page3);
+        $posts = $this->apiService->getDownloads($slug);
 
-        $menu = $this->menuService->get('investor-relations', $page3);
+        $menu = $this->menuService->get('investor-relations', $slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get('investor-relations', $parent->slug);
         $title = $menu->present()->name;
@@ -349,6 +349,44 @@ class WebController extends Controller
         $posts =  $this->apiService->queryByYear($year, $posts);
 
         return view("web.download.presetation", compact('menu', 'title', 'posts', 'years', 'year'));
+    }
+
+    public function irUpdate(Request $request, $slug)
+    {
+
+        $search = $request->search;
+        $menu = $this->menuService->get($slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+
+        $posts = $search ? $this->irService->searchNews(utf8_to_html_entities($search)) : $this->apiService->getNews($slug);
+
+        $years = $this->apiService->getYears($posts, 'en');
+        $years = locale_years_mapping($years);
+
+        $year = $request->year ?? null;
+
+        $posts =  $this->apiService->queryByYear($year, $posts);
+
+        $posts =  paginate($posts);
+
+        return view('web.update.ir', compact('root', 'menu', 'slug', 'posts', 'year', 'years', 'search', 'title', 'sidebar'));
+    }
+
+
+    public function showIrUpdate($slug, $id, $title = null)
+    {
+
+        $post = $this->irService->getNewsDetail($id);
+
+        if ($post->present()->title(true) !== $title) {
+            return redirect(action('Web\WebController@showIrUpdate', ['slug' => $slug, 'id' => $id, 'title' => $post->present()->title(true)]));
+        }
+
+        $menu = $this->menuService->get($root, $slug);
+
+        return view('web.update.detail', compact('root', 'menu', 'slug', 'post'));
     }
 
 
