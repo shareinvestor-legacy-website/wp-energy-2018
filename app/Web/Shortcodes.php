@@ -67,6 +67,30 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         return view('shortcode.home.news', compact('posts', 'root'));
     }
 
+    public function home_stock()
+    {
+        $stock = $this->irService->getStockPrice();
+
+        return view('shortcode.home.stock', compact('stock'));
+
+    }
+
+    public function ir_highlights(ShortcodeInterface $s)
+    {
+
+        $posts = $this->irService->getHighlightDownloads()->take(3);
+
+        return view('shortcode.home.download', compact('posts'));
+    }
+
+    public function ir_news()
+    {
+
+        $posts = $this->irService->getHighlightNews()->take(2);
+
+        return view('shortcode.home.ir-news', compact('posts'));
+    }
+
     public function download(ShortcodeInterface $s)
     {
 
