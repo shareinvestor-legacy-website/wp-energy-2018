@@ -8,7 +8,7 @@
 
 namespace BlazeCMS\Web;
 
-
+use BlazeCMS\IR\QueryService;
 use BlazeCMS\Web\Services\ApiService;
 use BlazeCMS\Web\Services\CategoryService;
 use BlazeCMS\Web\Services\DepartmentService;
@@ -31,11 +31,12 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
     protected $departmentService;
     protected $locationService;
     protected $apiService;
+    protected $irService;
 
 
     public function __construct(PageService $pageService, PostService $postService, CategoryService $categoryService,
                                 GalleryService $galleryService, PositionService $positionService, DepartmentService $departmentService,
-                                LocationService $locationService, ApiService $apiService)
+                                LocationService $locationService, ApiService $apiService, QueryService $irService)
     {
         $this->pageService = $pageService;
         $this->postService = $postService;
@@ -45,6 +46,7 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         $this->departmentService = $departmentService;
         $this->locationService = $locationService;
         $this->apiService = $apiService;
+        $this->irService = $irService;
     }
 
 
