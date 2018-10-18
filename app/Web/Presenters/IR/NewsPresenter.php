@@ -42,4 +42,35 @@ class NewsPresenter extends \BlazeCMS\IR\Presenter
         return "https://social-plugins.line.me/lineit/share?url=$url";
     }
 
+    public function date($format = 'dd MMM yyyy', $locale = null)
+    {
+        return $this->datetime($format, $locale);
+    }
+
+    public function image($default = null)
+    {
+        if (isset($this->entity->image) && $this->entity->image != '') {
+
+            return $this->entity->image;
+        } else if (isset($default)){
+
+            return theme_url($default);
+        }
+
+        return null;
+    }
+
+    public function is_html()
+    {
+        try {
+
+            return preg_match_all('/<.*>?|<.*\/>?/', $this->entity->body) || $this->entity->body != null;
+
+        } catch (Exception $e) {
+
+            return false;
+        }
+
+    }
+
 }

@@ -276,20 +276,19 @@ class WebController extends Controller
         $post = $this->postService->find($id);
 
         $action = action('Web\WebController@showUpdate', ['root'=> $root, 'category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]);
+        $back = action('Web\WebController@update', ['root'=> $root, 'category' => $category]);
 
         if ($post->present()->title(true) !== $title) {
             return redirect($action);
         }
 
         $category = $this->categoryService->get("update/{$category}")->first();
-        $posts = $this->postService->queryByYear(null, null, $category->path);
-
         $gallery = $post->galleries()->first();
 
         $menu = $this->menuService->get($root, $category->slug);
         $title = $menu->present()->name;
 
-        return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery', 'action'));
+        return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery', 'action', 'back'));
     }
 
 
@@ -380,14 +379,17 @@ class WebController extends Controller
 
         $post = $this->irService->getNewsDetail($id);
 
+        $action = action('Web\WebController@showIrUpdate', ['slug' => $slug, 'id' => $id, 'title' => $post->present()->title(true)]);
+        $back = action('Web\WebController@irUpdate', ['slug'=>$slug]);
+
         if ($post->present()->title(true) !== $title) {
-            return redirect(action('Web\WebController@showIrUpdate', ['slug' => $slug, 'id' => $id, 'title' => $post->present()->title(true)]));
+            return redirect($action);
         }
 
+        $root = 'investor-relations';
         $menu = $this->menuService->get($root, $slug);
+        $title = $menu->present()->name;
 
-        return view('web.update.detail', compact('root', 'menu', 'slug', 'post'));
+        return view('web.update.detail', compact('root', 'menu', 'title', 'post', 'action', 'back'));
     }
-
-
 }

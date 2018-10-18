@@ -26,11 +26,8 @@
 
         </div>
 
-        <div class="page-navigation text-center pt-5">
+        @component('component.filter.pagination', compact('posts', 'year')) @endcomponent
 
-            {{ $posts->appends(['year'=>$year])->links() }}
-
-        </div>
     </div>
 
 </section>

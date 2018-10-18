@@ -42,24 +42,32 @@
 
             {!! $post->present()->body !!}
 
+            @if($post->present()->url != "")
+            <ul>
+                @if(is_array($post->present()->url))
+                    @foreach($post->present()->url as $file)
+                    <li>
+                        <a href="{{ $file }}" target="_blank">Attachment {{ $loop->iteration }}</a>
+                    </li>
+                    @endforeach
+                @else
+                    <li>
+                        <a href="{{ $post->present()->url }}" target="_blank">Attachment 1</a>
+                    </li>
+                @endif
+            </ul>
+            @endif
+
         </div>
 
         <div class="col-12 col-lg-10">
-            <p>
-                <em>{{t('share')}}: </em>
-                <a class="px-1" href="{{$post->present()->facebookUrl($action)}}" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="px-1" href="{{$post->present()->twitterUrl($action)}}" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="px-1" href="{{$post->present()->lineUrl($action)}}" target="_blank">
-                    <i class="fab fa-line"></i>
-                </a>
-            </p>
+
+            @component('web.update.component.share', compact('action')) @endcomponent
+
         </div>
+
         <div class="col-12 col-lg-10 border-top pt-3">
-            <a class="btn btn-primary btn--back d-inline-flex" href="{{action('Web\WebController@update', ['root'=>$root, 'category'=>$category->slug])}}">{{t('back')}}</a>
+            <a class="btn btn-primary btn--back d-inline-flex" href="{{$back}}">{{t('back')}}</a>
         </div>
     </div>
 
