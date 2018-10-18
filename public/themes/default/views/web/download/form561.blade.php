@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12 col-md-12 col-lg-4">
 
-                @component('web.ir.download.component.latest', ['post'=>$latest]) @endcomponent
+                @component('web.download.component.latest', ['post'=>$latest]) @endcomponent
 
             </div>
             <div class="col-12 col-md-12 col-lg-8">
@@ -32,7 +32,7 @@
                             @foreach ($posts as $post)
 
                                 @if(!$loop->first)
-                                @component('web.ir.download.component.item', compact('post')) @endcomponent
+                                @component('web.download.component.item', compact('post')) @endcomponent
                                 @endif
 
                             @endforeach
