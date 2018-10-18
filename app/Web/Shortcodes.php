@@ -56,6 +56,17 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         return view('shortcode.home.hero-banner', compact('posts'));
     }
 
+    public function home_news(ShortcodeInterface $s)
+    {
+
+        $limit = $s->getParameter('limit') ?? 3;
+        $root = 'news-media';
+        $categories = ['update/company-news', 'update/press-releases', 'update/csr-activities'];
+        $posts = $this->postService->get(...$categories)->take($limit);
+
+        return view('shortcode.home.news', compact('posts', 'root'));
+    }
+
     public function download(ShortcodeInterface $s)
     {
 
