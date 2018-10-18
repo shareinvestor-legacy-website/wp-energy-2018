@@ -68,6 +68,10 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //news
         Route::get('update/{category}', 'WebController@update');
         Route::get('update/{category}/{id}/{title?}', 'WebController@showUpdate');
+
+        //video
+        Route::get('video/{category}', 'WebController@video');
+
     });
 
     //ir

@@ -291,6 +291,23 @@ class WebController extends Controller
         return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery', 'action', 'back'));
     }
 
+    //video
+    public function video(Request $request, $root, $category)
+    {
+
+        $category = $this->categoryService->get("video/{$category}")->first();
+        $menu = $this->menuService->get($root, $category->slug);
+        $title = $menu->present()->name;
+
+        $years = $this->postService->getYears(null, $category->path);
+        $year = $request->year ?? get_first_array($years, true);
+
+        $posts = $this->postService->queryByYear(null, $year, $category->path);
+
+        return view('web.update.video', compact('root', 'menu', 'title', 'category', 'years', 'year', 'posts'));
+
+    }
+
 
     //download
     public function irDownload(Request $request, $page2, $slug)
