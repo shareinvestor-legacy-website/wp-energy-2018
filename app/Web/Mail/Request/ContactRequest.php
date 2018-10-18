@@ -25,14 +25,12 @@ class ContactRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
-            'organization' => 'required',
+            'fullname' => 'required',
             'email' => 'required|email',
             'address' => 'required',
-            'department' => 'required',
             'subject' => 'required',
-            'phone' => 'required',
-            'messages' => 'required',
+            'telephone' => 'required',
+            'question' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

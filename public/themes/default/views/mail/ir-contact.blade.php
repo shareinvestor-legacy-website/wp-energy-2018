@@ -51,6 +51,10 @@
 				<tr>
 					<td><strong>Email Address : </strong></td>
 					<td>{{@$email}}</td>
+                </tr>
+                <tr>
+					<td><strong>Company : </strong></td>
+					<td>{{@$company}}</td>
 				</tr>
 				<tr>
 					<td><strong>Message / ข้อความ : </strong></td>

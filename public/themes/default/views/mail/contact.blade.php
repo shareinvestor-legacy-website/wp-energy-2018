@@ -38,31 +38,32 @@
 	</head>
 	<body>
 		<div class="container">
-		  	<h1>Contact Form</h1>
+		  	<h1>Contact Form: {{@$subject}}</h1>
 			<table>
 				<tr>
-					<td><strong>Name : </strong></td>
-					<td>{{@$name}}</td>
-				</tr>
-				<tr>
-					<td><strong>Organization : </strong></td>
-					<td>{{@$organization}}</td>
+					<td><strong>Full Name : </strong></td>
+					<td>{{@$fullname}}</td>
 				</tr>
 				<tr>
 					<td><strong>E-Mail : </strong></td>
 					<td>{{@$email}}</td>
+                </tr>
+                <tr>
+					<td><strong>Telephone : </strong></td>
+					<td>{{@$tel}}</td>
+                </tr>
+                <tr>
+					<td><strong>Fax : </strong></td>
+					<td>{{@$fax}}</td>
 				</tr>
 				<tr>
 					<td><strong>Address : </strong></td>
 					<td>{{@$address}}</td>
 				</tr>
+
 				<tr>
-					<td><strong>Tel : </strong></td>
-					<td>{{@$tel}}</td>
-				</tr>
-				<tr>
-					<td><strong>Message / ข้อความ : </strong></td>
-					<td>{!! @$messages !!}</td>
+					<td><strong>Question : </strong></td>
+					<td>{!! @$question !!}</td>
 				</tr>
 			</table>
 		</div>

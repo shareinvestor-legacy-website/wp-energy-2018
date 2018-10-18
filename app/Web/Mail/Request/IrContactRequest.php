@@ -25,11 +25,12 @@ class IrContactRequest extends Request
     public function rules()
     {
         return [
-            
+
             'fullname' => 'required',
             'email' => 'required|email',
             'name' => 'required',
             'telephone' => 'required',
+            'company' => 'required',
             'detail' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
