@@ -49,7 +49,7 @@ class NewsPresenter extends \BlazeCMS\IR\Presenter
 
     public function image($default = null)
     {
-        if (isset($this->entity->image) && $this->entity->image != '') {
+        if ($this->entity->image != '') {
 
             return $this->entity->image;
         } else if (isset($default)){

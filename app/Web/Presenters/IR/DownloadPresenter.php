@@ -18,5 +18,17 @@ class DownloadPresenter extends \BlazeCMS\IR\Presenter
 
 
     //custom methods here
+    public function image($default = null)
+    {
+        if ($this->entity->image != '') {
+
+            return $this->entity->image;
+        } else if (isset($default)){
+
+            return theme_url($default);
+        }
+
+        return null;
+    }
 
 }
