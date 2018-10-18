@@ -1,6 +1,6 @@
 @section('sidebar')
 
-    @if($sidebar->hasTag('has-sidebar'))
+    @if($sidebar != null && $sidebar->hasTag('has-sidebar'))
 
     <aside class="container">
 

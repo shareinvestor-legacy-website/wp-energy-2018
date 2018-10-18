@@ -86,9 +86,15 @@ class WebController extends Controller
         $page = $this->pageService->get($page1, $page2, $page3, $page4, $page5);
 
         if (isset($page)) {
+
             $parent = $page->parent()->first();
-            $sidebar = $this->menuService->get($page1, $parent->slug);
-            $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->title : $page->present()->title;
+            $sidebar = null;
+            $title = $page->present()->title;
+
+            if($parent != null){
+                $sidebar = $this->menuService->get($parent->slug);
+                $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->title : $title;
+            }
 
             //redirect to external url if exists
             if (!empty($page->external_url)) {
