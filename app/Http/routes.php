@@ -86,7 +86,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
 
     //post mail
-    Route::post('mail/contact', 'MailController@contact');
+    Route::group(['prefix' => 'mail'], function () {
+        Route::post('ir-contact', 'MailController@irContact');
+    });
 
 
     //match every route except -> admin

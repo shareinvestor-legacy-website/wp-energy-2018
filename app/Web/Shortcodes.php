@@ -68,4 +68,24 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
 
         return view('shortcode.download', compact('posts'));
     }
+
+    public function accordion(ShortcodeInterface $s)
+    {
+
+        $path = $s->getParameter('path');
+        $category = $this->categoryService->get($path)->first();
+        $posts = $this->postService->getCoerciveOrder($category->path);
+
+        return view('shortcode.accordion', compact('posts','category'));
+
+    }
+
+    public function form(ShortcodeInterface $s)
+    {
+
+        $name = $s->getParameter('name') ?? 'ir-contact';
+
+        return view("shortcode.form.{$name}");
+
+    }
 }

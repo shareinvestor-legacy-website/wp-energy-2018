@@ -30,4 +30,16 @@ class MailService
 
     }
 
+    public function sendIr(Request $request)
+    {
+
+        $name = $request->name;
+        $contact = Contact::where('name', $name)->first();
+
+        $emails = $contact->emails();
+
+        Mail::to($emails)->send(new ContactMail('mail.ir-contact', $contact, $request));
+
+    }
+
 }

@@ -42,7 +42,7 @@ class NewsPresenter extends \BlazeCMS\IR\Presenter
         return "https://social-plugins.line.me/lineit/share?url=$url";
     }
 
-    public function date($format = 'dd MMM yyyy', $locale = null)
+    public function date($format = 'dd/MM/yyyy', $locale = null)
     {
         return $this->datetime($format, $locale);
     }
