@@ -162,6 +162,10 @@ class ApiService
             case 'factsheet':
                 return $this->irService->getFactsheets();
                 break;
+
+             case 'ir-newsletters':
+                return $this->irService->getNewsletters();
+                break;
         }
     }
 

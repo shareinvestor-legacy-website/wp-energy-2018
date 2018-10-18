@@ -62,7 +62,7 @@
 
         <div class="col-12 col-lg-10">
 
-            @component('web.update.component.share', compact('action')) @endcomponent
+            @component('web.update.component.share', compact('action', 'post')) @endcomponent
 
         </div>
 
