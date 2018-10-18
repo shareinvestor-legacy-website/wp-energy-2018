@@ -77,6 +77,14 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
 
     }
 
+    public function stockquote()
+    {
+        $stock = $this->irService->getStockPrice();
+
+        return view('shortcode.stockquote', compact('stock'));
+
+    }
+
     public function ir_highlights(ShortcodeInterface $s)
     {
 
