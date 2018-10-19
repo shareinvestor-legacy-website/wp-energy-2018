@@ -13,6 +13,7 @@ namespace BlazeCMS\Http\Web;
 use BlazeCMS\Http\Controller;
 use BlazeCMS\Web\Mail\Request\ContactRequest;
 use BlazeCMS\Web\Mail\Request\IrContactRequest;
+use BlazeCMS\Web\Mail\Request\WhistleblowingRequest;
 use BlazeCMS\Web\Services\MailService;
 
 
@@ -68,6 +69,26 @@ class MailController extends Controller
 
         return back();
     }
+
+    //whistleblowing
+    public function whistleblowing(WhistleblowingRequest $request)
+    {
+
+        try {
+            $this->mailService->sendIssue($request);
+
+        } catch (\Exception $e) {
+            flash_error($e->getMessage());
+
+            return back();
+        }
+
+        flash_success('the mail is successfully sent');
+
+        return back();
+    }
+
+
 
 
 

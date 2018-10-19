@@ -42,4 +42,16 @@ class MailService
 
     }
 
+    public function sendIssue(Request $request)
+    {
+
+        $name = $request->name;
+        $contact = Contact::where('name', $name)->first();
+
+        $emails = $contact->emails();
+
+        Mail::to($emails)->send(new ContactMail('mail.whistleblowing', $contact, $request));
+
+    }
+
 }
