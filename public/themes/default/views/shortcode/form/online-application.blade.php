@@ -1,4 +1,7 @@
-<form class="form form--primary" action="javascript:;" method="post">
+<form class="form form--primary" action="{{action('Web\MailController@application', ['name'=>'online.application'])}}" name="application" method="post" _lpchecked="1">
+
+    {{csrf_field()}}
+
     <div class="form-row align-items-center mb-4">
         <div class="col-auto">
             <label for="position">{{t('position')}}<span class="text-red">*</span></label>
@@ -51,6 +54,8 @@
 
             @include('component.error-message', ['field' => 'firstname'])
 
+
+
         </div>
         <div class="form-group col-sm-6">
 
@@ -59,24 +64,31 @@
 
             @include('component.error-message', ['field' => 'lastname'])
 
+
         </div>
         <div class="form-group col-sm-6">
             <label for="birthdate">{{t('date.of.birth')}}<span class="text-red">*</span></label>
             <input class="form-control" name="birthdate" type="text">
 
-            @include('component.error-message', ['field' => 'lastname'])
+            @include('component.error-message', ['field' => 'birthdate'])
+
+
         </div>
         <div class="form-group col-sm-6">
             <label for="nationality">{{t('nationality')}}<span class="text-red">*</span></label>
             <input class="form-control" name="nationality" type="text" value="{{old('nationality', @$nationality)}}" required>
 
-            @include('component.error-message', ['field' => 'lastname'])
+            @include('component.error-message', ['field' => 'nationality'])
+
+
         </div>
         <div class="form-group col-sm-6">
             <label for="mobile">{{t('mobile.phone')}}<span class="text-red">*</span></label>
             <input class="form-control" name="mobile" type="text" value="{{old('mobile', @$mobile)}}" required>
 
             @include('component.error-message', ['field' => 'mobile'])
+
+
         </div>
         <div class="form-group col-sm-6">
 
@@ -114,7 +126,7 @@
             <div class="col-12 col-sm-6 col-md-4">
                 <input class="form-control mb-0" name="resume" type="file" id="resume">
 
-                @include('component.error-message', ['resume' => 'file'])
+                @include('component.error-message', ['field' => 'resume'])
 
             </div>
         </div>
