@@ -54,4 +54,16 @@ class MailService
 
     }
 
+    public function sendApp(Request $request)
+    {
+
+        $name = $request->name;
+        $contact = Contact::where('name', $name)->first();
+
+        $emails = $contact->emails();
+
+        Mail::to($emails)->send(new ContactMail('mail.online-application', $contact, $request));
+
+    }
+
 }

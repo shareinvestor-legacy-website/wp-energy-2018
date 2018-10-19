@@ -14,6 +14,7 @@ use BlazeCMS\Http\Controller;
 use BlazeCMS\Web\Mail\Request\ContactRequest;
 use BlazeCMS\Web\Mail\Request\IrContactRequest;
 use BlazeCMS\Web\Mail\Request\WhistleblowingRequest;
+use BlazeCMS\Web\Mail\Request\ApplicationRequest;
 use BlazeCMS\Web\Services\MailService;
 
 
@@ -88,8 +89,22 @@ class MailController extends Controller
         return back();
     }
 
+    //application
+    public function application(ApplicationRequest $request)
+    {
 
+        try {
+            $this->mailService->sendApp($request);
 
+        } catch (\Exception $e) {
+            flash_error($e->getMessage());
 
+            return back();
+        }
+
+        flash_success('the mail is successfully sent');
+
+        return back();
+    }
 
 }

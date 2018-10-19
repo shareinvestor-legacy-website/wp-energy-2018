@@ -134,6 +134,15 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
 
     }
 
+    public function online_application()
+    {
+
+        $positions = $this->positionService->get();
+
+        return view("shortcode.form.online-application", compact('positions'));
+
+    }
+
     public function jobboard()
     {
 

@@ -94,6 +94,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::post('contact', 'MailController@contact');
         Route::post('ir-contact', 'MailController@irContact');
         Route::post('whistleblowing', 'MailController@whistleblowing');
+        Route::post('application', 'MailController@application');
     });
 
 
