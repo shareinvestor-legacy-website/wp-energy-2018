@@ -15,7 +15,6 @@
         {!! $child->present()->body !!}
     @endforeach
 
-
 @stop
 
 

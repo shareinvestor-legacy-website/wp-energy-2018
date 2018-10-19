@@ -22,7 +22,7 @@
         </div>
         <div class="col-sm-6">
 
-            <label for="tel">{{t('telephone')}}<span class="text-red">*</span></label>
+            <label for="telephone">{{t('telephone')}}<span class="text-red">*</span></label>
             <input class="form-control" id="telephone" name="telephone" type="text" value="{{old('telephone', @$telephone)}}" />
 
             @include('component.error-message', ['field' => 'telephone'])
