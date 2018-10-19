@@ -133,4 +133,13 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         return view("shortcode.form.{$name}");
 
     }
+
+    public function jobboard()
+    {
+
+        $positions = $this->positionService->get();
+
+        return view("shortcode.jobboard", compact('positions'));
+
+    }
 }
