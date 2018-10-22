@@ -86,6 +86,8 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //news
         Route::get('newsroom/update/{slug}', 'WebController@irUpdate');
         Route::get('newsroom/update/{slug}/{id}/{title?}', 'WebController@showIrUpdate');
+        //historical-price
+        Route::get('stock-information/historical-price', 'WebController@historicalPrice');
     });
 
 

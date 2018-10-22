@@ -361,6 +361,29 @@ class WebController extends Controller
         return view("web.download.presetation", compact('menu', 'posts', 'years', 'year'));
     }
 
+    //historical price
+    public function historicalPrice(Request $request)
+    {
+
+        $menu = $this->menuService->get('stock-information', 'historical-price');
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+
+        if ($request->date_start && $request->date_end) {
+            $daily = $this->irService->getDailyHistoricalPrices(intl_convert_format($request->date_start, 'dd/MM/yyyy', 'yyyyMMdd'),
+                intl_convert_format($request->date_end, 'dd/MM/yyyy', 'yyyyMMdd'));
+        } else {
+            $daily = $this->irService->getDailyHistoricalPrices();
+        }
+
+        $summary = $this->irService->getSummaryHistoricalPrices();
+
+        $date_start = $request->date_start;
+        $date_end = $request->date_end;
+
+        return view('web.historical-price', compact('menu', 'summary', 'daily', 'date_start', 'date_end', 'sidebar'));
+    }
+
     public function irUpdate(Request $request, $slug)
     {
 
