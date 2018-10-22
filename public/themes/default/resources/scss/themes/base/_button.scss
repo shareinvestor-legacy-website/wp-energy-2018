@@ -1,7 +1,7 @@
 a {
-    color: inherit;
+    color: $black;
     &:hover {
         text-decoration: none;
-        color: inherit;
+        color: $black;
     }
 }

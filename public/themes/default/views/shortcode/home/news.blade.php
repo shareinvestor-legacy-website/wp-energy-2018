@@ -10,7 +10,7 @@
             </div>
 
             <div class="card__body">
-                <p class="card__category text-blue">{{$post->category()->present()->name}}</p>
+                <p class="card__category">{{$post->category()->present()->name}}</p>
                 <h4 class="card__title">
                     {{$post->present()->title}}
                 </h4>
