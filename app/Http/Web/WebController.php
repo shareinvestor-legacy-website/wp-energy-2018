@@ -89,18 +89,16 @@ class WebController extends Controller
 
             $parent = $page->parent()->first();
             $sidebar = null;
-            $title = $page->present()->title;
 
             if($parent != null){
                 $sidebar = $this->menuService->get($parent->slug);
-                $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->title : $title;
             }
 
             //redirect to external url if exists
             if (!empty($page->external_url)) {
                 return redirect($page->external_url);
             }
-            return view('web.page', compact('page', 'sidebar', 'title'));
+            return view('web.page', compact('page', 'sidebar'));
         }
 
         return redirect('home');
@@ -142,11 +140,10 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($root, $parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
         $highlights = $this->postService->getCoerciveOrder("{$category->path}/highlights");
 
-        return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts', 'title', 'sidebar'));
+        return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts', 'sidebar'));
     }
 
     //milestone
@@ -157,10 +154,9 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($root, $parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.milestone', compact('root', 'menu', 'category', 'highlights', 'posts', 'title', 'sidebar'));
+        return view('web.milestone', compact('root', 'menu', 'category', 'highlights', 'posts', 'sidebar'));
     }
 
     //subsidiary
@@ -171,10 +167,9 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($root, $parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.subsidiary', compact('root', 'menu', 'category', 'highlights', 'posts', 'title', 'sidebar'));
+        return view('web.subsidiary', compact('root', 'menu', 'category', 'highlights', 'posts', 'sidebar'));
     }
 
     //download
@@ -207,12 +202,14 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("document/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($root, $parent->slug);
         $posts = $this->postService->get($category->path);
         $years = $this->postService->getYears($category->path);
         $year = $request->year ?? get_first_array($years, true);
         $posts = $this->postService->queryByYear($year, $category->path);
 
-        return view('web.document', compact('root', 'menu', 'category', 'posts', 'years', 'year'));
+        return view('web.document', compact('root', 'menu', 'category', 'posts', 'years', 'year', 'sidebar'));
     }
 
     //report
@@ -222,10 +219,9 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($root, $parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->get($category->path);
 
-        return view('web.report.index', compact('root', 'menu', 'category', 'posts', 'title', 'sidebar'));
+        return view('web.report.index', compact('root', 'menu', 'category', 'posts', 'sidebar'));
     }
 
     public function management($root, $category)
@@ -235,10 +231,9 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($root, $parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.management.index', compact('root', 'menu', 'category', 'posts', 'title', 'sidebar'));
+        return view('web.management.index', compact('root', 'menu', 'category', 'posts', 'sidebar'));
     }
 
     public function showManagement($root, $category, $id, $title = null)
@@ -252,9 +247,8 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("management/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
-        $title = $menu->present()->name;
 
-        return view('web.management.detail', compact('root', 'menu', 'category', 'post', 'title'));
+        return view('web.management.detail', compact('root', 'menu', 'category', 'post'));
 
     }
 
@@ -266,14 +260,13 @@ class WebController extends Controller
         $menu = $this->menuService->get($root, $category->slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($root, $parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
 
         $years = $this->postService->getYears(null, $category->path);
         $year = $request->year ?? get_first_array($years, true);
 
         $posts = $this->postService->queryByYear(null, $year, $category->path);
 
-        return view('web.update.index', compact('root', 'menu', 'title', 'sidebar', 'category', 'years', 'year', 'posts'));
+        return view('web.update.index', compact('root', 'menu', 'sidebar', 'category', 'years', 'year', 'posts'));
 
     }
 
@@ -292,7 +285,6 @@ class WebController extends Controller
         $gallery = $post->galleries()->first();
 
         $menu = $this->menuService->get($root, $category->slug);
-        $title = $menu->present()->name;
 
         return view('web.update.detail', compact('root', 'menu', 'title', 'sidebar', 'category', 'post', 'gallery', 'action', 'back'));
     }
@@ -303,14 +295,13 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("video/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
-        $title = $menu->present()->name;
 
         $years = $this->postService->getYears(null, $category->path);
         $year = $request->year ?? get_first_array($years, true);
 
         $posts = $this->postService->queryByYear(null, $year, $category->path);
 
-        return view('web.update.video', compact('root', 'menu', 'title', 'category', 'years', 'year', 'posts'));
+        return view('web.update.video', compact('root', 'menu', 'category', 'years', 'year', 'posts'));
 
     }
 
@@ -325,7 +316,6 @@ class WebController extends Controller
         $menu = $this->menuService->get('investor-relations', $slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get('investor-relations', $parent->slug);
-        $title = $menu->present()->name;
 
         $years = $this->apiService->getYears($posts, 'en');
         $year = $request->year ?? $years->first();
@@ -336,7 +326,7 @@ class WebController extends Controller
         if($menu->slug != 'form-56-1')
             $posts =  $this->apiService->queryByYear($year, $posts);
 
-        return view("web.download.{$view}", compact('menu', 'title', 'sidebar', 'posts', 'years', 'year', 'latest'));
+        return view("web.download.{$view}", compact('menu', 'sidebar', 'posts', 'years', 'year', 'latest'));
     }
 
     //report
@@ -348,9 +338,8 @@ class WebController extends Controller
         $menu = $this->menuService->get('investor-relations', $slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get('investor-relations', $parent->slug);
-        $title = $menu->present()->name;
 
-        return view('web.report.index', compact('menu', 'sidebar', 'title', 'posts'));
+        return view('web.report.index', compact('menu', 'sidebar', 'posts'));
     }
 
     //presentation
@@ -362,7 +351,6 @@ class WebController extends Controller
         $posts = $this->apiService->getMatchingPosts($webcasts, $presentations);
 
         $menu = $this->menuService->get('investor-relations', 'webcasts-and-presentations');
-        $title = $menu->present()->name;
 
         $years = $this->apiService->getYears($webcasts, 'en');
         $year = $request->year ?? $years->first();
@@ -370,7 +358,7 @@ class WebController extends Controller
 
         $posts =  $this->apiService->queryByYear($year, $posts);
 
-        return view("web.download.presetation", compact('menu', 'title', 'posts', 'years', 'year'));
+        return view("web.download.presetation", compact('menu', 'posts', 'years', 'year'));
     }
 
     public function irUpdate(Request $request, $slug)
@@ -380,7 +368,6 @@ class WebController extends Controller
         $menu = $this->menuService->get($slug);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
 
         $posts = $search ? $this->irService->searchNews(utf8_to_html_entities($search)) : $this->apiService->getNews($slug);
 
@@ -393,7 +380,7 @@ class WebController extends Controller
 
         $posts =  paginate($posts);
 
-        return view('web.update.ir', compact('root', 'menu', 'slug', 'posts', 'year', 'years', 'search', 'title', 'sidebar'));
+        return view('web.update.ir', compact('root', 'menu', 'slug', 'posts', 'year', 'years', 'search',  'sidebar'));
     }
 
 
@@ -411,9 +398,8 @@ class WebController extends Controller
 
         $root = 'investor-relations';
         $menu = $this->menuService->get($root, $slug);
-        $title = $menu->present()->name;
 
-        return view('web.update.detail', compact('root', 'menu', 'title', 'post', 'action', 'back'));
+        return view('web.update.detail', compact('root', 'menu', 'post', 'action', 'back'));
     }
 
     //calendar
@@ -425,7 +411,6 @@ class WebController extends Controller
         $menu = $this->menuService->get($category->path);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($parent->slug);
-        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
 
         $years = $this->postService->getYears(null, $category->path);
         $year = $request->year ?? get_first_array($years, true);
@@ -437,7 +422,7 @@ class WebController extends Controller
             $posts = $this->postService->queryByYear(true, $year, ...$categories->pluck('path'));
         }
 
-        return view('web.calendar.index', compact('root', 'categories', 'category', 'menu', 'posts', 'title', 'sidebar', 'years', 'year'));
+        return view('web.calendar.index', compact('root', 'categories', 'category', 'menu', 'posts', 'sidebar', 'years', 'year'));
 
     }
 }

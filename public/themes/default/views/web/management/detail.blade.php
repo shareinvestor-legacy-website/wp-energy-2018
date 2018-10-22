@@ -1,10 +1,10 @@
 @extends('layouts.default')
 
 
-@section('title', title($menu->present()->name, t('company.name')))
+@section('title', title($post->present()->title, t('company.name')))
 
 @component('component.breadcrumb', ['breadcrumbs'=>$menu->breadcrumbs()]) @endcomponent
-@component('component.titlepage', ['title'=>$title]) @endcomponent
+@component('component.titlepage', ['title'=>$menu->present()->name]) @endcomponent
 
 @section('body')
 

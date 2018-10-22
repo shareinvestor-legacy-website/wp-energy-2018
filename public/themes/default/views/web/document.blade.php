@@ -7,21 +7,35 @@
 @component('component.titlepage', ['title'=>$menu->present()->getTitle($sidebar)]) @endcomponent
 @component('component.menu.sidebar', ['sidebar'=>$sidebar, 'subTitle'=> $menu->present()->name]) @endcomponent
 
-
 @section('body')
 
-    <div class="container">
+<div class="container mb-5">
 
-        <div class="row">
+        @component('component.filter.year', compact('years', 'year', 'category'))
+        @endcomponent
 
-            @foreach ($posts as $post)
-                @component('web.management.component.item', compact('root', 'post', 'category'))@endcomponent
-            @endforeach
+        <div id="year-{{$year}}">
 
+            <div class="row">
+
+                <div class="col-12">
+
+                    @foreach ($posts as $post)
+
+                        {!! $post->present()->body !!}
+
+                    @endforeach
+
+                </div>
+
+
+            </div>
 
         </div>
 
     </div>
 
 @stop
+
+
 

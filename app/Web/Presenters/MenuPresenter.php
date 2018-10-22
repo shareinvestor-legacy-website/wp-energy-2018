@@ -17,7 +17,13 @@ class MenuPresenter extends \BlazeCMS\Presenters\MenuPresenter
         return str_contains(request()->fullUrl(), $this->url());
     }
 
-    public function getTitle(){
+    public function getTitle($sidebar = null){
+
+        if(isset($sidebar) && $sidebar != null)
+        {
+
+            return $sidebar->hasTag('has-sidebar') ? $this->parent->name : $this->name();
+        }
 
         return $this->name();
     }
