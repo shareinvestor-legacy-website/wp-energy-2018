@@ -415,4 +415,29 @@ class WebController extends Controller
 
         return view('web.update.detail', compact('root', 'menu', 'title', 'post', 'action', 'back'));
     }
+
+    //calendar
+    public function calendar(Request $request, $root, $subCategory = null)
+    {
+
+        $category = $this->categoryService->get("ir-calendar")->first();
+        $categories = $category->children()->public()->get();
+        $menu = $this->menuService->get($category->path);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+        $title = $sidebar->hasTag('has-sidebar') ? $parent->present()->name : $menu->present()->name;
+
+        $years = $this->postService->getYears(null, $category->path);
+        $year = $request->year ?? get_first_array($years, true);
+
+        if($subCategory != null){
+            $category = $this->categoryService->get("{$category->slug}/{$subCategory}")->first();
+            $posts = $this->postService->queryByYear(true, $year, $category->path);
+        }else{
+            $posts = $this->postService->queryByYear(true, $year, ...$categories->pluck('path'));
+        }
+
+        return view('web.calendar.index', compact('root', 'categories', 'category', 'menu', 'posts', 'title', 'sidebar', 'years', 'year'));
+
+    }
 }
