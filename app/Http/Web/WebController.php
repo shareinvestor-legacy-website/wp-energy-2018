@@ -64,8 +64,9 @@ class WebController extends Controller
 
 
         view()->share('isHome', false);
-        view()->share('menus', $this->menuService->get('main'));
-        view()->share('footerMenus', $this->menuService->get('footer'));
+        view()->share('isIrHome', false);
+        view()->share('menus', $this->menuService->get('main')->getChildren(true));
+        view()->share('footerMenus', $this->menuService->get('footer')->getChildren(true));
 
     }
 
@@ -120,8 +121,12 @@ class WebController extends Controller
         }
     }
 
-    public function home()
+    public function home($page2 = null)
     {
+        if($page2 != null){
+            return redirect('home');
+        }
+
         $isHome = true;
         $page = $this->pageService->get('home');
         $pages = $this->pageService->get('home')->children()->public()->get();
@@ -224,6 +229,7 @@ class WebController extends Controller
         return view('web.report.index', compact('root', 'menu', 'category', 'posts', 'sidebar'));
     }
 
+    // management
     public function management($root, $category)
     {
 
@@ -305,8 +311,20 @@ class WebController extends Controller
 
     }
 
+    public function irHome($page3 = null)
+    {
+        if($page3 != null){
+            return redirect(action('Web\WebController@irHome', ['page3'=>null]));
+        }
 
-    //download
+        $isIrHome = true;
+        $page = $this->pageService->get('investor-relations', 'ir-home');
+
+        return view('web.ir.home', compact('isIrHome', 'page'));
+
+    }
+
+    //ir download
     public function irDownload(Request $request, $page2, $slug)
     {
 
@@ -329,7 +347,7 @@ class WebController extends Controller
         return view("web.download.{$view}", compact('menu', 'sidebar', 'posts', 'years', 'year', 'latest'));
     }
 
-    //report
+    //ir report
     public function irReport($page2, $slug)
     {
 
@@ -381,9 +399,10 @@ class WebController extends Controller
         $date_start = $request->date_start;
         $date_end = $request->date_end;
 
-        return view('web.historical-price', compact('menu', 'summary', 'daily', 'date_start', 'date_end', 'sidebar'));
+        return view('web.ir.historical-price', compact('menu', 'summary', 'daily', 'date_start', 'date_end', 'sidebar'));
     }
 
+    // ir news
     public function irUpdate(Request $request, $slug)
     {
 

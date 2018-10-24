@@ -4,5 +4,5 @@
     <td>
         {{$post->present()->title}}
     </td>
-    <td>{{$post->present()->excerpt}}</td>
+    <td>{!! $post->present()->excerpt !!}</td>
 </tr>

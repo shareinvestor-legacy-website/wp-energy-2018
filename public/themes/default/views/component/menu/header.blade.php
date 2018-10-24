@@ -1,6 +1,6 @@
 <ul class="navbar-nav menu__lv1">
 
-    @foreach($menus->getChildren(true) as $menu)
+    @foreach($menus as $menu)
 
         @if($menu->isLeaf())
 

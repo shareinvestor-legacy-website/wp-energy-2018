@@ -71,9 +71,10 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
 
     public function home_stock()
     {
+
         $stock = $this->irService->getStockPrice();
 
-        return view('shortcode.home.stock', compact('stock'));
+        return view("shortcode.home.stock", compact('stock'));
 
     }
 
@@ -99,6 +100,15 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         $posts = $this->irService->getHighlightNews()->take(2);
 
         return view('shortcode.home.ir-news', compact('posts'));
+    }
+
+    public function ir_stock()
+    {
+
+        $stock = $this->irService->getStockPrice();
+
+        return view("shortcode.ir.stock", compact('stock'));
+
     }
 
     public function download(ShortcodeInterface $s)
@@ -151,4 +161,40 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         return view("shortcode.jobboard", compact('positions'));
 
     }
+
+    public function presentation()
+    {
+
+        $post = $this->apiService->getDownloads('presentation')->first();
+
+        return view("shortcode.ir.presentation", compact('post'));
+
+    }
+
+    public function set_announcements()
+    {
+
+        $posts = $this->irService->getSetAnnouncements()->take(2);
+
+        return view('shortcode.ir.set-announcements', compact('posts'));
+    }
+
+    public function upcomming_event()
+    {
+
+        $category = $this->categoryService->get("ir-calendar")->first();
+        $categories = $category->children()->public()->get();
+        $post = $this->postService->queryByYear(true, $year, ...$categories->pluck('path'))->first();
+
+        return view('shortcode.ir.upcomming-event', compact('post'));
+    }
+
+    public function ir_download()
+    {
+
+        $posts = $this->irService->getHighlightDownloads()->take(3);
+
+        return view('shortcode.ir.download', compact('posts'));
+    }
+
 }

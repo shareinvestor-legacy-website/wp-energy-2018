@@ -46,7 +46,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //milestone
         Route::get('company-milestone', 'WebController@milestone');
 
-        //milestone
+        //subsidiary
         Route::get('company-subsidiary', 'WebController@subsidiary');
 
         //download
@@ -55,7 +55,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //document
         Route::get('document/{category}', 'WebController@document');
 
-        //document
+        //report
         Route::get('report/{category}', 'WebController@report');
 
         //calendar
@@ -65,7 +65,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::get('management/{category}', 'WebController@management');
         Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
 
-        //news
+        //news update
         Route::get('update/{category}', 'WebController@update');
         Route::get('update/{category}/{id}/{title?}', 'WebController@showUpdate');
 
@@ -78,18 +78,24 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
     Route::group(['prefix' => 'investor-relations'], function () {
 
         //download
+        Route::get('ir-home/{page3?}', 'WebController@irHome');
+
+        //download
         Route::get('{page2}/download/{slug}', 'WebController@irDownload');
+
         //report
         Route::get('{page2}/report/{slug}', 'WebController@irReport');
+
         //webcast & presentation
         Route::get('webcasts-and-presentations', 'WebController@presentation');
+
         //news
         Route::get('newsroom/update/{slug}', 'WebController@irUpdate');
         Route::get('newsroom/update/{slug}/{id}/{title?}', 'WebController@showIrUpdate');
+
         //historical-price
         Route::get('stock-information/historical-price', 'WebController@historicalPrice');
     });
-
 
     //post mail
     Route::group(['prefix' => 'mail'], function () {
@@ -98,7 +104,6 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::post('whistleblowing', 'MailController@whistleblowing');
         Route::post('application', 'MailController@application');
     });
-
 
     //match every route except -> admin
     Route::get('{page1?}/{page2?}/{page3?}/{page4?}/{page5?}', 'WebController@page')->where('page1', '^(?!admin)([^/]*)');
