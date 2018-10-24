@@ -12,7 +12,7 @@
 </div>
 <div class="col-md-6">
     <div class="stock__change">
-        <p class="h4">{{$stock->present()->change}}({{$stock->present()->precent_change}}%)</p>
+        <p class="h4">{{$stock->present()->change}}({{$stock->present()->percent_change}}%)</p>
     </div>
 </div>
 <div class="col-md-12">

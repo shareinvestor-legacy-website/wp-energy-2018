@@ -311,6 +311,7 @@ class WebController extends Controller
 
     }
 
+    // ir home
     public function irHome($page3 = null)
     {
         if($page3 != null){
