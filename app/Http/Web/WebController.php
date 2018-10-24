@@ -143,25 +143,20 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("awards-recognitions")->first();
         $menu = $this->menuService->get($root, $category->slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($root, $parent->slug);
         $posts = $this->postService->getCoerciveOrder($category->path);
         $highlights = $this->postService->getCoerciveOrder("{$category->path}/highlights");
 
-        return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts', 'sidebar'));
+        return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts'));
     }
 
     //milestone
     public function milestone($root)
     {
-
         $category = $this->categoryService->get("company-milestone")->first();
         $menu = $this->menuService->get($root, $category->slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($root, $parent->slug);
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.milestone', compact('root', 'menu', 'category', 'highlights', 'posts', 'sidebar'));
+        return view('web.milestone', compact('root', 'menu', 'category', 'posts'));
     }
 
     //subsidiary
@@ -170,11 +165,9 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("company-subsidiary")->first();
         $menu = $this->menuService->get($root, $category->slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($root, $parent->slug);
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.subsidiary', compact('root', 'menu', 'category', 'highlights', 'posts', 'sidebar'));
+        return view('web.subsidiary', compact('root', 'menu', 'category', 'posts'));
     }
 
     //download
@@ -207,14 +200,12 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("document/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($root, $parent->slug);
         $posts = $this->postService->get($category->path);
         $years = $this->postService->getYears($category->path);
         $year = $request->year ?? get_first_array($years, true);
         $posts = $this->postService->queryByYear($year, $category->path);
 
-        return view('web.document', compact('root', 'menu', 'category', 'posts', 'years', 'year', 'sidebar'));
+        return view('web.document', compact('root', 'menu', 'category', 'posts', 'years', 'year'));
     }
 
     //report
@@ -333,8 +324,6 @@ class WebController extends Controller
         $view = $this->apiService->getDownloadView($slug);
 
         $menu = $this->menuService->get('investor-relations', $slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get('investor-relations', $parent->slug);
 
         $years = $this->apiService->getYears($posts, 'en');
         $year = $request->year ?? $years->first();
@@ -345,7 +334,7 @@ class WebController extends Controller
         if($menu->slug != 'form-56-1')
             $posts =  $this->apiService->queryByYear($year, $posts);
 
-        return view("web.download.{$view}", compact('menu', 'sidebar', 'posts', 'years', 'year', 'latest'));
+        return view("web.download.{$view}", compact('menu', 'posts', 'years', 'year', 'latest'));
     }
 
     //ir report
@@ -385,8 +374,6 @@ class WebController extends Controller
     {
 
         $menu = $this->menuService->get('stock-information', 'historical-price');
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($parent->slug);
 
         if ($request->date_start && $request->date_end) {
             $daily = $this->irService->getDailyHistoricalPrices(intl_convert_format($request->date_start, 'dd/MM/yyyy', 'yyyyMMdd'),
@@ -400,7 +387,7 @@ class WebController extends Controller
         $date_start = $request->date_start;
         $date_end = $request->date_end;
 
-        return view('web.ir.historical-price', compact('menu', 'summary', 'daily', 'date_start', 'date_end', 'sidebar'));
+        return view('web.ir.historical-price', compact('menu', 'summary', 'daily', 'date_start', 'date_end'));
     }
 
     // ir news
@@ -409,8 +396,6 @@ class WebController extends Controller
 
         $search = $request->search;
         $menu = $this->menuService->get($slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($parent->slug);
 
         $posts = $search ? $this->irService->searchNews(utf8_to_html_entities($search)) : $this->apiService->getNews($slug);
 
@@ -423,7 +408,7 @@ class WebController extends Controller
 
         $posts =  paginate($posts);
 
-        return view('web.update.ir', compact('root', 'menu', 'slug', 'posts', 'year', 'years', 'search',  'sidebar'));
+        return view('web.update.ir', compact('root', 'menu', 'slug', 'posts', 'year', 'years', 'search'));
     }
 
 

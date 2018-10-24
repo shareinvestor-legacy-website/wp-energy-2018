@@ -4,7 +4,7 @@
 @section('title', title($menu->present()->name, t('company.name')))
 
 @component('component.breadcrumb', ['breadcrumbs'=>$menu->breadcrumbs()]) @endcomponent
-@component('component.titlepage', ['title'=>$menu->present()->name]) @endcomponent
+@component('component.titlepage', ['title'=>$menu->present()->getTitle()]) @endcomponent
 
 
 @section('body')
