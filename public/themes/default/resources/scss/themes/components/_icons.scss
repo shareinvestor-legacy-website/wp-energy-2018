@@ -1,0 +1,13 @@
+.icon {
+    &-form_561:before,
+    &-slides:before {
+        content: "\e900";
+    }
+    &-mdna:before,
+    &-financials:before {
+        content: "\e902";
+    }
+    &-ar:before {
+        content: "\e903";
+    }
+}
