@@ -4,10 +4,10 @@
 
     $grandparent: &;
 
-    #{$grandparent} {    
+    #{$grandparent} {
         &__image {
             margin-bottom: 2rem;
-        }  
+        }
 
         &__title {
             @include set-font-family;
@@ -19,11 +19,12 @@
         }
 
         &__body {
+            color: $black;
             min-height: 120px;
         }
-        
+
         &__footer {
-            border-top: 1px solid #1a4783;
+            border-top: 1px solid $blue;
             padding-top: 1rem;
         }
 

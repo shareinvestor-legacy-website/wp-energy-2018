@@ -1,0 +1,18 @@
+.blockquote {
+    position: relative;
+    &:before, &:after {
+        font-family: 'wp';
+        font-weight: 400;
+        font-size: 1.2rem;
+        position: absolute;
+        top: -0.5rem;
+    }
+    &:before {
+        content: '\e908'; 
+        left: 0;       
+    }
+    &:after {
+        content: '\e909';     
+        right: 0;     
+    }
+}
