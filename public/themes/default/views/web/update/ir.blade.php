@@ -18,13 +18,13 @@
             <div class="row mt-5">
 
                 @foreach ($posts as $post)
-                <div class="col-12 col-lg-4 mb-4 d-fex">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <a class="card card--border" href="{{$post->present()->is_html ? action('Web\WebController@showIrUpdate', ['slug'=> $slug, 'id'=>$post->id, 'title'=>$post->present()->title(true)]) : $post->present()->url}}" target="{{$post->present()->is_html ? '_self' : '_blank'}}">
                         <div class="card__body">
                             <time class="datetime">
                                 {{$post->present()->date}}
                             </time>
-                            <h5 class="card__title">
+                            <h5 class="card__title ellipsis ellipsis-3">
                                 {{$post->present()->title}}
                             </h5>
                         </div>
