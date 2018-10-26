@@ -15,7 +15,7 @@
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="card bg-transparent mb-4 mb-md-0">
                     <div class="card__body mb-5">
-                        <h2>{{$post->present()->title}}</h2>
+                        <h2 class="text-white">{{$post->present()->title}}</h2>
                     </div>
                     <div class="card__footer border-white">
                         <time class="datetime">{{$post->present()->date}}</time>
