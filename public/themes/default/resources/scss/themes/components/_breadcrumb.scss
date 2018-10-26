@@ -14,7 +14,7 @@
                 color: $black;
             }
 
-            &.active {
+            &.active > a {
                 color: $lightblue;
                 font-weight: 700;
             }
