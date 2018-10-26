@@ -14,6 +14,7 @@
                     padding: 1rem 0;
                 }
                 > a {
+                    color: $white;
                     font-size: 1rem;
                     display: flex;
                     font-family: Fira Sans,sans-serif;
@@ -25,10 +26,10 @@
                         }
                     }
                     &:hover {
-                       color: $blue; 
+                       color: $blue;
                        i {
                         &::before {
-                            color: $blue; 
+                            color: $blue;
                         }
                     }
                     }
@@ -41,6 +42,6 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-        } 
+        }
     }
 }

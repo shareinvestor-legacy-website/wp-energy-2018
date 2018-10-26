@@ -8,7 +8,6 @@
         <a href="{{$post->present()->file}}" target="_blank">
             {{t('download')}} <i class="icon-download"></i>
         </a>
-{{$post->present()->category}}
     </div>
 </div>
 @endif
