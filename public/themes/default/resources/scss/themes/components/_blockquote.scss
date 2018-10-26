@@ -1,5 +1,8 @@
 .blockquote {
     position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
     &:before, &:after {
         font-family: 'wp';
         font-weight: 400;
@@ -8,11 +11,11 @@
         top: -0.5rem;
     }
     &:before {
-        content: '\e908'; 
-        left: 0;       
+        content: '\e908';
+        left: 0;
     }
     &:after {
-        content: '\e909';     
-        right: 0;     
+        content: '\e909';
+        right: 0;
     }
 }
