@@ -203,7 +203,7 @@ class WebController extends Controller
         $posts = $this->postService->get($category->path);
         $years = $this->postService->getYears($category->path);
         $year = $request->year ?? get_first_array($years, true);
-        $posts = $this->postService->queryByYear($year, $category->path);
+        $posts = $this->postService->queryByYear(null, $year, $category->path);
 
         return view('web.document', compact('root', 'menu', 'category', 'posts', 'years', 'year'));
     }
