@@ -71,7 +71,8 @@ if ($('#gross-profit').length) {
                 dashStyle: 'Dash',
                 width: 1,
                 value: 2.5
-            }]
+            }],
+            crosshair: true
         },
         yAxis: {
             className: 'highcharts-color-0',
@@ -115,8 +116,6 @@ if ($('#gross-profit').length) {
         }],
     });
 }
-
-
 
 if ($('#ebitda').length) {
     if (website_language == "th") {
@@ -169,7 +168,8 @@ if ($('#ebitda').length) {
                 dashStyle: 'Dash',
                 width: 1,
                 value: 2.5
-            }]
+            }],
+            crosshair: true
         },
         yAxis: {
             className: 'highcharts-color-0',
@@ -265,7 +265,8 @@ if ($('#net-profit').length) {
                 dashStyle: 'Dash',
                 width: 1,
                 value: 2.5
-            }]
+            }],
+            crosshair: true
         },
         yAxis: {
             className: 'highcharts-color-0',
@@ -311,75 +312,87 @@ if ($('#net-profit').length) {
 }
 
 if ($('#position').length) {
+    if (website_language == "th") {
+        var categoriesData = [["2558"], ["2559"], ["2560"], ["1H/2561"]];
+    } else {
+        var categoriesData = [["2015"], ["2016"], ["2017"], ["1H/2018"]];
+    }
     chart = new Highcharts.Chart({
-         chart: {
-             renderTo: 'position',
-             type: 'column'
-         },
-         title: {
-             text: null
-         },
-         exporting: {
-             enabled: false
-         },
-         credits: {
-             enabled: false
-         },
-     xAxis: {
-         categories: ['2015', '2016', '2017', '1H/2018'],
-         lineColor: '#7f7f7f',
-         tickWidth: 0,
-         plotLines: [{
-                 color: '#5d5d5d',
-                 dashStyle: 'Dash',
-                 width: 1,
-                 value: 2.5
-             }]
-     },
- 
-     yAxis: {
-             allowDecimals: false,
-             min: 0,
-             title: {
-                 text: null
-             },
-             gridLineColor: '#1d5124',
-             gridLineWidth: 0,
-             dataLabels: {
+        chart: {
+            renderTo: 'position',
+            type: 'column'
+        },
+        colors: ['#034EA2','#178EF4','#85BA41'],
+        title: {
+            text: null
+        },
+        exporting: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            categories: categoriesData,
+            lineColor: '#7f7f7f',
+            tickWidth: 0,
+            plotLines: [{
+                    color: '#5d5d5d',
+                    dashStyle: 'Dash',
+                    width: 1,
+                    value: 2.5
+                }],
+                crosshair: true
+        },
+
+        yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: null
+                },
+                gridLineColor: '#1d5124',
+                gridLineWidth: 0,
+                dataLabels: {
                 enabled: true,
             },
-             labels: {
-                 enabled: false
-             }
-     },
- 
-     tooltip: {
-         formatter: function () {
-             return '<b>' + this.x + '</b><br/>' +
-                 this.series.name + ': ' + this.y + '<br/>' +
-                 'Total: ' + this.point.stackTotal;
-         }
-     },
- 
-     plotOptions: {
-         column: {
-             stacking: 'normal'
-         }
-     },
- 
-     series: [{
-         name: 'Assets',
-         data: [5313,	5274,	5612,	5650],
-         stack: 'male'
-     },{
-         name: 'liabilities',
-         data: [4834,	4738,	4941,	4818],
-         stack: 'female'
-     }, {
-         name: 'Equity',
-         data: [480,	536,	671,	832],
-         stack: 'female'
-     }]
- });
-    
+                labels: {
+                    enabled: false
+                }
+        },
+        legend: {
+            align: 'center',
+            verticalAlign: 'top',
+        },
+        tooltip: {
+            headerFormat: '<p style="font-size:13px;"><b>{point.key}</b><br>',
+            pointFormat: '<span style="color:{series.color};padding:0;font-weight:bold;">{series.name}: </span>' +
+                '<span style="padding:0;font-weight:bold;">{point.y:,.0f} Million Baht</span></p>',
+            footerFormat: '',
+            shared: true,
+            useHTML: true
+
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+
+        series: [{
+            name: 'Assets',
+            data: [5313,	5274,	5612,	5650],
+            stack: 'male'
+        },{
+            name: 'liabilities',
+            data: [4834,	4738,	4941,	4818],
+            stack: 'female'
+        }, {
+            name: 'Equity',
+            data: [480,	536,	671,	832],
+            stack: 'female'
+        }]
+    });
+
  }
