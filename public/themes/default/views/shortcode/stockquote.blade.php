@@ -16,21 +16,14 @@
             <div class="col-md-6 d-flex">
                 <div class="card">
                     <div class="card-body">
-                        <div class="stock-change">
-                            <p><span>{{t('change')}}</span><span> {{$stock->present()->change}}</span></p>
-                            <p><span>{{t('volume.shares')}}</span><span> {{$stock->present()->volume}}</span></p>
-                        </div><div class="stock-change"><p><span>{{t('change')}} (%)</span><span> {{$stock->present()->percent_change}}%</span></p><p><span>{{t('value.baht')}}</span><span> {{$stock->present()->value}}</span></p>
-                        </div>
+                        <div class="stock-change"><p><span>{{t('change')}}</span><span> {{$stock->present()->change}}</span></p><p><span>{{t('volume.shares')}}</span><span> {{$stock->present()->volume}}</span></p></div><div class="stock-change"><p><span>{{t('change')}} (%)</span><span> {{$stock->present()->percent_change}}%</span></p><p><span>{{t('value.baht')}}</span><span> {{$stock->present()->value}}</span></p></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 d-flex">
                 <div class="card">
                     <div class="card-body">
-                        <div class="stock-change">
-                            <p><span>{{t('prior')}} :</span><span>{{$stock->present()->prior}}</span></p>
-                            <p><span>{{t('days.range')}}</span><span> {{$stock->present()->range_days}}</span></p>
-                        </div><div class="stock-change"><p><span>{{t('price.open')}}</span><span> {{$stock->present()->open}}</span></p><p><span>{{t('52weeks.range')}}</span><span> {{$stock->present()->range_52weeks}}</span></p>
+                        <div class="stock-change"><p><span>{{t('prior')}} :</span><span>{{$stock->present()->prior}}</span></p><p><span>{{t('days.range')}}</span><span> {{$stock->present()->range_days}}</span></p></div><div class="stock-change"><p><span>{{t('price.open')}}</span><span> {{$stock->present()->open}}</span></p><p><span>{{t('52weeks.range')}}</span><span> {{$stock->present()->range_52weeks}}</span></p>
                         </div>
                     </div>
                 </div>
