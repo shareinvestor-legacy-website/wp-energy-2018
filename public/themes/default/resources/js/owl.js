@@ -20,29 +20,31 @@ class owl {
                 items:1,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                autoplayTimeout: 10000, 
+                autoplayTimeout: 10000,
                 onChanged: animation,
             })
         }
 
         function animation(event) {
-            $('.owl-item').children('.item').removeClass('animated animated-10s zoomNonStop');  
-            $($('.owl-item')[event.item.index]).children('.item').addClass('animated animated-10s zoomNonStop');       
+            $('.owl-item').children('.item').removeClass('animated animated-10s zoomNonStop');
+            $($('.owl-item')[event.item.index]).children('.item').addClass('animated animated-10s zoomNonStop');
         }
     }
-    
+
     highlight(selector) {
-        if(selector.length) {
-            selector.owlCarousel({
-                loop: true,
-                autoplay: false,
-                margin: 10,
-                mouseDrag: false,
-                touchDrag: true,
-                dots: true,
-                items:1
-            })
-        }
+        $(function() {
+            if(selector.length) {
+                selector.owlCarousel({
+                    loop: true,
+                    autoplay: false,
+                    margin: 10,
+                    mouseDrag: false,
+                    touchDrag: true,
+                    dots: true,
+                    items:1
+                })
+            }
+        })
     }
 
     news(selector) {
@@ -117,14 +119,14 @@ class owl {
                         items:7,
                     }
                 },
-                onInitialized : toggle, 
-                onChanged: border,           
+                onInitialized : toggle,
+                onChanged: border,
             })
         }
 
         function toggle(event) {
             border(event);
-            try {       
+            try {
                 $('.item').click(function() {
                     let index = $(this).parent('.owl-item').index();
                 $('.item').removeClass('show');
@@ -136,11 +138,11 @@ class owl {
                 console.log(err)
             }
         }
-        
-        function border(event) {    
+
+        function border(event) {
             try {
                 $(event.currentTarget).find('.owl-item.active').css('border-right', '1px solid white');
-                $($('.owl-item')[event.page.size+event.item.index-1]).css('border', 'none');  
+                $($('.owl-item')[event.page.size+event.item.index-1]).css('border', 'none');
             } catch(err) {}
         }
     }

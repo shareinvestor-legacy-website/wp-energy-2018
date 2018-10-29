@@ -1,5 +1,5 @@
 import './menu';
-import './hightchart/highlight';
+import './highcharts';
 import './owl';
 import './viewport';
 import './datepicker';
