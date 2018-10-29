@@ -24,8 +24,11 @@ iframe {
         }
         &.download {
             height: 790px;
+            @include media-breakpoint-down(md) {
+                height: 1900px;
+            }
             @include media-breakpoint-down(sm) {
-                height: 1850px;
+                height: 1900px;
             }
 
         }
