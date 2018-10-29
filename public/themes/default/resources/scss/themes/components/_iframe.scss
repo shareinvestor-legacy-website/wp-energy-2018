@@ -16,18 +16,21 @@ iframe {
         }
         &.calculator {
             height: 850px;
-        
+
             @include media-breakpoint-down(sm) {
                 height: 1300px;
             }
-            
+
         }
         &.download {
             height: 790px;
-            @include media-breakpoint-down(sm) {
-                height: 1650px;
+            @include media-breakpoint-down(md) {
+                height: 1900px;
             }
-            
+            @include media-breakpoint-down(sm) {
+                height: 1900px;
+            }
+
         }
         &.interactive-chart-home{
             margin-top: -15px;
