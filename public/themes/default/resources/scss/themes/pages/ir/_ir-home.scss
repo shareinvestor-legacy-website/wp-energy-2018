@@ -159,6 +159,7 @@
         @include media-breakpoint-down(sm) {
             padding-left: 20px;
             margin-bottom: 1rem;
+
         }
         @include media-breakpoint-down(md) {
             margin-bottom: 2rem;
@@ -176,6 +177,12 @@
             @include media-breakpoint-down(sm) {
                 display: inline-block;
                 margin-bottom: 2rem;
+            }
+            span {
+                @include media-breakpoint-down(sm) {
+                    display: block;
+                    margin-left: 61px;
+                }
             }
             [class*="icon-"] {
                 margin-right: 1rem;
