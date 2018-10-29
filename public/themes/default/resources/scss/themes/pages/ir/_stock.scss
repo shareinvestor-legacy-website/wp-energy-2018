@@ -28,12 +28,12 @@
                         }
                     }
                     &-body{
-                        //padding: 1rem 2rem 1rem; 
+                        //padding: 1rem 2rem 1rem;
                         padding: 0;
                         color: $white;
                         >p {
                             text-align: right;
-                        
+
                             @include media-breakpoint-down(sm) {
                                 text-align: center;
                             }
@@ -42,6 +42,7 @@
                             display: inline-block;
                             width: 50%;
                             border-right: solid 1px $white;
+                            float:left;
                             @include media-breakpoint-down(sm) {
                                 width: 100%;
                                 border-right: 0;
@@ -50,7 +51,7 @@
                                 margin: 0;
                                 padding: 20px 30px;
                                 border-bottom: solid 1px $white;
-                               
+
                                 span {
                                     &:first-child {
                                         padding-right: 10px;
@@ -75,16 +76,16 @@
                                         }
                                     }
                                 }
-                                
+
                             }
-                            
+
                         }
                     }
                 }
-                
+
             }
-            
-            
+
+
         }
     }
 }
@@ -143,7 +144,7 @@
                             padding: 0.5rem 75px;
                         }
                     }
-                   
+
                     &:after {
                         position: absolute;
                         right: 1rem;
@@ -188,7 +189,7 @@
             color: $black;
             font-weight: 700;
             text-transform: uppercase;
-           
+
         }
         input {
             vertical-align: middle;
