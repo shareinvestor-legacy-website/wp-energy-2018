@@ -178,12 +178,6 @@
                 display: inline-block;
                 margin-bottom: 2rem;
             }
-            span {
-                @include media-breakpoint-down(sm) {
-                    display: block;
-                    margin-left: 61px;
-                }
-            }
             [class*="icon-"] {
                 margin-right: 1rem;
                 margin-left: 1rem;
