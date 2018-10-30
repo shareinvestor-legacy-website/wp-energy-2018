@@ -18,5 +18,15 @@ class StockPricePresenter extends \BlazeCMS\IR\Presenter
 
 
     //custom methods here
+    public function range52weeks()
+    {
 
+        return "{$this->low_52weeks} - {$this->high_52weeks}";
+    }
+
+    public function rangeDays()
+    {
+
+        return "{$this->low} - {$this->high}";
+    }
 }
