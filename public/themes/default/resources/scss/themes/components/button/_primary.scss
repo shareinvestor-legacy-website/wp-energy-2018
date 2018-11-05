@@ -4,7 +4,7 @@
     &#{$grandparent} {
         &-primary {
             @include set-font-family;
-            @include after-arrow(lg);            
+            @include after-arrow(lg);
             background-color: transparent;
             padding: 0;
             border: none;
@@ -12,7 +12,13 @@
             transition: all .5s ease;
             font-size: px-to-rem(14);
             display: inline-flex;
-            
+
+            html[lang="th"] & {
+                font-size: px-to-rem(22);
+                font-weight: 700;
+                align-items: center;
+            }
+
             &:focus, &:focus:active {
                 box-shadow: none !important;
             }
@@ -35,7 +41,7 @@
             &:after {
                 content: none;
             }
-            @include after-arrow(lg, before);  
+            @include after-arrow(lg, before);
         }
     }
 }

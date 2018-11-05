@@ -16,6 +16,10 @@
             line-height: 1.5;
             font-size: px-to-rem(18);
             transition: all .15s ease-in-out;
+
+            html[lang="th"] & {
+                font-size: px-to-rem(27);
+            }
         }
 
         &__body {

@@ -13,13 +13,18 @@
                 color: $black;
                 padding-left: 0;
 
+                html[lang="th"] & {
+                    font-size: 1.375rem;
+                    font-weight: 700;
+                }
+
                 [class*="icon-"] {
                     margin-right: 1rem;
                 }
 
                 &-action {
                     transition: all .5s ease;
-                    
+
                     &:hover, &.active {
                         color: $funblue;
                     }

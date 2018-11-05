@@ -1,5 +1,5 @@
 
-        
+
     .banner {
 
         position: relative;
@@ -29,15 +29,15 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-    
+
             @include media-breakpoint-down(xs) {
                 top: 125px;
                 transform: translateY(0);
             }
-    
+
             img {
                 height: 100px;
-    
+
                 @include media-breakpoint-down(sm) {
                     height: 80px;
                 }
@@ -51,6 +51,11 @@
             margin-top: 0.5rem;
             margin-bottom: 0;
             line-height: 1;
+
+            html[lang="th"] & {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
         }
 
         &__icon {
@@ -63,12 +68,12 @@
                 .row {
                     align-items: flex-end;
                     height: 100%;
-                    padding-bottom: 0.5rem;               
-        
+                    padding-bottom: 0.5rem;
+
                     @media only screen and (min-width: 768px) and (min-height: 415px)  {
                         padding-bottom: 8rem;
                     }
                 }
             }
         }
-    } 
+    }

@@ -26,6 +26,12 @@
             p {
                 margin-bottom: 0;
             }
+
+            html[lang="th"] & {
+                font-size: px-to-rem(31);
+                font-weight: 700;
+                line-height: 1;
+            }
         }
 
 
@@ -41,9 +47,9 @@
                 font-weight: 600;
             }
         }
-        
 
-        &__value {            
+
+        &__value {
             @include media-breakpoint-down(sm) {
                 text-align: left;
                 flex: 1 1 50%;
@@ -60,6 +66,11 @@
             font-size: 16px;
             @include media-breakpoint-down(sm) {
                 flex: 1 1 50%;
+            }
+            html[lang="th"] & {
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 1;
             }
         }
     }

@@ -13,7 +13,7 @@ $font-types: (
                 font-size: 36,
             ),
             th: (
-                font-weight: 400,
+                font-weight: 600,
                 font-size: 48,
             )
         ),
@@ -23,7 +23,7 @@ $font-types: (
                 font-size: 34,
             ),
             th: (
-                font-weight: 400,
+                font-weight: 600,
                 font-size: 45,
             )
         ),
@@ -60,7 +60,7 @@ $font-types: (
                 font-size: 26,
                 line-height: 1.5,
             )
-        ),       
+        ),
        /* h6: (
             en: (
                 font-weight: 400,
@@ -74,11 +74,11 @@ $font-types: (
     ),
 
     /* define font class only */
-    class: (           
+    class: (
         sub-title: (
             en: (
                 font-weight: 400,
-                font-size: 14,               
+                font-size: 14,
             ),
             th: (
                 font-weight: 400,
@@ -140,7 +140,7 @@ $font-types: (
             ),
             th: (
                 font-weight: 400,
-                font-size: 20,              
+                font-size: 20,
             )
         ),
     )

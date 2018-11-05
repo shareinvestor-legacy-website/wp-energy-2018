@@ -1,10 +1,14 @@
 @each $language, $font-family in $languages {
     html[lang='#{$language}'] {
-        @include set-font-type ($language, $font-family);  
+        @include set-font-type ($language, $font-family);
     }
 
     body {
         font-size: px-to-rem(14);
+
+        html[lang="th"] & {
+            font-size: px-to-rem(16);
+        }
     }
 }
 
