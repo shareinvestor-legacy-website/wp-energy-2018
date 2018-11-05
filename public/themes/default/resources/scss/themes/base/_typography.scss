@@ -14,4 +14,8 @@
 
 .font-weight-medium {
     font-weight: 500 !important;
+
+    html[lang="th"] & {
+        font-weight: 700 !important;
+    }
 }

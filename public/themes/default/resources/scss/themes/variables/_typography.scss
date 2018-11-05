@@ -61,16 +61,16 @@ $font-types: (
                 line-height: 1.5,
             )
         ),
-       /* h6: (
+       h6: (
             en: (
                 font-weight: 400,
                 font-size: 16,
             ),
             th: (
-                font-weight: 400,
-                font-size: 16,
+                font-weight: 700,
+                font-size: 24,
             )
-        ),*/
+        ),
     ),
 
     /* define font class only */
@@ -139,8 +139,9 @@ $font-types: (
                 font-size: 20,
             ),
             th: (
-                font-weight: 400,
-                font-size: 20,
+                font-weight: 600,
+                font-size: 30,
+                line-height: 1,
             )
         ),
     )

@@ -21,6 +21,11 @@
                     background: $green;
                     border: solid 1px $green;
                 }
+
+                html[lang="th"] & {
+                    font-size: 1.375rem;
+                    font-weight: 700;
+                }
             }
         }
 
@@ -42,6 +47,11 @@
                 color: $white;
                 background: $darkgreen;
                 border: solid 1px $darkgreen;
+            }
+
+            html[lang="th"] & {
+                font-size: 1.375rem;
+                font-weight: 700;
             }
         }
 

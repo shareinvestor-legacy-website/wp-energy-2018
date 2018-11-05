@@ -16,6 +16,11 @@
                 font-size: px-to-rem(22);
                 margin: 0 1rem;
             }
+
+            html[lang="th"] & {
+                font-size: 1.375rem;
+                font-weight: 700;
+            }
         }
     }
 }

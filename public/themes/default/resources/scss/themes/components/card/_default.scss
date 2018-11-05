@@ -18,7 +18,9 @@
             transition: all .15s ease-in-out;
 
             html[lang="th"] & {
+                line-height: 1.2;
                 font-size: px-to-rem(27);
+                font-weight: 700;
             }
         }
 

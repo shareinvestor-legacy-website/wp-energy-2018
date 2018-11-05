@@ -35,6 +35,11 @@
             }
             .list-bullet {
                 font-size: px-to-rem(16);
+
+                html[lang="th"] & {
+                    font-size: px-to-rem(24);
+                    font-weight: 700;
+                }
             }
         }
         &__items {
@@ -52,10 +57,20 @@
                     font-size: px-to-rem(16);
                     font-weight: 700;
                     margin-right: 1rem;
+
+                    html[lang="th"] & {
+                        font-size: px-to-rem(24);
+                        font-weight: 900;
+                    }
                 }
                 dd {
                     font-size: px-to-rem(14);
                     margin-bottom: 0;
+
+                    html[lang="th"] & {
+                        font-size: px-to-rem(24);
+                        font-weight: 700;
+                    }
                 }
             }
         }

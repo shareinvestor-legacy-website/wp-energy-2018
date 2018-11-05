@@ -5,13 +5,13 @@
         td, th {
             border-top: 0 !important;
             line-height: 2em;
-            padding-right: 20px;         
+            padding-right: 20px;
         }
 
         th {
             background: $blue;
             color: $white;
-            text-align: center;            
+            text-align: center;
         }
 
         &.row-highlight {
@@ -94,7 +94,7 @@
                         &::before{
                             color: $green;
                         }
-                        
+
                     }
                     &:hover {
                         color: $funblue;
@@ -102,7 +102,7 @@
                             &::before{
                                 color: $funblue;
                             }
-                            
+
                         }
                     }
                 }
@@ -121,7 +121,7 @@
     &--historical {
         tr {
             th:not(:first-child), td:not(:first-child) {
-                text-align: right;                
+                text-align: right;
             }
 
             &.row-highlight {
@@ -133,7 +133,7 @@
                     background: $lightgray;
                 }
             }
-            background-color: $white !important;        
+            background-color: $white !important;
 
             &:hover {
                 td {
@@ -180,7 +180,7 @@
                     font-weight: 700;
                 }
             }
-            background-color: $white !important;         
+            background-color: $white !important;
             border-bottom: solid 2px $blue;
         }
     }
@@ -215,24 +215,37 @@
         tr {
             background-color: $white;
 
+            th {
+                html[lang="th"] & {
+                    font-size: px-to-rem(22);
+                    font-weight: 900;
+                }
+            }
+
             td {
                 background-color: $white;
-                
+                html[lang="th"] & {
+                    font-size: px-to-rem(22);
+                    font-weight: 700;
+                }
+
                 @include media-breakpoint-down(xs)
                 {
                     padding: 2px;
                 }
             }
 
+
+
             &.highlight {
                 border-bottom: solid 1px $lightblue;
-                
+
                 td {
                     font-weight: 700;
-                } 
+                }
             }
-        }        
+        }
     }
 
-    
+
 }

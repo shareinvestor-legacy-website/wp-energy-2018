@@ -16,6 +16,11 @@
                     padding-left: px-to-rem(20);
                     padding-right: px-to-rem(20);
 
+                    html[lang="th"] & {
+                        font-size: px-to-rem(22);
+                        font-weight: 700;
+                    }
+
                     &.active {
                         color: $funblue;
                         font-weight: 500;
@@ -63,16 +68,16 @@
                         font-size: 1rem;
                         font-weight: 500;
                         border-radius: 0;
-    
+
                         .fas {
                             margin-left: 1rem;
                             transition: all .3s ease;
                         }
-                        
+
                         &[aria-expanded="true"] {
                             border-bottom: 0;
-                            background-color: $lightgray;                            
-    
+                            background-color: $lightgray;
+
                             .fas {
                                 transform: rotate(-180deg);
                             }
