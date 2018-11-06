@@ -213,6 +213,7 @@
                 html[lang="th"] & {
                     font-weight: 700;
                     font-size: 1.5rem;
+                    letter-spacing: 1.2px;
                 }
 
                 &:hover {
@@ -252,39 +253,6 @@
             }
         }
     }
-
-    // Button for switch language
-    // .language {
-    //     display: block;
-    //     position: relative;
-    //     color: $white;
-    //     @include set-font-family;
-
-    //     html[lang="en"] & {
-    //         font-size: 0.9rem;
-    //         font-weight: 500;
-    //     }
-
-    //     html[lang="th"] & {
-    //         font-size: 1.4rem;
-    //         font-weight: 800;
-    //         line-height: 1;
-    //     }
-
-    //     &:after {
-    //         content: '';
-    //         width: 2.5rem;
-    //         height: 2.5rem;
-    //         border-radius: 100%;
-    //         display: block;
-    //         background-color: $green;
-    //         position: absolute;
-    //         top: 50%;
-    //         left: 50%;
-    //         z-index: -1;
-    //         transform: translate(-50%, -35%);
-    //     }
-    // }
 
     @include media-breakpoint-up(xl) {
         .menu {
@@ -376,8 +344,9 @@
                     padding-bottom: 1.5rem;
                     border-bottom: 1px solid $lightgray;
 
-                    html[lang="en"] &, html[lang="th"] & {
-                        font-size: 1rem;
+                    html[lang="th"] & {
+                        font-size: 1.5rem;
+                        letter-spacing: 1.2px;
                     }
                 }
 
