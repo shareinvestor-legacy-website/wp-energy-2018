@@ -1,9 +1,9 @@
 .card {
     $grandparent: &;
 
-    &#{$grandparent} { 
-        &--news {                
-            border: 1px solid $lightgray;
+    &#{$grandparent} {
+        &--news {
+            border: 1px solid $gray;
 
             #{$grandparent} {
                 &__image {
@@ -12,12 +12,13 @@
                     text-align: center;
 
                     img {
+                        transition: all .5s ease;
                         height: 100%;
                     }
                 }
 
                 &__body {
-                    padding: 0 1rem 1rem 1rem;        
+                    padding: 0 1rem 1rem 1rem;
                 }
 
                 &__title {
@@ -30,8 +31,14 @@
                     &__title {
                         color: $funblue;
                     }
+
+                    &__image {
+                        img {
+                            transform: scale3d(1.1, 1.1, 1.1);
+                        }
+                    }
                 }
             }
-        }    
+        }
     }
 }
