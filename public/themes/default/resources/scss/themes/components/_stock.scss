@@ -14,24 +14,35 @@
     .stock {
         &--datetime {
             font-size: .9rem;
+
+            html[lang="th"] & {
+                line-height: 1.5;
+            }
         }
 
         &__date {
             text-align: left;
+
+            h3 {
+                html[lang="th"] & {
+                    line-height: 1;
+                }
+            }
         }
 
         &__symbol {
             @include set-font-family;
-            font-size: px-to-rem(20);
+
             p {
+                font-size: px-to-rem(20);
                 margin-bottom: 0;
                 font-weight: 700;
-            }
 
-            html[lang="th"] & {
-                font-size: px-to-rem(31);
-                font-weight: 700;
-                line-height: 1;
+                html[lang="th"] & {
+                    font-size: px-to-rem(31);
+                    font-weight: 700;
+                    line-height: 1;
+                }
             }
         }
 
@@ -60,6 +71,7 @@
                 font-size: 2.3rem;
                 font-weight: 500;
             }
+
             html[lang="th"] & {
                 line-height: 2;
                 > p {
@@ -74,16 +86,17 @@
 
         &__change {
             @include set-font-family;
-            font-size: 16px;
             @include media-breakpoint-down(sm) {
                 flex: 1 1 50%;
             }
-            html[lang="th"] & {
-                font-size: 25px;
-                font-weight: 700;
-                line-height: 1;
-            }
+
             > p {
+                font-size: 16px;
+                html[lang="th"] & {
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 1;
+                }
                 &:first-child {
                     line-height: 1.7;
                 }
