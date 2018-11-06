@@ -1,11 +1,13 @@
 .card {
+    $grandparent: &;
+
     &--overlap {
         margin-bottom: 2rem;
         margin-top: 1.5rem;
         padding: 0 1.5rem 1rem;
         box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.09);
 
-        .card {
+        #{$grandparent} {
             &__body {
                 min-height: 200px;
             }
@@ -26,6 +28,11 @@
                 margin-bottom: 1rem;
                 margin-left: auto;
                 margin-right: auto;
+                overflow: hidden;
+
+                img {
+                    transition: all .5s ease;
+                }
             }
 
             &__title {
@@ -38,6 +45,16 @@
                 border-top: 1px solid $blue;
                 padding-top: 1rem;
                 width: 120px;
+            }
+        }
+
+        &:hover {
+            #{$grandparent} {
+                &__image {
+                    img {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                }
             }
         }
     }

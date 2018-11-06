@@ -1,4 +1,6 @@
 .card {
+    $grandparent: &;
+
     &--gradient {
         margin-bottom: 2rem;
         margin-top: 1.5rem;
@@ -6,7 +8,7 @@
         box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.09);
         background: linear-gradient(90deg,#85ba41,#1a4783);
 
-        .card {
+        #{$grandparent} {
             &__body {
                 min-height: auto;
                 color: $white;
@@ -41,6 +43,21 @@
                 margin-bottom: 1rem;
                 margin-left: auto;
                 margin-right: auto;
+                overflow: hidden;
+
+                img {
+                    transition: all .5s ease;
+                }
+            }
+        }
+
+        &:hover {
+            #{$grandparent} {
+                &__image {
+                    img {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                }
             }
         }
     }

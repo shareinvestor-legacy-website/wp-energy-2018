@@ -1,32 +1,33 @@
 .card {
+    $grandparent: &;
+
     &--publication {
         border: solid 1px $gray;
 
-        >div {
-            &:hover {
-                a {
-                    color: $green;
+        .col-md-6 {
+            // left
+            &:first-child {
+                padding: 0;
+                overflow: hidden;
+                border-right: solid 1px $gray;
+
+                @include media-breakpoint-down(sm) {
+                    border-right: none;
                 }
             }
 
-            >div {
-                padding: 20px;
-
-                &:first-child {
-                    border-right: solid 1px $gray;
-                    padding: 0;
-                    @include media-breakpoint-down(sm) {
-                        border-right: none;
-                    }
-                }
+            // right
+            &:last-child {
+                align-self: center;
             }
         }
 
-        .card {
+        #{$grandparent} {
             &-cover {
                 height: 245px;
                 background-size: cover;
                 background-position: center right;
+                transition: all .5s ease;
 
                 @include media-breakpoint-down(sm) {
                     min-height: 350px;
@@ -66,8 +67,17 @@
                 color: $funblue !important;
             }
         }
+
         hr {
             border-bottom: 1px solid $blue;
+        }
+
+        &:hover {
+            #{$grandparent} {
+                &-cover {
+                    transform: scale3d(1.1, 1.1, 1.1);
+                }
+            }
         }
     }
 }
