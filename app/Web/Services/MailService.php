@@ -22,7 +22,8 @@ class MailService
     public function send(Request $request)
     {
 
-        $contact = Contact::where('name', $request->department)->first();
+        $name = $request->name;
+        $contact = Contact::where('name', $name)->first();
 
         $emails = $contact->emails();
 

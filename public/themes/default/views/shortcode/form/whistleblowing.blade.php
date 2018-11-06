@@ -4,6 +4,7 @@
 
     <div class="form-row">
         <div class="form-group col-sm-6">
+
             <label for="firstname">{{t('first.name')}}<span class="text-red">*</span></label>
             <input class="form-control" name="firstname" type="text" value="{{old('firstname', @$firstname)}}" required>
 

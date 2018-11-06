@@ -68,7 +68,7 @@
         </div>
         <div class="form-group col-sm-6">
             <label for="birthdate">{{t('date.of.birth')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="birthdate" type="text">
+            <input class="form-control" name="birthdate" type="text" value="{{old('birthdate', @$birthdate)}}">
 
             @include('component.error-message', ['field' => 'birthdate'])
 
