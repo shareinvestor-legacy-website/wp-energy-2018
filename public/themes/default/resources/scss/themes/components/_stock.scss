@@ -60,6 +60,10 @@
                 font-size: 2.3rem;
                 font-weight: 500;
             }
+            html[lang="th"] & {
+                line-height: 2;
+            }
+
         }
 
         &__change {
@@ -72,6 +76,12 @@
                 font-size: 25px;
                 font-weight: 700;
                 line-height: 1;
+            }
+            > p {
+                &:first-child {
+                    line-height: 1.7;
+                }
+
             }
         }
     }
