@@ -2,11 +2,16 @@
 
     $size: 40;
     font-size: 0.9rem;
+
+    html[lang="th"] & {
+        font-size: 1.4rem;
+    }
+
     width: px-to-rem($size);
     height: px-to-rem($size);
 
     position: relative;
-    
+
 
     @include set-font-family;
     display: flex;
