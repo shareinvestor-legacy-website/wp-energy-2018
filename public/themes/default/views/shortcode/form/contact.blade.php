@@ -60,7 +60,7 @@
     </div>
     <div class="form-group">
 
-        <label for="subject">{{t('subject')}}</label>
+        <label for="subject">{{t('subject')}}<span class="text-red">*</span></label>
         <input class="form-control" id="subject" name="subject" type="text" value="{{old('subject', @$subject)}}" />
 
         @include('component.error-message', ['field' => 'subject'])

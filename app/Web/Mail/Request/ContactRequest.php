@@ -27,9 +27,7 @@ class ContactRequest extends Request
         return [
             'fullname' => 'required',
             'email' => 'required|email',
-            'address' => 'required',
             'subject' => 'required',
-            'telephone' => 'required',
             'question' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
