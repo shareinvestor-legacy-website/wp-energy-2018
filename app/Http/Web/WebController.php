@@ -431,11 +431,10 @@ class WebController extends Controller
     }
 
     //calendar
-    public function calendar(Request $request, $root, $subCategory = null)
+    public function calendar(Request $request, $root)
     {
 
         $category = $this->categoryService->get("ir-calendar")->first();
-        $categories = $category->children()->public()->get();
         $menu = $this->menuService->get($category->path);
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($parent->slug);
@@ -443,14 +442,9 @@ class WebController extends Controller
         $years = $this->postService->getYears(null, $category->path);
         $year = $request->year ?? get_first_array($years, true);
 
-        if($subCategory != null){
-            $category = $this->categoryService->get("{$category->slug}/{$subCategory}")->first();
-            $posts = $this->postService->queryByYear(true, $year, $category->path);
-        }else{
-            $posts = $this->postService->queryByYear(true, $year, ...$categories->pluck('path'));
-        }
+        $posts = $this->postService->queryByYear(true, $year, $category->path);
 
-        return view('web.calendar.index', compact('root', 'categories', 'category', 'menu', 'posts', 'sidebar', 'years', 'year'));
+        return view('web.calendar.index', compact('root', 'category', 'menu', 'posts', 'sidebar', 'years', 'year'));
 
     }
 }
