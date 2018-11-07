@@ -3,6 +3,7 @@ import webpackMerge from 'webpack-merge'
 import base from './base.babel'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 
 export default function (env) {
 
@@ -24,7 +25,14 @@ export default function (env) {
                     to: 'static'
                 },
             ]),
-
+            new OptimizeCssAssetsPlugin({
+                assetNameRegExp: /\.css$/g,
+                cssProcessor: require('cssnano'),
+                cssProcessorPluginOptions: {
+                  preset: ['default', { discardComments: { removeAll: true } }],
+                },
+                canPrint: true
+            })
 
         ],
     })
