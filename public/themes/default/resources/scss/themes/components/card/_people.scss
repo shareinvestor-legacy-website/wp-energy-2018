@@ -15,7 +15,8 @@
                     height: $bg-height;
                     text-align: center;
                     margin-left: 0;
-                    margin-right: 0;                      
+                    margin-right: 0;
+                    overflow: initial;
 
                     .img-fluid {
                         height: $man-height;
@@ -33,13 +34,19 @@
                     transition: color 1s ease;
                 }
             }
-            
+
             &:hover {
                 color: $funblue;
 
                 #{$grandparent} {
                     &__title {
                         color: $funblue;
+                    }
+
+                    &__image {
+                        img {
+                            transform: none;
+                        }
                     }
                 }
             }
