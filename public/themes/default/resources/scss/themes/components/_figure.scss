@@ -3,8 +3,8 @@
 
     &#{$grandparent} {
         &--circle {
-            padding-left: px-to-rem(28);
-            padding-right: px-to-rem(28);
+            padding-left: px-to-rem(16);
+            padding-right: px-to-rem(16);
 
             #{$grandparent} {
                 &__image {
@@ -24,7 +24,12 @@
                 }
                 &__value {
                     @include set-font-family;
-                    font-size: px-to-rem(14);                    
+                    font-size: px-to-rem(14);
+
+                    html[lang="th"] & {
+                        font-size: px-to-rem(22);
+                        font-weight: 700;
+                    }
                 }
             }
 
@@ -32,7 +37,8 @@
                 text-align: center;
                 color: $blue;
                 font-weight: 500;
-                font-size: px-to-rem(15)
+                font-size: px-to-rem(15);
+
             }
 
         }
