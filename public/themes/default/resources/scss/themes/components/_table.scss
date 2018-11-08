@@ -227,6 +227,7 @@
                 html[lang="th"] & {
                     font-size: px-to-rem(22);
                     font-weight: 700;
+                    line-height: 1.3;
                 }
 
                 @include media-breakpoint-down(xs)
@@ -242,6 +243,10 @@
 
                 td {
                     font-weight: 700;
+
+                    html[lang="th"] & {
+                        font-weight: 900;
+                    }
                 }
             }
         }
