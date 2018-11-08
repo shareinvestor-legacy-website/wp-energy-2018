@@ -14,9 +14,11 @@ export default function (env) {
 
 
         plugins: [
+
             new CleanWebpackPlugin(['assets'], {
                 root: path.resolve(__dirname, '../../public/themes/default'),
             }),
+
             new CopyWebpackPlugin([
                 {
                     //theme:static
@@ -25,15 +27,12 @@ export default function (env) {
                     to: 'static'
                 },
             ]),
-            new OptimizeCssAssetsPlugin({
-                assetNameRegExp: /\.css$/g,
-                cssProcessor: require('cssnano'),
-                cssProcessorPluginOptions: {
-                  preset: ['default', { discardComments: { removeAll: true } }],
-                },
-                canPrint: true
-            })
 
+            new OptimizeCssAssetsPlugin({
+                assetNameRegExp: /(\.css)$/g,
+                cssProcessor: require('cssnano'),
+                canPrint: true
+            }),
         ],
     })
 };
