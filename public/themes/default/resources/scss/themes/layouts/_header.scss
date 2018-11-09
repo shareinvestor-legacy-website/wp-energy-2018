@@ -436,6 +436,7 @@
                     padding-top: 1rem;
                     color: $white;
                     width: auto;
+                    white-space: initial;
 
                     &.active {
                         border-bottom: 1px solid $green;
