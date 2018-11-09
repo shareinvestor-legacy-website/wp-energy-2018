@@ -5,10 +5,10 @@
 
     body {
         font-size: px-to-rem(14);
+        line-height: 2;
 
         html[lang="th"] & {
             font-size: px-to-rem(16);
-            line-height: 2;
         }
     }
 }
