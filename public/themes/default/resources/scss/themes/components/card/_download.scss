@@ -1,10 +1,19 @@
 .card {
     $grandparent: &;
 
-    &#{$grandparent} { 
-        &--download {                
-            @extend .card--border;
-            
+    &#{$grandparent} {
+        &--download {
+            border-width: 4.7px;
+            border-image: linear-gradient(to right, $blue, $green);
+            border-style: solid;
+            border-image-width: 0 0 1 0;
+            border-image-slice: 0 0 1 0;
+            border-left: none;
+            border-right: none;
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.07);
+            margin-bottom: 1rem;
+            padding: 1rem 2rem;
+
             box-shadow: none;
             background-color: $lightgray;
             z-index: 1;
@@ -19,14 +28,14 @@
                 top: 0;
                 z-index: -1;
                 @include set-image(137px 50%, 60%);
-                background-image: url('/assets/static/images/watermark.svg');
+                background-image: url('/themes/default/assets/static/images/watermark.svg');
             }
 
             .card__title {
                 color: $lightblue;
                 font-weight: 500;
-                transition: all .15s ease-in-out; 
-                height: 55px;                           
+                transition: all .15s ease-in-out;
+                height: 55px;
             }
 
             &:hover {
@@ -37,7 +46,7 @@
                 .btn:after {
                     background-color: transparent;
                 }
-            } 
-        }    
+            }
+        }
     }
 }
