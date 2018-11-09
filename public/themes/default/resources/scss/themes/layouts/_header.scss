@@ -55,6 +55,7 @@
 
             .nav {
                 &-item:last-child {
+                    display: none;
                     .nav-link {
                         padding-top: 1.7rem;
                         padding-bottom: 1rem;
