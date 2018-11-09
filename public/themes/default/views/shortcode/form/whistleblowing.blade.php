@@ -35,7 +35,7 @@
     </div>
     <div class="form-group">
         <label for="address">{{t('address')}}</label>
-        <textarea class="form-control" name="address" cols="40" rows="5" required>{{old('address', @$address)}}</textarea>
+        <textarea class="form-control" name="address" cols="40" rows="5">{{old('address', @$address)}}</textarea>
 
         @include('component.error-message', ['field' => 'address'])
 
