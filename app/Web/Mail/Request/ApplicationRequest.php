@@ -31,7 +31,7 @@ class ApplicationRequest extends Request
             'firstname' => 'required',
             'lastname' => 'required',
             'birthdate' => 'required',
-            'nationality' => 'required|email',
+            'nationality' => 'required',
             'email' => 'required|email',
             'mobile' => 'required',
             'address' => 'required',
