@@ -9,7 +9,7 @@
         <div id="callapse-{{$position->id}}" class="card-block collapse{{ $loop->first ? ' show' : '' }}" data-parent="#accordion-available-position">
             <div class="card-body">
 
-                <h5 class="text-blue font-weight-medium">{{$position->present()->title}}</h5>
+                <h5 class="text-blue">{{$position->present()->title}}</h5>
 
                 @if($position->present()->description != null)
 
