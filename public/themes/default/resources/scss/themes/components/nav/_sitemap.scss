@@ -46,7 +46,7 @@
                     padding-right: 0;
 
                     html[lang="th"] & {
-                        font-size: px-to-rem(22);
+                        font-size: px-to-rem(24);
                         font-weight: 900;
                     }
                 }
@@ -61,7 +61,8 @@
                             color: $black;
 
                             html[lang="th"] & {
-                                font-size: px-to-rem(20);
+                                font-size: px-to-rem(22);
+                                font-weight: 900;
                             }
                         }
                     }
@@ -77,7 +78,8 @@
                             color: $black;
 
                             html[lang="th"] & {
-                                font-size: px-to-rem(20);
+                                font-size: px-to-rem(22);
+                                font-weight: 700;
                             }
                         }
                     }
