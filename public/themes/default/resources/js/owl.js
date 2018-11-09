@@ -20,7 +20,7 @@ class owl {
                 items:1,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                autoplayTimeout: 5000,
+                autoplayTimeout: 10000,
                 onChanged: animation,
             })
         }
