@@ -29,8 +29,6 @@ class WhistleblowingRequest extends Request
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required|email',
-            'telephone' => 'required',
-            'address' => 'required',
             'detail' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
