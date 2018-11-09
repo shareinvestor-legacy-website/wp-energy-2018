@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='google-site-verification' content='{{setting('general.website.verification')}}'>
+    <meta name="format-detection" content="telephone=no">
 
     @yield('meta')
 
