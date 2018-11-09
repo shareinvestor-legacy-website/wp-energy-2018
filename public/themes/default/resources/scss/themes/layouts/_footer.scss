@@ -6,6 +6,7 @@
     html[lang="th"] & {
         font-size: px-to-rem(18);
         font-weight: 700;
+        line-height: 1;
     }
 
     .nav {
@@ -27,6 +28,7 @@
 
             html[lang="th"] & {
                 line-height: 1;
+                font-size: px-to-rem(20);
             }
         }
 
@@ -34,12 +36,18 @@
             padding-bottom: 0.7rem;
             margin-bottom: 0.5rem;
 
-            .nav-item {
+            &-item {
                 &:not(:first-child) {
                     border-left: 1px solid $white;
                 }
                 &:first-child .nav-link {
                     padding-left: 0;
+                }
+            }
+            &-link {
+                html[lang="th"] & {
+                    line-height: 1;
+                    font-size: px-to-rem(20);
                 }
             }
         }
