@@ -1,0 +1,88 @@
+.nav {
+    $grandparent: &;
+
+    &#{$grandparent} {
+        &--sitemap {
+            display: block;
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+
+            @include media-breakpoint-down(lg)
+            {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+            }
+
+            @include media-breakpoint-down(md)
+            {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+            }
+
+            @include media-breakpoint-down(sm)
+            {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
+            }
+
+            >#{$grandparent}-item {
+                page-break-inside: avoid;
+                // /* Fix bug::list style on Edge */
+                list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+            }
+
+            #{$grandparent} {
+                &-link {
+                    @include set-font-family;
+                    font-size: px-to-rem(18);
+                    font-weight: 500;
+                    color: $blue;
+                    line-height: 1.2;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    html[lang="th"] & {
+                        font-size: px-to-rem(22);
+                        font-weight: 900;
+                    }
+                }
+
+                &__lv-2 {
+                    padding-left: 1rem;
+
+                    #{$grandparent} {
+                        &-link {
+                            font-size: px-to-rem(16);
+                            font-weight: 500;
+                            color: $black;
+
+                            html[lang="th"] & {
+                                font-size: px-to-rem(20);
+                            }
+                        }
+                    }
+                }
+
+                &__lv-3 {
+                    padding-left: 1rem;
+
+                    #{$grandparent} {
+                        &-link {
+                            font-size: px-to-rem(16);
+                            font-weight: 400;
+                            color: $black;
+
+                            html[lang="th"] & {
+                                font-size: px-to-rem(20);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

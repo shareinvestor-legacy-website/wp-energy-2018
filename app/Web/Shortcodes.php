@@ -197,4 +197,9 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
         return view('shortcode.ir.download', compact('posts'));
     }
 
+    public function sitemap()
+    {
+        return view('shortcode.sitemap');
+    }
+
 }
