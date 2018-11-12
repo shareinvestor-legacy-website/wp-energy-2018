@@ -29,7 +29,7 @@ class WhistleblowingRequest extends Request
             'lastname' => 'required',
             'email' => 'required|email',
             'detail' => 'required',
-            'file' => 'file:1,3000|mimes:pdf,doc,docx',
+            'file' => 'mimes:pdf,doc,docx',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

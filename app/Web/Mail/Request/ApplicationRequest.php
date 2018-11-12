@@ -33,8 +33,8 @@ class ApplicationRequest extends Request
             'email' => 'required|email',
             'mobile' => 'required',
             'address' => 'required',
-            'resume' => 'file:1,3000|mimes:jpeg,bmp,png',
-            'picture' => 'file:1,3000|mimes:pdf,doc,docx',
+            'resume' => 'mimes:jpeg,bmp,png',
+            'picture' => 'mimes:pdf,doc,docx',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
