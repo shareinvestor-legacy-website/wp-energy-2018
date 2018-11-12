@@ -26,11 +26,8 @@
             @include set-font-family;
             color: $blue;
             margin-bottom: 1rem;
-
-            html[lang="en"] & {
-                font-size: 2.4rem;
-                font-weight: 600;
-            }
+            font-size: 2.4rem;
+            font-weight: 600;
 
             html[lang="th"] & {
                 font-size: 3.4rem;
@@ -40,9 +37,16 @@
         }
 
         &__text {
+            @include set-font-family;
             color: $blue;
-            font-weight: 300;
+            font-weight: 400;
             font-size: px-to-rem(14);
+
+            html[lang="th"] & {
+                font-size: px-to-rem(22);
+                font-weight: 700;
+                line-height: 1.5;
+            }
         }
 
         /* Reset style */
@@ -52,14 +56,11 @@
 
         &__lv1 {
             margin-left: auto;
+            >.nav-item:last-child>.nav-link {
+                padding-top: 1.7rem;
+                padding-bottom: 1rem;
+            }
             .nav {
-                &-item:last-child {
-                    .nav-link {
-                        padding-top: 1.7rem;
-                        padding-bottom: 1rem;
-                    }
-                }
-
                 &-link {
                     min-height: 76px;
                     padding-top: 2.4rem;
@@ -90,7 +91,7 @@
             @include media-breakpoint-up(xl)
             {
                 &>.dropdown>.dropdown-menu {
-                    height: 536px;
+                    height: 611px;
                 }
             }
 
