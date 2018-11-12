@@ -52,9 +52,6 @@
 
         &__lv1 {
             margin-left: auto;
-            >.nav-item:last-child {
-                display: none;
-            }
             .nav {
                 &-item:last-child {
                     .nav-link {
@@ -338,6 +335,10 @@
                 max-height: calc(100vh - 76px);
                 overflow: auto;
                 background-color: $white;
+
+                >.nav-item:last-child {
+                    display: none;
+                }
 
                 .nav-link {
                     margin-left: 1.5rem;
