@@ -42,12 +42,12 @@
                     font-weight: 500;
                     color: $blue;
                     line-height: 1.2;
-                    padding-left: 0;
-                    padding-right: 0;
+                    padding: .3rem 0;
 
                     html[lang="th"] & {
                         font-size: px-to-rem(24);
                         font-weight: 900;
+                        line-height: .8;
                     }
                 }
 
@@ -73,7 +73,7 @@
 
                     #{$grandparent} {
                         &-link {
-                            font-size: px-to-rem(16);
+                            font-size: px-to-rem(14);
                             font-weight: 400;
                             color: $black;
 
