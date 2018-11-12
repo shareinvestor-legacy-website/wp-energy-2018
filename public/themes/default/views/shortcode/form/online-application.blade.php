@@ -1,4 +1,4 @@
-<form class="form form--primary" action="{{action('Web\MailController@application', ['name'=>'online.application'])}}" name="application" method="post" _lpchecked="1">
+<form class="form form--primary" action="{{action('Web\MailController@application', ['name'=>'online.application'])}}" name="application" method="post"  enctype="multipart/form-data">
 
     {{csrf_field()}}
 
