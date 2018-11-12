@@ -28,17 +28,17 @@
             <div class="input-radio">
                 <ul>
                     <li>
-                        <input checked type="radio" name="{{t('mr')}}">
+                        <input checked type="radio" name="title" value="{{t('mr')}}">
                         <span class="text">{{t('mr')}}</span>
                         <div class="bullet"></div>
                     </li>
                     <li>
-                        <input type="radio" name="{{t('mr')}}">
+                        <input type="radio" name="title" value="{{t('mrs')}}">
                         <span class="text">{{t('mrs')}}</span>
                         <div class="bullet"></div>
                     </li>
                     <li>
-                        <input type="radio" name="{{t('ms')}}">
+                        <input type="radio" name="title" value="{{t('ms')}}">
                         <span class="text">{{t('ms')}}</span>
                         <div class="bullet"></div>
                     </li>
