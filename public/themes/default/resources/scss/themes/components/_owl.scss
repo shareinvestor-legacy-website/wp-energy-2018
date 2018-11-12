@@ -112,8 +112,9 @@
                     transition: all .3s ease;
 
                     html[lang="th"] & {
-                        font-size: px-to-rem(33);
+                        font-size: px-to-rem(27);
                         font-weight: 700;
+                        line-height: 1.5;
                     }
 
                     &:hover {
