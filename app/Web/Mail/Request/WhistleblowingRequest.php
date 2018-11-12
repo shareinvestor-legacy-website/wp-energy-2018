@@ -25,11 +25,11 @@ class WhistleblowingRequest extends Request
     public function rules()
     {
         return [
-            'file' => 'mimes:pdf,doc,docx|max:3000',
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required|email',
             'detail' => 'required',
+            'file' => 'file:1,3000|mimes:pdf,doc,docx',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
