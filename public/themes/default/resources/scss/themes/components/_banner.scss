@@ -11,6 +11,16 @@
         .item {
             @include set-image();
             height: 100vh;
+
+            @include media-breakpoint-down(md)
+            {
+                @include set-image(17% 50%);
+            }
+
+            @include media-breakpoint-down(sm)
+            {
+                @include set-image(27% 50%);
+            }
         }
 
         .owl-item.active {
