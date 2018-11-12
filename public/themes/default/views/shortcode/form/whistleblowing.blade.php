@@ -1,4 +1,4 @@
-<form class="form form--primary" action="{{action('Web\MailController@whistleblowing', ['name'=>'whistleblowing'])}}" name="whistleblowing" method="post" _lpchecked="1">
+<form class="form form--primary" action="{{action('Web\MailController@whistleblowing', ['name'=>'whistleblowing'])}}" name="whistleblowing" method="post" enctype="multipart/form-data">
 
     {{csrf_field()}}
 

@@ -25,8 +25,6 @@ class ApplicationRequest extends Request
     public function rules()
     {
         return [
-            'resume' => 'mimes:pdf,doc,docx,jpg,png|max:3000',
-            'picture' => 'mimes:pdf,doc,docx,jpg,png|max:3000',
             'position' => 'required',
             'firstname' => 'required',
             'lastname' => 'required',
@@ -35,6 +33,8 @@ class ApplicationRequest extends Request
             'email' => 'required|email',
             'mobile' => 'required',
             'address' => 'required',
+            'picture' => 'max:3000|mimes:jpeg,jpg,png',
+            'resume' => 'max:3000|mimes:jpeg,jpg,png,doc,docx,pdf',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
