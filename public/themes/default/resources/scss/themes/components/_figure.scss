@@ -21,6 +21,7 @@
                 &__number {
                     font-size: px-to-rem(30);
                     color: $green;
+                    white-space: nowrap;
                 }
                 &__value {
                     @include set-font-family;
