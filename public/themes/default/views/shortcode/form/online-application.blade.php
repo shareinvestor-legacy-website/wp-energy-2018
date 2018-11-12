@@ -12,10 +12,12 @@
                 <option selected disabled>{{t('please.select')}}</option>
 
                 @foreach ($positions as $position)
-                <option>{{$position->present()->title}}</option>
+                    <option>{{$position->present()->title}}</option>
                 @endforeach
 
             </select>
+
+            @include('component.error-message', ['field' => 'position'])
 
         </div>
     </div>
