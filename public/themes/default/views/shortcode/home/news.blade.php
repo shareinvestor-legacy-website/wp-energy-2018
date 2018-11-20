@@ -1,4 +1,4 @@
-<div class="owl-carousel owl-theme owl--news invisible" data-vp-remove-class="invisible" data-vp-add-class="animated fadeIn">
+<div class="owl-carousel owl-theme owl--news">
 
     @foreach ($posts as $post)
 
