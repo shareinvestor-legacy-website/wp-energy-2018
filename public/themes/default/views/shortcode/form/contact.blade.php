@@ -20,7 +20,7 @@
 
             <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
 
-            <input class="form-control" id="fullname" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" required />
+            <input class="form-control" id="fullname" name="fullname" type="text" value="{{old('fullname', @$fullname)}}"/>
 
             @include('component.error-message', ['field' => 'fullname'])
 

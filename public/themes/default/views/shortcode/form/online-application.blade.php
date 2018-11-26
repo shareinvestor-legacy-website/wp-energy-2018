@@ -50,7 +50,7 @@
     </div>
     <div class="form-group">
         <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
-        <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" required>
+        <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}">
 
         @include('component.error-message', ['field' => 'fullname'])
     </div>
@@ -63,13 +63,13 @@
     <div class="form-row">
         <div class="form-group col-sm-6">
             <label for="nationality">{{t('nationality')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="nationality" type="text" value="{{old('nationality', @$nationality)}}" required>
+            <input class="form-control" name="nationality" type="text" value="{{old('nationality', @$nationality)}}">
 
             @include('component.error-message', ['field' => 'nationality'])
         </div>
         <div class="form-group col-sm-6">
             <label for="mobile">{{t('mobile.phone')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="mobile" type="text" value="{{old('mobile', @$mobile)}}" required>
+            <input class="form-control" name="mobile" type="text" value="{{old('mobile', @$mobile)}}">
 
             @include('component.error-message', ['field' => 'mobile'])
         </div>
