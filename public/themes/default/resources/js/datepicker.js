@@ -8,7 +8,15 @@ class datepicker {
             changeMonth: true,
             changeYear: true
         });
-  
+        $(".datepicker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            minDate: '-80Y',
+            maxDate: '-18Y',
+            defaultdate: '-18Y',
+            changeMonth: true,
+            changeYear: true
+        });
+
     }
 }
 

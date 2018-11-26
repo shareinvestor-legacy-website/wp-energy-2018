@@ -1,4 +1,4 @@
-<form class="form form--primary" action="{{action('Web\MailController@application', ['name'=>'online.application'])}}" name="application" method="post"  enctype="multipart/form-data">
+<form class="form form--primary" action="{{action('Web\MailController@application', ['name'=>'online.application'])}}" name="application" method="post"  enctype="multipart/form-data" autocomplete="off">
 
     {{csrf_field()}}
 
@@ -48,17 +48,24 @@
             </div>
         </div>
     </div>
-    <div class="form-group">
-        <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
-        <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}">
+    <div class="form-row">
+        <div class="form-group col-12 col-sm-6">
+            <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
+            <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}">
 
-        @include('component.error-message', ['field' => 'fullname'])
-    </div>
-    <div class="form-group">
-        <label for="birthdate">{{t('date.of.birth')}}<span class="text-red">*</span></label>
-        <input class="form-control" name="birthdate" type="text" value="{{old('birthdate', @$birthdate)}}">
+            @include('component.error-message', ['field' => 'fullname'])
+        </div>
+        <div class="form-group col-12 col-sm-6">
+            <label for="birthdate">{{t('date.of.birth')}}<span class="text-red">*</span></label>
+            <div class="input-group">
+                <input class="form-control datepicker" id="birthdate" name="birthdate" type="text" value="{{old('birthdate', @$birthdate)}}">
+                <div class="input-group-append">
+                    <a class="btn btn-outline-primary" onclick="$('.datepicker').focus()"><i class="icon-calendar fa-lg"></i></a>
+                </div>
+            </div>
 
-        @include('component.error-message', ['field' => 'birthdate'])
+            @include('component.error-message', ['field' => 'birthdate'])
+        </div>
     </div>
     <div class="form-row">
         <div class="form-group col-sm-6">

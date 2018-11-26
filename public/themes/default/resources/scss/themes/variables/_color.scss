@@ -1,6 +1,7 @@
 $white:         #FFFFFF;
 $lightgray:     #F4F4F4;
 $gray:          #e2e2e2;
+$darkgray:      #ced4da;
 $black:         #000000;
 $funblue:       #178EF4;
 $blue:          #1A4783;
@@ -10,7 +11,7 @@ $darkgreen:     #487867;
 
 $colors: () !default;
 $colors: map-merge((
-    
+
 ), $colors);
 
 $theme-colors: () !default;
@@ -18,7 +19,7 @@ $theme-colors: map-merge((
     'white':        $white,
     'black':        $black,
     'green':        $green,
-    'blue':         $blue,    
+    'blue':         $blue,
 ), $theme-colors);
 
 $backgrounds: () !default;
