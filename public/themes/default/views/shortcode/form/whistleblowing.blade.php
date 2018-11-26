@@ -20,7 +20,7 @@
         </div>
         <div class="form-group col-sm-6">
             <label for="telephone">{{t('telephone')}}</label>
-            <input class="form-control" name="telephone" type="text" value="{{old('telephone', @$telephone)}}" placeholder="Ex. 080-1234567" />>
+            <input class="form-control" name="telephone" type="text" value="{{old('telephone', @$telephone)}}" placeholder="Ex. 080-1234567" />
 
             @include('component.error-message', ['field' => 'telephone'])
 
