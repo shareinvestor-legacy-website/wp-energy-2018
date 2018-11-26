@@ -26,8 +26,7 @@ class ApplicationRequest extends Request
     {
         return [
             'position' => 'required',
-            'firstname' => 'required',
-            'lastname' => 'required',
+            'fullname' => 'required',
             'birthdate' => 'required',
             'nationality' => 'required',
             'email' => 'required|email',

@@ -48,58 +48,37 @@
             </div>
         </div>
     </div>
+    <div class="form-group">
+        <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
+        <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" required>
+
+        @include('component.error-message', ['field' => 'fullname'])
+    </div>
+    <div class="form-group">
+        <label for="birthdate">{{t('date.of.birth')}}<span class="text-red">*</span></label>
+        <input class="form-control" name="birthdate" type="text" value="{{old('birthdate', @$birthdate)}}">
+
+        @include('component.error-message', ['field' => 'birthdate'])
+    </div>
     <div class="form-row">
-        <div class="form-group col-sm-6">
-
-            <label for="firstname">{{t('first.name')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="firstname" type="text" value="{{old('firstname', @$firstname)}}" required>
-
-            @include('component.error-message', ['field' => 'firstname'])
-
-
-
-        </div>
-        <div class="form-group col-sm-6">
-
-            <label for="lastname">{{t('last.name')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="lastname" type="text" value="{{old('lastname', @$lastname)}}" required>
-
-            @include('component.error-message', ['field' => 'lastname'])
-
-
-        </div>
-        <div class="form-group col-sm-6">
-            <label for="birthdate">{{t('date.of.birth')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="birthdate" type="text" value="{{old('birthdate', @$birthdate)}}">
-
-            @include('component.error-message', ['field' => 'birthdate'])
-
-
-        </div>
         <div class="form-group col-sm-6">
             <label for="nationality">{{t('nationality')}}<span class="text-red">*</span></label>
             <input class="form-control" name="nationality" type="text" value="{{old('nationality', @$nationality)}}" required>
 
             @include('component.error-message', ['field' => 'nationality'])
-
-
         </div>
         <div class="form-group col-sm-6">
             <label for="mobile">{{t('mobile.phone')}}<span class="text-red">*</span></label>
             <input class="form-control" name="mobile" type="text" value="{{old('mobile', @$mobile)}}" required>
 
             @include('component.error-message', ['field' => 'mobile'])
-
-
         </div>
-        <div class="form-group col-sm-6">
+    </div>
+    <div class="form-group">
+        <label for="email">{{t('email')}}<span class="text-red">*</span></label>
+        <input class="form-control" name="email" type="email" value="{{old('email', @$email)}}" required>
 
-            <label for="email">{{t('email')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="email" type="email" value="{{old('email', @$email)}}" required>
-
-            @include('component.error-message', ['field' => 'email'])
-
-        </div>
+        @include('component.error-message', ['field' => 'email'])
     </div>
     <div class="form-group">
 
