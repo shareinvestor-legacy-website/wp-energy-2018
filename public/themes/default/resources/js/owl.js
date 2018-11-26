@@ -36,7 +36,7 @@ class owl {
             if(selector.length) {
                 selector.owlCarousel({
                     loop: true,
-                    autoplay: false,
+                    autoplay: true,
                     margin: 10,
                     mouseDrag: false,
                     touchDrag: true,
