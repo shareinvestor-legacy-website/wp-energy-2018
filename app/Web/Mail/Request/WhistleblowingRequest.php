@@ -27,8 +27,9 @@ class WhistleblowingRequest extends Request
         return [
             'fullname' => 'required',
             'email' => 'required|email',
+            'subject' => 'required',
             'detail' => 'required',
-            'file' => 'max:3000|mimes:jpeg,jpg,png,doc,docx,pdf',
+            'file' => 'max:2000|mimes:jpeg,jpg,png,doc,docx,pdf',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
