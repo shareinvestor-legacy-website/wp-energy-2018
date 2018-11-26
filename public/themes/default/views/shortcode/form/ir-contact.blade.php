@@ -2,40 +2,40 @@
 
     {{csrf_field()}}
 
-    <div class="form-row form-group">
-        <div class="col-sm-6">
+    <div class="form-row">
+        <div class="form-group col-sm-6">
 
             <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
 
-            <input class="form-control" id="fullname" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" required />
+            <input class="form-control" id="fullname" name="fullname" type="text" value="{{old('fullname', @$fullname)}}"/>
 
             @include('component.error-message', ['field' => 'fullname'])
 
         </div>
-        <div class="col-sm-6">
+        <div class="form-group col-sm-6">
 
             <label for="email">{{t('email')}}<span class="text-red">*</span></label>
-            <input class="form-control" id="email" name="email" type="email" value="{{old('email', @$email)}}" required />
+            <input class="form-control" id="email" name="email" type="email" value="{{old('email', @$email)}}" required/>
 
             @include('component.error-message', ['field' => 'email'])
 
         </div>
-        <div class="col-sm-6">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-sm-6">
 
             <label for="telephone">{{t('telephone')}}<span class="text-red">*</span></label>
             <input class="form-control" id="telephone" name="telephone" type="text" value="{{old('telephone', @$telephone)}}" />
 
             @include('component.error-message', ['field' => 'telephone'])
         </div>
-        <div class="col-sm-6">
+        <div class="form-group col-sm-6">
 
             <label for="company">{{t('company')}}<span class="text-red">*</span></label>
-            <input class="form-control" id="company" name="company" type="text" value="{{old('company', @$company)}}" required />
+            <input class="form-control" id="company" name="company" type="text" value="{{old('company', @$company)}}" />
 
             @include('component.error-message', ['field' => 'company'])
         </div>
-
-
     </div>
     <div class="form-group">
         <label for="detail">{{t('detail')}}<span class="text-red">*</span></label>
@@ -43,8 +43,8 @@
 
         @include('component.error-message', ['field' => 'detail'])
     </div>
-    <div class="form-row justify-content-center mb-4">
-        <div class="col-lg-4">
+    <div class="form-group justify-content-center mb-4">
+
             <div class="recaptcha text-center">
 
                 {!! Recaptcha::render([ 'lang' => locale() ]) !!}
@@ -54,9 +54,8 @@
                 @include('component.flash')
 
             </div>
-        </div>
     </div>
-    <div class="col-12 text-center">
+    <div class="form-group text-center">
         <button type="submit" class="btn btn-success text-uppercase">{{t('send')}}</button>
         <button type="reset" class="btn btn-outline-success text-uppercase">{{t('cancel')}}</button>
     </div>
