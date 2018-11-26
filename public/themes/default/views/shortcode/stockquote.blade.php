@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 d-flex">
+            <div class="col-md-12 col-lg-6 d-flex">
                 <div class="card">
                     <div class="card-body">
                         <div class="stock-change">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-flex">
+            <div class="col-md-12 col-lg-6 d-flex">
                 <div class="card">
                     <div class="card-body">
                         <div class="stock-change">
