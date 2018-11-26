@@ -42,7 +42,7 @@
 			<table>
                 <tr>
 					<td><strong>Full Name : </strong></td>
-					<td>{{@$firstname}} {{@$lastname}}</td>
+					<td>{{@$fullname}}</td>
 				</tr>
 				<tr>
 					<td><strong>Telephone Number : </strong></td>

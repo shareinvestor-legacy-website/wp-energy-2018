@@ -3,19 +3,12 @@
     {{csrf_field()}}
 
     <div class="form-row">
-        <div class="form-group col-sm-6">
+        <div class="form-group col-sm-12">
 
-            <label for="firstname">{{t('first.name')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="firstname" type="text" value="{{old('firstname', @$firstname)}}" required>
+            <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
+            <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" required>
 
-            @include('component.error-message', ['field' => 'firstname'])
-
-        </div>
-        <div class="form-group col-sm-6">
-            <label for="lastname">{{t('last.name')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="lastname" type="text" value="{{old('lastname', @$lastname)}}" required>
-
-            @include('component.error-message', ['field' => 'lastname'])
+            @include('component.error-message', ['field' => 'fullname'])
 
         </div>
         <div class="form-group col-sm-6">

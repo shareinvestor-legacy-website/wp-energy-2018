@@ -25,8 +25,7 @@ class WhistleblowingRequest extends Request
     public function rules()
     {
         return [
-            'firstname' => 'required',
-            'lastname' => 'required',
+            'fullname' => 'required',
             'email' => 'required|email',
             'detail' => 'required',
             'file' => 'max:3000|mimes:jpeg,jpg,png,doc,docx,pdf',
