@@ -76,7 +76,7 @@
         </div>
         <div class="form-group col-sm-6">
             <label for="mobile">{{t('mobile.phone')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="mobile" type="text" value="{{old('mobile', @$mobile)}}">
+            <input class="form-control" name="mobile" type="text" value="{{old('mobile', @$mobile)}}" placeholder="Ex. 080-1234567">
 
             @include('component.error-message', ['field' => 'mobile'])
         </div>
