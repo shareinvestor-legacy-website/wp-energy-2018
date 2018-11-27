@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="stock-change">
-                            <p><span>{{t('change')}}</span><span> {{$stock->present()->change}} ({{$stock->present()->percent_change}}%)</span></p>
+                            <p><span>{{t('stock.change')}}</span><span> {{$stock->present()->change}} ({{$stock->present()->percent_change}}%)</span></p>
                             <p><span>{{t('volume.shares')}}</span><span> {{$stock->present()->volume}}</span></p>
                         </div>
                     </div>
