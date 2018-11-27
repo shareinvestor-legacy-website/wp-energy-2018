@@ -2,7 +2,7 @@
 .form-control {
     height: 45px;
     border-radius: 0 !important;
-    margin-bottom: 2rem
+    margin-bottom: 0;
 }
 .form {
     &--primary {
@@ -10,7 +10,6 @@
             font-weight: 500;
         }
         .form-group {
-            margin-bottom: 0;
             .form-control {
                 box-shadow: none;
                 &::placeholder {
@@ -41,7 +40,7 @@
         text-align: right;
         @include media-breakpoint-down(sm) {
             text-align: left;
-        }  
+        }
         label {
             font-weight: 700;
         }

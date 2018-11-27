@@ -42,7 +42,7 @@
 			<table>
                 <tr>
 					<td><strong>Full Name : </strong></td>
-					<td>{{@$title}} {{@$firstname}} {{@$lastname}}</td>
+					<td>{{@$title}} {{@$fullname}}</td>
                 </tr>
                 <tr>
 					<td><strong>Date of Birth : </strong></td>

@@ -20,7 +20,7 @@
 
             <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
 
-            <input class="form-control" id="fullname" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" required />
+            <input class="form-control" id="fullname" name="fullname" type="text" value="{{old('fullname', @$fullname)}}"/>
 
             @include('component.error-message', ['field' => 'fullname'])
 
@@ -36,7 +36,7 @@
         <div class="form-group col-sm-6">
 
             <label for="telephone">{{t('telephone')}}</label>
-            <input class="form-control" id="telephone" name="telephone" type="text" value="{{old('telephone', @$telephone)}}" />
+            <input class="form-control" id="telephone" name="telephone" type="text" value="{{old('telephone', @$telephone)}}" placeholder="Ex. 080-1234567"/>
 
             @include('component.error-message', ['field' => 'telephone'])
 

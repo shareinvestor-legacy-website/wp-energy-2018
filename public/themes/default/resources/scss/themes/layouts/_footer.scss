@@ -134,12 +134,6 @@
             bottom: px-to-rem(20);
             height: 100px;
 
-            @include media-breakpoint-up(xl)
-            {
-                position: fixed;
-                z-index: 999;
-            }
-
             @include media-breakpoint-down(md)
             {
                 right: px-to-rem(15);

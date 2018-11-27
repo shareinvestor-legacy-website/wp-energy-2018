@@ -52,7 +52,7 @@ class menu {
         function inactive(level = null) {
             if(level == null) {
                 let windowScroll = $(window).scrollTop();
-                if(window.location.pathname == '/' || window.location.pathname == '/en' || window.location.pathname == 'th' || window.location.pathname == '/en/home' || window.location.pathname == '/th/home') {
+                if(window.location.pathname == '/' || window.location.pathname == '/en' || window.location.pathname == '/th' || window.location.pathname == '/en/home' || window.location.pathname == '/th/home') {
                     if (windowScroll <= 0 && !$('.menu').hasClass('show')){
                         $('header.header').removeClass('active');
                     } else {
