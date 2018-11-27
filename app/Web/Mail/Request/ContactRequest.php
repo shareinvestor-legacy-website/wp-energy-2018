@@ -27,6 +27,7 @@ class ContactRequest extends Request
         return [
             'fullname' => 'required',
             'email' => 'required|email',
+            'address' => 'max:5000',
             'subject' => 'required',
             'question' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
