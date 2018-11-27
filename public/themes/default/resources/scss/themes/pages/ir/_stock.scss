@@ -56,7 +56,7 @@
                                     &:first-child {
                                         padding-right: 10px;
                                         color: $white;
-                                        width: 50%;
+                                        //width: 50%;
                                         display: inline-block;
                                         @include media-breakpoint-down(md) {
                                             width: 100%;
