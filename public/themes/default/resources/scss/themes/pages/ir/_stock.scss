@@ -40,7 +40,7 @@
                         }
                         .stock-change {
                             display: inline-block;
-                            width: 50%;
+                            width: 100%;
                             border-right: solid 1px $white;
                             float:left;
                             @include media-breakpoint-down(sm) {
@@ -56,8 +56,13 @@
                                     &:first-child {
                                         padding-right: 10px;
                                         color: $white;
-                                        //width: 55%;
+                                        width: 50%;
                                         display: inline-block;
+                                        @include media-breakpoint-down(md) {
+                                            width: 100%;
+                                            font-weight: bold;
+                                            text-align: center;
+                                        }
                                         @include media-breakpoint-down(sm) {
                                             width: 100%;
                                             font-weight: bold;
@@ -70,6 +75,10 @@
                                         font-size: 16px;
                                         text-align:left;
                                         display: inline-block;
+                                        @include media-breakpoint-down(md) {
+                                            width: 100%;
+                                            text-align: center;
+                                        }
                                         @include media-breakpoint-down(sm) {
                                             width: 100%;
                                             text-align: center;
@@ -189,7 +198,9 @@
             color: $black;
             font-weight: 700;
             text-transform: uppercase;
-
+            @include media-breakpoint-down(sm) {
+                margin: 0;
+            }
         }
         input {
             vertical-align: middle;
