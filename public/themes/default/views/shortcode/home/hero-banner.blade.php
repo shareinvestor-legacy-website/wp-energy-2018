@@ -6,7 +6,7 @@
 
             <div class="item-video">
                 <video autoplay muted loop width="109%">
-                    <source src="{{$post->present()->file}}" type="video/mp4">
+                    <source src="{{ $post->present()->file ?? $post->present()->url }}" type="video/mp4">
                 </video>
             </div>
 

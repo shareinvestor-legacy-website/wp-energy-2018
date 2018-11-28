@@ -42,7 +42,7 @@ class PostPresenter extends \BlazeCMS\Presenters\PostPresenter
     //custom methods here
     public function isMp4()
     {
-        return str_contains($this->file, '.mp4');
+        return str_contains($this->file ?? $this->external_url, '.mp4');
     }
 
 
