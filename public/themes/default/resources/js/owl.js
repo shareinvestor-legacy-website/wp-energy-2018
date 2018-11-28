@@ -22,12 +22,21 @@ class owl {
                 animateOut: 'fadeOut',
                 autoplayTimeout: 5000,
                 onChanged: animation,
+                onInitialized: autoplay,
             })
         }
 
         function animation(event) {
             $('.owl-item').children('.item').removeClass('animated animated-10s zoomNonStop');
             $($('.owl-item')[event.item.index]).children('.item').addClass('animated animated-10s zoomNonStop');
+
+            autoplay();
+        }
+
+        function autoplay() {
+            if($('.owl-item').find('video').length) {
+                $('.owl-item').find('video')[0].play();
+            }
         }
     }
 
