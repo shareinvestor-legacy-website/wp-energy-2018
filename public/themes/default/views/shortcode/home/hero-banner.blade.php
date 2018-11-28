@@ -2,7 +2,7 @@
 
     @foreach ($posts as $post)
 
-        @if($post->present()->file)
+        @if($post->present()->isMp4)
 
             <div class="item-video">
                 <video autoplay muted loop width="109%">

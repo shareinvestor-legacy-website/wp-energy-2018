@@ -38,7 +38,12 @@ class PostPresenter extends \BlazeCMS\Presenters\PostPresenter
         return "https://social-plugins.line.me/lineit/share?url=$url";
     }
 
+
     //custom methods here
+    public function isMp4()
+    {
+        return str_contains($this->file, '.mp4');
+    }
 
 
 
