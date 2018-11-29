@@ -44,7 +44,7 @@ class owl {
         $(function() {
             if(selector.length) {
                 selector.owlCarousel({
-                    loop: true,
+                    loop: false,
                     autoplay: true,
                     margin: 10,
                     mouseDrag: false,
