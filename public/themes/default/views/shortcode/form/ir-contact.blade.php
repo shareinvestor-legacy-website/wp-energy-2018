@@ -1,3 +1,5 @@
+@include('component.flash')
+
 <form class="form form--primary" action="{{action('Web\MailController@irContact', ['name'=>'ir.contact'])}}" name="ir_contact" method="post" _lpchecked="1">
 
     {{csrf_field()}}
@@ -50,8 +52,6 @@
                 {!! Recaptcha::render([ 'lang' => locale() ]) !!}
 
                 @include('component.error-message', ['field' => 'g-recaptcha-response'])
-
-                @include('component.flash')
 
             </div>
     </div>

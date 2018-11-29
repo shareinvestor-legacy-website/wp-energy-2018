@@ -1,3 +1,6 @@
+@include('component.flash')
+
+
 <form class="form form--primary" action="{{action('Web\MailController@whistleblowing', ['name'=>'whistleblowing'])}}" name="whistleblowing" method="post" enctype="multipart/form-data">
 
     {{csrf_field()}}
@@ -70,8 +73,6 @@
                 {!! Recaptcha::render([ 'lang' => locale() ]) !!}
 
                 @include('component.error-message', ['field' => 'g-recaptcha-response'])
-
-                @include('component.flash')
 
             </div>
         </div>
