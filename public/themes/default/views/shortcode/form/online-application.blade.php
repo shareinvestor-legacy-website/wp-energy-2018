@@ -97,11 +97,11 @@
     </div>
     <div class="bg-gray p-3 mb-4">
         <div class="form-row justify-content-center align-items-center">
-            <div class="col-12 col-sm-2 col-lg-auto">
+            <div class="col-12 col-sm-2 col-lg-1">
                 <label for="picture">{{t('picture')}}</label>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <input class="form-control mb-0" name="picture" type="file" id="picture">
+                <input class="form-control mb-0 px-0" name="picture" type="file" id="picture">
 
                 @include('component.error-message', ['field' => 'picture'])
 
@@ -114,11 +114,11 @@
             </div>
         </div>
         <div class="form-row justify-content-center align-items-center">
-            <div class="col-12 col-sm-2 col-lg-auto">
+            <div class="col-12 col-sm-2 col-lg-1">
                 <label for="resume">{{t('resume')}}</label>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <input class="form-control mb-0" name="resume" type="file" id="resume">
+                <input class="form-control mb-0 px-0" name="resume" type="file" id="resume">
 
                 @include('component.error-message', ['field' => 'resume'])
 
