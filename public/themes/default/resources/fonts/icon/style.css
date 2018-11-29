@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'wp';
-  src:  url('fonts/wp.eot?k3geth');
-  src:  url('fonts/wp.eot?k3geth#iefix') format('embedded-opentype'),
-    url('fonts/wp.ttf?k3geth') format('truetype'),
-    url('fonts/wp.woff?k3geth') format('woff'),
-    url('fonts/wp.svg?k3geth#wp') format('svg');
+  src:  url('fonts/wp.eot?lv63hn');
+  src:  url('fonts/wp.eot?lv63hn#iefix') format('embedded-opentype'),
+    url('fonts/wp.ttf?lv63hn') format('truetype'),
+    url('fonts/wp.woff?lv63hn') format('woff'),
+    url('fonts/wp.svg?lv63hn#wp') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-target:before {
+  content: "\e91c";
+}
+.icon-teamwork:before {
+  content: "\e91d";
+}
+.icon-money:before {
+  content: "\e91e";
+}
+.icon-screwdriver:before {
+  content: "\e91f";
+}
+.icon-service:before {
+  content: "\e920";
+}
+.icon-area:before {
+  content: "\e921";
+}
+.icon-hand-holding:before {
+  content: "\e922";
+}
+.icon-radar:before {
+  content: "\e923";
+}
+.icon-docs:before {
+  content: "\e924";
+}
+.icon-time-left:before {
+  content: "\e925";
+}
 .icon-planting:before {
   content: "\e919";
 }
