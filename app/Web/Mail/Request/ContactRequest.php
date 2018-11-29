@@ -25,11 +25,11 @@ class ContactRequest extends Request
     public function rules()
     {
         return [
-            'fullname' => 'required',
-            'email' => 'required|email',
-            'address' => 'max:5000',
-            'subject' => 'required',
-            'question' => 'required',
+            'fullname' => 'required|max:200',
+            'email' => 'required|email|max:200',
+            'address' => 'max:200',
+            'subject' => 'required|max:200',
+            'question' => 'required|max:200',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

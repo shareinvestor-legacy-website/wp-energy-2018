@@ -26,12 +26,11 @@ class IrContactRequest extends Request
     {
         return [
 
-            'fullname' => 'required',
-            'email' => 'required|email',
-            'name' => 'required',
-            'telephone' => 'required',
-            'company' => 'required',
-            'detail' => 'required',
+            'fullname' => 'required|max:200',
+            'email' => 'required|email|max:200',
+            'telephone' => 'required|max:200',
+            'company' => 'required|max:200',
+            'detail' => 'required|max:200',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
