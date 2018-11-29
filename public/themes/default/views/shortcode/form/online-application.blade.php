@@ -108,8 +108,8 @@
             </div>
         </div>
         <div class="form-row">
-            <div class="col-12 text-center mt-2">
-                <p>{{t('application.attachment.image')}}</p>
+            <div class="col-12 text-center">
+                <p class="mb-0">{{t('application.attachment.image')}}</p>
                 <p>{{t('application.attachment.recommend')}}</p>
             </div>
         </div>
@@ -125,7 +125,7 @@
             </div>
         </div>
         <div class="form-row">
-            <div class="col-12 text-center mt-2">
+            <div class="col-12 text-center">
                 <p>{{t('application.attachment.doc')}}</p>
             </div>
         </div>
