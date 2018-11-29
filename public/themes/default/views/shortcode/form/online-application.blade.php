@@ -60,7 +60,7 @@
             <div class="input-group">
                 <input class="form-control datepicker" id="birthdate" name="birthdate" type="text" value="{{old('birthdate', @$birthdate)}}">
                 <div class="input-group-append">
-                    <a class="btn btn-outline-primary" onclick="$('.datepicker').focus()"><i class="icon-calendar fa-lg"></i></a>
+                    <a class="btn btn-outline-primary" onclick="$('.datepicker').focus()"><i class="icon-calendar fa-xs"></i></a>
                 </div>
             </div>
 
