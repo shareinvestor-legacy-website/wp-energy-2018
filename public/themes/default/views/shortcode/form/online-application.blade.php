@@ -107,6 +107,12 @@
 
             </div>
         </div>
+        <div class="form-row">
+            <div class="col-12 text-center mt-2">
+                <p>{{t('application.attachment.image')}}</p>
+                <p>{{t('application.attachment.recommend')}}</p>
+            </div>
+        </div>
         <div class="form-row justify-content-center align-items-center">
             <div class="col-12 col-sm-2 col-lg-auto">
                 <label for="resume">{{t('resume')}}</label>
@@ -120,8 +126,7 @@
         </div>
         <div class="form-row">
             <div class="col-12 text-center mt-2">
-                <p>{{t('application.attachment.maximum')}}</p>
-                <p>{{t('application.attachment.recommend')}}</p>
+                <p>{{t('application.attachment.doc')}}</p>
             </div>
         </div>
     </div>

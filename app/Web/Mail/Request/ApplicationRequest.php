@@ -26,14 +26,14 @@ class ApplicationRequest extends Request
     {
         return [
             'position' => 'required',
-            'fullname' => 'required',
+            'fullname' => 'required|max:200',
             'birthdate' => 'required',
-            'nationality' => 'required',
-            'email' => 'required|email',
-            'mobile' => 'required',
-            'address' => 'required|max:5000',
-            'picture' => 'max:3000|mimes:jpeg,jpg,png',
-            'resume' => 'max:3000|mimes:jpeg,jpg,png,doc,docx,pdf',
+            'nationality' => 'required|max:200',
+            'email' => 'required|email|max:200',
+            'mobile' => 'required|max:200',
+            'address' => 'required|max:200',
+            'picture' => 'max:2000|mimes:jpeg,jpg,png',
+            'resume' => 'max:2000|mimes:doc,docx,pdf',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
