@@ -37,7 +37,7 @@
 @push('script')
 <script>
     $(function () {
-        $('.alert-success').delay(2000).fadeOut();
+        $('.alert-success').delay(5000).fadeOut();
     });
 </script>
 @endpush
