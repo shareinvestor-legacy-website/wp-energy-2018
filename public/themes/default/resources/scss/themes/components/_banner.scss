@@ -24,9 +24,8 @@
         }
 
         .item-video {
-            video {
-                object-fit: cover;
-            }
+            @include set-image();
+            height: 100vh;
         }
 
         .owl-item.active {

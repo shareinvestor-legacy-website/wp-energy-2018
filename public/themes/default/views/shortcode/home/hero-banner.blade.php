@@ -4,8 +4,8 @@
 
         @if($post->present()->isMp4)
 
-            <div class="item-video">
-                <video autoplay muted loop height="100%" preload="none" poster="{{ $post->present()->image }}">
+            <div class="item-video" style="background-image: url({{ $post->present()->image }})">
+                <video autoplay muted loop height="100%" preload="none">
                     <source src="{{ $post->present()->file ?? $post->present()->url }}" type="video/mp4">
                 </video>
             </div>
