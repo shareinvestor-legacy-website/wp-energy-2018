@@ -26,6 +26,13 @@
         .item-video {
             @include set-image();
             height: 100vh;
+
+            @include media-breakpoint-down(sm)
+            {
+                video {
+                    display: none;
+                }
+            }
         }
 
         .owl-item.active {
