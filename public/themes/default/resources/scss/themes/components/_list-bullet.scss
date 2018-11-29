@@ -1,27 +1,27 @@
-ul.list-bullet {
+.list-bullet {
     $grandparent: &;
 
     list-style: none;
     padding-inline-start: 1rem;
-    
+
     li:before {
-        content: "\2022"; 
+        content: "\2022";
         font-size: 1rem;
-        display: inline-block; 
+        display: inline-block;
         width: 1em;
         margin-left: -1rem
     }
 
     &#{$grandparent} {
-        &--green {        
+        &--green {
             li:before {
-                color: $green;                
+                color: $green;
             }
         }
-    
+
         &--blue {
             li:before {
-                color: $blue;                
+                color: $blue;
             }
         }
     }
