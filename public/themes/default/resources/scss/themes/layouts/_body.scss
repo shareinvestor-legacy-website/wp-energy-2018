@@ -1,11 +1,13 @@
 .page {
     $grandparent: &;
-    
+
     margin-top: 92px;
+    min-height: calc(100vh - 92px - 158px - 48px);
 
     @include media-breakpoint-up(xl)
     {
         margin-top: 83.39px;
+        min-height: calc(100vh - 83.39px - 88px - 48px);
     }
 
     #{$grandparent} {
@@ -16,7 +18,7 @@
             @include media-breakpoint-up(xl)
             {
                 display: block;
-            } 
+            }
         }
 
         &__title {
