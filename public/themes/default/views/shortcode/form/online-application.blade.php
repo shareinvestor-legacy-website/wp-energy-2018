@@ -99,7 +99,7 @@
     </div>
     <div class="bg-gray p-3 mb-4">
         <div class="form-row justify-content-center align-items-center">
-            <div class="col-12 col-sm-2 col-lg-1">
+            <div class="col-12 col-sm-2 col-lg-2">
                 <label for="picture">{{t('picture')}}</label>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="form-row justify-content-center align-items-center">
-            <div class="col-12 col-sm-2 col-lg-1">
+            <div class="col-12 col-sm-2 col-lg-2">
                 <label for="resume">{{t('resume')}}</label>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
