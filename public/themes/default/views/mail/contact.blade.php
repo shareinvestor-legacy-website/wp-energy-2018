@@ -63,7 +63,7 @@
 
 				<tr>
 					<td><strong>Question : </strong></td>
-					<td>{!! @$question !!}</td>
+					<td>{!! @$detail !!}</td>
 				</tr>
 			</table>
 		</div>

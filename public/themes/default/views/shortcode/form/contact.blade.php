@@ -70,10 +70,10 @@
 
     <div class="form-group">
 
-        <label for="question">{{t('question')}}<span class="text-red">*</span></label>
-        <textarea class="form-control" id="question" name="question" rows="5">{{old('question', @$question)}}</textarea>
+        <label for="detail">{{t('detail')}}<span class="text-red">*</span></label>
+        <textarea class="form-control" id="detail" name="detail" rows="5">{{old('detail', @$detail)}}</textarea>
 
-        @include('component.error-message', ['field' => 'question'])
+        @include('component.error-message', ['field' => 'detail'])
 
     </div>
     <div class="form-row justify-content-center mb-4">
