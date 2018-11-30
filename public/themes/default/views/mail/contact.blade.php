@@ -40,6 +40,10 @@
 		<div class="container">
 		  	<h1>Contact Form: {{@$subject}}</h1>
 			<table>
+                <tr>
+					<td><strong>Department : {{t($department)}}</strong></td>
+					<td>{{@$fullname}}</td>
+				</tr>
 				<tr>
 					<td><strong>Full Name : </strong></td>
 					<td>{{@$fullname}}</td>
