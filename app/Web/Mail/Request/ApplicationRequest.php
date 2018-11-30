@@ -31,7 +31,7 @@ class ApplicationRequest extends Request
             'nationality' => 'required|max:200',
             'email' => 'required|email|max:200',
             'mobile' => 'required|max:200',
-            'address' => 'required|max:200',
+            'address' => 'required|max:1000',
             'picture' => 'max:2000|mimes:jpeg,jpg,png',
             'resume' => 'max:2000|mimes:doc,docx,pdf',
             'g-recaptcha-response' => 'required|recaptcha'
