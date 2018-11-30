@@ -41,8 +41,8 @@
 		  	<h1>Contact Form: {{@$subject}}</h1>
 			<table>
                 <tr>
-					<td><strong>Department : {{t($department)}}</strong></td>
-					<td>{{@$fullname}}</td>
+					<td><strong>Department : </strong></td>
+					<td>{{t($department)}}</td>
 				</tr>
 				<tr>
 					<td><strong>Full Name : </strong></td>
