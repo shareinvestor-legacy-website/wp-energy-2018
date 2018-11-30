@@ -5,7 +5,7 @@ class datepicker {
 
         $(".datepicker").datepicker(
             Object.assign($.datepicker.regional[ lang ], {
-                dateFormat: 'dd/mm/yy',
+                dateFormat: dateFormat,
                 minDate: '-80Y',
                 maxDate: '-18Y',
                 defaultdate: '-18Y',
