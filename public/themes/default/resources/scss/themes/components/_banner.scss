@@ -2,6 +2,19 @@
     position: relative;
     height: 100vh;
 
+    @include media-breakpoint-down(sm)
+    {
+        &:before {
+            content: "";
+            background-color: rgba($color: $black, $alpha: .5);
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+
     &__slide {
         .owl-carousel {
             position: absolute;
