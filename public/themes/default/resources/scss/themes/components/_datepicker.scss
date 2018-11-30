@@ -56,19 +56,12 @@
         background: $green;
         font-weight: 700;
         color: #fff;
-       
+
     }
 }
 
-// .ui-button.ui-state-active:hover,
-// .ui-button:active,
-// .ui-state-active,
-// .ui-widget-content .ui-state-active,
-// .ui-widget-header .ui-state-active,
-// a.ui-button:active {
-//     border: 1px solid $green;
-//         background: $green;
-//         font-weight: 700;
-//         color: #fff;
-// }
-
+.ui-state-disabled {
+    .ui-state-default {
+        color: #929292;
+    }
+}
