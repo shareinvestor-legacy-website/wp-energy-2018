@@ -3,14 +3,16 @@ class datepicker {
         let lang = $("html").attr("lang");
         var dateFormat = "dd/mm/yy";
 
-        $(".datepicker").datepicker({
-            dateFormat: 'dd/mm/yy',
-            minDate: '-80Y',
-            maxDate: '-18Y',
-            defaultdate: '-18Y',
-            changeMonth: true,
-            changeYear: true
-        });
+        $(".datepicker").datepicker(
+            Object.assign($.datepicker.regional[ lang ], {
+                dateFormat: 'dd/mm/yy',
+                minDate: '-80Y',
+                maxDate: '-18Y',
+                defaultdate: '-18Y',
+                changeMonth: true,
+                changeYear: true
+            })
+       );
 
         var from = $( "#startDate" ).datepicker(
             Object.assign($.datepicker.regional[ lang ], {
