@@ -10,7 +10,7 @@
 
             <option selected disabled>{{t('please.select')}}</option>
             <option value="filling.plant">{{t('filling.plant')}}</option>
-            <option value="gas.retail.shop">{{t('auto.gas.station')}}</option>
+            <option value="auto.gas.station">{{t('auto.gas.station')}}</option>
             <option value="gas.retail.shop">{{t('gas.retail.shop')}}</option>
             <option value="industrial.sector">{{t('industrial.sector')}}</option>
             <option value="commercial.sector">{{t('commercial.sector')}}</option>
