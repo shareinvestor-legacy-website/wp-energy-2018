@@ -25,6 +25,10 @@ class MailService
         $name = $request->name;
         $contact = Contact::where('name', $name)->first();
 
+        if($request->department){
+            $contact = $contact->where('department', $request->department)->first();
+        }
+
         $emails = $contact->emails();
 
         Mail::to($emails)->send(new ContactMail('mail.contact', $contact, $request));

@@ -1,6 +1,6 @@
 @include('component.flash')
 
-<form class="form form--primary" action="{{action('Web\MailController@contact', ['name'=>'contact.us'])}}" name="contact" method="post" _lpchecked="1">
+<form class="form form--primary" action="{{action('Web\MailController@contact', ['name'=>'contact.us'])}}" name="contact" method="post">
 
     {{csrf_field()}}
 
@@ -9,10 +9,11 @@
         <select name="department" class="form-control">
 
             <option selected disabled>{{t('please.select')}}</option>
-
-            <option  value="department-1">Department 1</option>
-            <option  value="department-2">Department 2</option>
-            <option  value="department-3">Department 3</option>
+            <option value="filling.plant">{{t('filling.plant')}}</option>
+            <option value="gas.retail.shop">{{t('auto.gas.station')}}</option>
+            <option value="gas.retail.shop">{{t('gas.retail.shop')}}</option>
+            <option value="industrial.sector">{{t('industrial.sector')}}</option>
+            <option value="commercial.sector">{{t('commercial.sector')}}</option>
 
         </select>
     </div>
@@ -92,3 +93,27 @@
         <button type="reset" class="btn btn-outline-success text-uppercase">{{t('cancel')}}</button>
     </div>
 </form>
+
+
+@push('script')
+
+<script>
+    function getQuerystring(key) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == key) {
+                return pair[1];
+            }
+        }
+    }
+    $(function(){
+        var value = getQuerystring("department");
+        if(value != null){
+            $('option[value="'+value+'"]').attr('selected', 'selected');
+        }
+    });
+</script>
+
+@endpush
