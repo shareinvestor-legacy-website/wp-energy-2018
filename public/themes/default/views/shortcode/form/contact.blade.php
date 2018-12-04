@@ -110,8 +110,9 @@
     }
     $(function(){
         var value = getQuerystring("department");
+
         if(value != null){
-            $('option[value="'+value+'"]').attr('selected', 'selected');
+            $('option[value="'+value+'"]').prop('selected', true);
         }
     });
 </script>
