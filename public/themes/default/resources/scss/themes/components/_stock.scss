@@ -50,7 +50,9 @@
         &__text {
             @include set-font-family;
             font-size: px-to-rem(33);
-
+            html[lang="th"] & {
+                font-family: "Fira Sans", sans-serif;
+            }
             &--bold {
                 font-weight: 500;
             }
@@ -73,7 +75,7 @@
             }
 
             html[lang="th"] & {
-                font-family: "Fira Sans", sans-serif;
+
                 line-height: 2;
                 > p {
                     span {
