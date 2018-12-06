@@ -10,6 +10,7 @@ namespace BlazeCMS\Http\Web;
 
 
 use BlazeCMS\IR\QueryService;
+use BlazeCMS\IR\DownloadFactory;
 use BlazeCMS\Web\Services\ApiService;
 use BlazeCMS\Web\Services\CategoryService;
 use BlazeCMS\Web\Services\DepartmentService;
@@ -356,11 +357,11 @@ class WebController extends Controller
 
         $webcasts = $this->apiService->getDownloads('webcast');
         $presentations = $this->apiService->getDownloads('presentation');
-        $posts = $this->apiService->getMatchingPosts($webcasts, $presentations);
+        $posts = DownloadFactory::mergeByTitle($webcasts, $presentations);
 
         $menu = $this->menuService->get('investor-relations', 'webcasts-and-presentations');
 
-        $years = $this->apiService->getYears($webcasts, 'en');
+        $years = $this->apiService->getYears($posts, 'en');
         $year = $request->year ?? $years->first();
         $years = locale_years_mapping($years);
 

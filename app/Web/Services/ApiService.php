@@ -179,32 +179,4 @@ class ApiService
             return 'index';
         }
     }
-
-    public function getMatchingPosts($posts, $posts2)
-    {
-        $starts = $posts;
-        $ends = $posts2;
-
-        if($posts->count() < $posts2->count()){
-            $starts = $posts2;
-            $ends = $posts;
-        }
-
-        return $starts->map(function($item) use ($ends){
-
-            foreach ($ends as $post)
-            {
-                if($item->title == $post->title)
-                {
-                    $item->file = $item->file ?? $post->file;
-                    $item->url = $item->url ?? $post->url;
-                    $item->title = $item->title ?? $post->title;
-                    $item->image = $item->image ?? $post->image;
-                    $item->filesize = $item->filesize ?? $post->filesize;
-                }
-            }
-
-            return  $item;
-        });
-    }
 }

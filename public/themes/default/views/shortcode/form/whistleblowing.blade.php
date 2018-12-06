@@ -36,6 +36,21 @@
         @include('component.error-message', ['field' => 'address'])
 
     </div>
+
+    <div class="form-group">
+        <label for="department">{{t('department')}}<span class="text-red">*</span></label>
+        <select name="department" class="form-control">
+
+            <option selected disabled>{{t('please.select')}}</option>
+            <option value="filling.plant">{{t('filling.plant')}}</option>
+            <option value="auto.gas.station">{{t('auto.gas.station')}}</option>
+            <option value="gas.retail.shop">{{t('gas.retail.shop')}}</option>
+            <option value="industrial.sector">{{t('industrial.sector')}}</option>
+            <option value="commercial.sector">{{t('commercial.sector')}}</option>
+
+        </select>
+    </div>
+
     <div class="form-group">
         <label for="subject">{{t('subject')}}<span class="text-red">*</span></label>
         <input class="form-control" name="subject" type="text" value="{{old('subject', @$subject)}}">
