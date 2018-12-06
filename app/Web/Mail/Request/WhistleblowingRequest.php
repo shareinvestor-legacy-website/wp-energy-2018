@@ -27,6 +27,7 @@ class WhistleblowingRequest extends Request
         return [
             'fullname' => 'required',
             'email' => 'required|email|max:200',
+            'department' => 'required',
             'subject' => 'required|max:1000',
             'detail' => 'required|max:2000',
             'address' => 'max:1000',

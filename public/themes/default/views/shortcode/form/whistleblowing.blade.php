@@ -42,13 +42,16 @@
         <select name="department" class="form-control">
 
             <option selected disabled>{{t('please.select')}}</option>
-            <option value="filling.plant">{{t('filling.plant')}}</option>
-            <option value="auto.gas.station">{{t('auto.gas.station')}}</option>
-            <option value="gas.retail.shop">{{t('gas.retail.shop')}}</option>
-            <option value="industrial.sector">{{t('industrial.sector')}}</option>
-            <option value="commercial.sector">{{t('commercial.sector')}}</option>
+            <option value="internal.audit">{{t('internal.audit')}}</option>
+            <option value="company.secretary">{{t('company.secretary')}}</option>
+            <option value="director.of.human.resources">{{t('director.of.human.resources')}}</option>
+            <option value="chairman.of.wp.energy">{{t('chairman.of.wp.energy')}}</option>
+            <option value="audit.committee">{{t('audit.committee')}}</option>
 
         </select>
+
+        @include('component.error-message', ['field' => 'department'])
+
     </div>
 
     <div class="form-group">

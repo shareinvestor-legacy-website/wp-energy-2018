@@ -41,6 +41,10 @@
 		  	<h1>Whistle Blowing: {{@$subject}}</h1>
 			<table>
                 <tr>
+                    <td><strong>Department : </strong></td>
+                    <td>{{t($department)}}</td>
+                </tr>
+                <tr>
 					<td><strong>Full Name : </strong></td>
 					<td>{{@$fullname}}</td>
 				</tr>

@@ -22,8 +22,7 @@ class MailService
     public function send(Request $request)
     {
 
-        $name = $request->name;
-        $contact = Contact::where('name', $name)->first();
+        $contact = Contact::where('name', $request->name)->first();
 
         if($request->department){
             $contact = $contact->where('department', $request->department)->first();
@@ -38,8 +37,7 @@ class MailService
     public function sendIr(Request $request)
     {
 
-        $name = $request->name;
-        $contact = Contact::where('name', $name)->first();
+        $contact = Contact::where('name', $request->name)->first();
 
         $emails = $contact->emails();
 
@@ -50,8 +48,10 @@ class MailService
     public function sendIssue(Request $request)
     {
 
-        $name = $request->name;
-        $contact = Contact::where('name', $name)->first();
+        $contact = Contact::where('name', $request->name)->first();
+        if($request->department){
+            $contact = $contact->where('department', $request->department)->first();
+        }
 
         $emails = $contact->emails();
 
@@ -62,8 +62,7 @@ class MailService
     public function sendApp(Request $request)
     {
 
-        $name = $request->name;
-        $contact = Contact::where('name', $name)->first();
+        $contact = Contact::where('name', $request->name)->first();
 
         $emails = $contact->emails();
 
