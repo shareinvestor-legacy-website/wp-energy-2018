@@ -9,7 +9,7 @@ class owl {
     }
 
     banner(selector) {
-        if(selector.length) {
+        if (selector.length) {
             selector.owlCarousel({
                 loop: true,
                 autoplay: true,
@@ -17,10 +17,10 @@ class owl {
                 mouseDrag: false,
                 touchDrag: false,
                 dots: false,
-                items:1,
+                items: 1,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                autoplayTimeout: 5000,
+                autoplayTimeout: 9000,
                 onChanged: animation,
                 onInitialized: autoplay,
             })
@@ -34,7 +34,7 @@ class owl {
         }
 
         function autoplay() {
-            if($('.owl-item').find('video').length) {
+            if ($('.owl-item').find('video').length) {
                 $('.owl-item').find('video')[0].play();
             }
         }
@@ -42,7 +42,7 @@ class owl {
 
     highlight(selector) {
         $(function() {
-            if(selector.length) {
+            if (selector.length) {
                 selector.owlCarousel({
                     loop: false,
                     autoplay: true,
@@ -50,14 +50,14 @@ class owl {
                     mouseDrag: false,
                     touchDrag: true,
                     dots: true,
-                    items:1
+                    items: 1
                 })
             }
         })
     }
 
     news(selector) {
-        if(selector.length) {
+        if (selector.length) {
             selector.owlCarousel({
                 loop: false,
                 autoplay: true,
@@ -68,13 +68,13 @@ class owl {
                 touchDrag: true,
                 responsive: {
                     0: {
-                        items:1,
+                        items: 1,
                     },
                     768: {
-                        items:2,
+                        items: 2,
                     },
                     1280: {
-                        items:3,
+                        items: 3,
                     }
                 }
             })
@@ -83,7 +83,7 @@ class owl {
 
 
     garelly(selector) {
-        if(selector.length) {
+        if (selector.length) {
             selector.owlCarousel({
                 loop: false,
                 margin: 15,
@@ -94,13 +94,13 @@ class owl {
                 navText: ['<i class="icon-arrow-left text-green fa-2x"></i>', '<i class="icon-arrow-right text-green fa-2x"></i>'],
                 responsive: {
                     0: {
-                        items:1,
+                        items: 1,
                     },
                     768: {
-                        items:3,
+                        items: 3,
                     },
                     1280: {
-                        items:6,
+                        items: 6,
                     }
                 }
             })
@@ -108,7 +108,7 @@ class owl {
     }
 
     milestone(selector) {
-        if(selector.length) {
+        if (selector.length) {
             selector.owlCarousel({
                 loop: false,
                 margin: 0,
@@ -119,16 +119,16 @@ class owl {
                 navText: ['<i class="icon-arrow-left text-green fa-2x"></i>', '<i class="icon-arrow-right text-green fa-2x"></i>'],
                 responsive: {
                     0: {
-                        items:1,
+                        items: 1,
                     },
                     768: {
-                        items:3,
+                        items: 3,
                     },
                     1280: {
-                        items:7,
+                        items: 7,
                     }
                 },
-                onInitialized : toggle,
+                onInitialized: toggle,
                 onChanged: border,
             })
         }
@@ -138,12 +138,12 @@ class owl {
             try {
                 $('.item').click(function() {
                     let index = $(this).parent('.owl-item').index();
-                $('.item').removeClass('show');
+                    $('.item').removeClass('show');
                     $(this).addClass('show');
                     $('.milestone-lists>.list-group').removeClass('show');
                     $($(`.list-group`)[index]).addClass('show');
                 })
-            } catch(err) {
+            } catch (err) {
                 console.log(err)
             }
         }
@@ -151,8 +151,8 @@ class owl {
         function border(event) {
             try {
                 $(event.currentTarget).find('.owl-item.active').css('border-right', '1px solid white');
-                $($('.owl-item')[event.page.size+event.item.index-1]).css('border', 'none');
-            } catch(err) {}
+                $($('.owl-item')[event.page.size + event.item.index - 1]).css('border', 'none');
+            } catch (err) {}
         }
     }
 }
