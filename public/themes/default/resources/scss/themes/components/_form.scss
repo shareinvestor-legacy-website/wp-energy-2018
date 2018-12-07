@@ -1,9 +1,9 @@
-
 .form-control {
     height: 45px;
     border-radius: 0 !important;
     margin-bottom: 0;
 }
+
 .form {
     &--primary {
         label {
@@ -23,18 +23,16 @@
                 &.form-control {
                     box-shadow: none;
                 }
-                option{
+                option {
                     font-size: px-to-rem(14);
                 }
             }
         }
     }
-
     input[type="file"] {
         background: transparent;
         border: none;
     }
-
     .icon-birthdate {
         display: block;
         font-size: 1.3rem;
@@ -42,8 +40,9 @@
         padding-top: 0.5rem;
     }
 }
+
 .text-label {
-    > div {
+    >div {
         text-align: right;
         @include media-breakpoint-down(sm) {
             text-align: left;
@@ -53,11 +52,11 @@
         }
     }
 }
+
 .filter {
     position: relative;
     display: flex;
     align-items: center;
-
     &__title {
         margin-right: 1rem;
         font-weight: 700;
@@ -75,6 +74,7 @@
         -webkit-appearance: none;
         cursor: pointer;
         margin-bottom: 0;
+        padding-left: 11px;
         &:hover,
         &:focus,
         &:active,
@@ -114,8 +114,9 @@
         }
     }
 }
+
 .g-recaptcha {
-    > div {
+    >div {
         margin: 0 auto;
     }
 }
