@@ -74,7 +74,9 @@
         -webkit-appearance: none;
         cursor: pointer;
         margin-bottom: 0;
-        padding-left: 11px;
+        @media all and (-ms-high-contrast: none) {
+            padding: 6px 11px 7px 20px;
+        }
         &:hover,
         &:focus,
         &:active,
