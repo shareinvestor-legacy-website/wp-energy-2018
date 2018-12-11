@@ -4,7 +4,7 @@ class datepicker {
         var dateFormat = "dd/mm/yy";
 
         $(".datepicker").datepicker(
-            Object.assign($.datepicker.regional[ lang ], {
+            $.extend($.datepicker.regional[ lang ], {
                 dateFormat: dateFormat,
                 minDate: '-80Y',
                 maxDate: '-18Y',
@@ -12,10 +12,11 @@ class datepicker {
                 changeMonth: true,
                 changeYear: true
             })
+
        );
 
         var from = $( "#startDate" ).datepicker(
-            Object.assign($.datepicker.regional[ lang ], {
+            $.extend($.datepicker.regional[ lang ], {
                 dateFormat: dateFormat,
                 maxDate: 0,
                 changeMonth: true,
@@ -26,7 +27,7 @@ class datepicker {
             to.datepicker( "option", "minDate", getDate( this ) );
         }),
         to = $( "#endDate" ).datepicker(
-            Object.assign($.datepicker.regional[ lang ], {
+            $.extend($.datepicker.regional[ lang ], {
                 dateFormat: dateFormat,
                 maxDate: 0,
                 changeMonth: true,
