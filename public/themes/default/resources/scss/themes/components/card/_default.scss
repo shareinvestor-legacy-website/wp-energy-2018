@@ -50,8 +50,18 @@
         &--shadow {
             box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.09);
         }
-        &--over-bottom {
-            margin-bottom: -6rem;
+        &--over {
+            &-bottom {
+                background-color: transparent;
+                margin-bottom: -6rem;
+            }
+            &-top {
+                background-color: transparent;
+                margin-top: -2rem;
+                @include media-breakpoint-down(md) {
+                    margin-top: 2rem;
+                }
+            }
         }
     }
 
