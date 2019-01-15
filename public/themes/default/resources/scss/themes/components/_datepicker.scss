@@ -31,7 +31,6 @@
     th {
         @include set-font-family;
         text-align: center;
-        font-weight: 700;
         font-size: 0.7rem;
 
         html[lang="th"] & {
@@ -44,12 +43,7 @@
         @include set-font-family;
         border: 0;
         padding: 1px;
-        font-size: 0.7rem;
 
-        html[lang="th"] & {
-            font-size: 1rem;
-            line-height: 1;
-        }
     }
 
     &-month, &-year {
@@ -88,8 +82,15 @@
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
     border: 1px solid #ccc;
     background: #f6f6f6;
-    font-weight: 700;
     color: $blue;
+    font-weight: 700;
+    font-size: 0.7rem;
+
+    html[lang="th"] & {
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 800;
+    }
 }
 
 .ui-widget.ui-widget-content {
