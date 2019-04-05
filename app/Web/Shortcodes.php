@@ -63,7 +63,7 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
 
         $limit = $s->getParameter('limit') ?? 3;
         $root = 'news-media';
-        $categories = ['update/company-news', 'update/press-releases', 'update/csr-activities'];
+        $categories = ['update/csr-activities', 'update/press-releases', 'update/csr-activities'];
         $posts = $this->postService->get(...$categories)->take($limit);
 
         return view('shortcode.home.news', compact('posts', 'root'));
