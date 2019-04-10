@@ -15,6 +15,13 @@
             padding: 1rem 2rem;
             min-height: 227px;
 
+            #{$grandparent} {
+                &__footer {
+                    border-top: none;
+                    margin-top: auto;
+                }
+            }
+
             .media {
                 align-items: center;
                 img {
