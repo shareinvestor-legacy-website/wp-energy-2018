@@ -44,4 +44,16 @@
             height: px-to-rem($size);
         }
     }
+
+    &--md {
+        $size: 40;
+        font-size: 1.5rem;
+        width: px-to-rem($size);
+        height: px-to-rem($size);
+
+        &:after {
+            width: px-to-rem($size);
+            height: px-to-rem($size);
+        }
+    }
 }
