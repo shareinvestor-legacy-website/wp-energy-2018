@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row mt-5 pt-4">
 
             @foreach ($posts as $post)
                 @component('web.management.component.item', compact('root', 'post', 'category'))@endcomponent

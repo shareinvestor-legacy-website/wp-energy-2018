@@ -3,7 +3,8 @@
 
     &#{$grandparent} {
         &--people {
-            margin-top: 3.5rem;
+            height: 100%;
+            margin-top: 0;
             transition: color 1s ease;
 
             #{$grandparent} {
@@ -33,10 +34,10 @@
                     margin-bottom: 0;
                     transition: color 1s ease;
                 }
+            }
 
-                &__body {
-                    min-height: 305px;
-                }
+            .list-bullet {
+                margin-bottom: 0;
             }
 
             &:hover {
