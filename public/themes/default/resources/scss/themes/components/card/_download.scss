@@ -48,5 +48,16 @@
                 }
             }
         }
+
+        &--row {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .card__title {
+                height: auto;
+                margin-bottom: 0;
+            }
+        }
     }
 }
