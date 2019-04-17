@@ -1,13 +1,9 @@
 .milestone-lists {
     .list-group {
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
+        display: none;
 
         &.show {
-            height: auto;
-            opacity: 1;
-            visibility: visible;
+            display: block;
         }
     }
 }
