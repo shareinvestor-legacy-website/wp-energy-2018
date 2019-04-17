@@ -6,8 +6,13 @@
 
     @include media-breakpoint-up(xl)
     {
-        margin-top: 83.39px;
-        min-height: calc(100vh - 83.39px - 88px - 48px);
+        margin-top: 93.39px;
+        min-height: calc(100vh - 93.39px - 88px - 48px);
+        html[lang="en"] & {
+            margin-top: 90.39px;
+            min-height: calc(100vh - 90.39px - 81.98px - 48px);
+        }
+
     }
 
     #{$grandparent} {

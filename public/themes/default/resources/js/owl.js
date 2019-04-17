@@ -135,7 +135,7 @@ class owl {
 
         function toggle(event) {
             border(event);
-            try {
+            if($('.item').length) {
                 $('.item').click(function() {
                     let index = $(this).parent('.owl-item').index();
                     $('.item').removeClass('show');
@@ -143,16 +143,14 @@ class owl {
                     $('.milestone-lists>.list-group').removeClass('show');
                     $($(`.list-group`)[index]).addClass('show');
                 })
-            } catch (err) {
-                console.log(err)
             }
         }
 
         function border(event) {
-            try {
+            if($(event.currentTarget).find('.owl-item.active').length) {
                 $(event.currentTarget).find('.owl-item.active').css('border-right', '1px solid white');
                 $($('.owl-item')[event.page.size + event.item.index - 1]).css('border', 'none');
-            } catch (err) {}
+            }
         }
     }
 }
