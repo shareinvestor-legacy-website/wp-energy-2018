@@ -34,6 +34,11 @@
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{t('instagram.url')}}">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
