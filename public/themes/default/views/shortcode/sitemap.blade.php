@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
 
-            <ul class="nav flex-column nav--sitemap">
+            <ul class="nav nav--sitemap">
 
                 @foreach($menus as $menu)
 
@@ -22,7 +22,7 @@
                                 {{$menu->present()->name}}
                             </a>
 
-                            <ul class="nav nav__lv-2 flex-column">
+                            <ul class="nav nav__lv-2">
 
                                 @foreach($menu->getChildren(true) as $child)
 
@@ -44,7 +44,7 @@
                                                 {{$child->present()->name}}
                                             </a>
 
-                                            <ul class="nav nav__lv-3 flex-column">
+                                            <ul class="nav nav__lv-3">
 
                                                 @foreach($child->getChildren(true) as $grandChild)
 

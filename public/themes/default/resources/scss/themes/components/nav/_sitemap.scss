@@ -29,13 +29,15 @@
                 column-count: 1;
             }
 
-            >#{$grandparent}-item {
+            >.nav-item {
+                -webkit-column-break-inside: avoid;
                 page-break-inside: avoid;
+                break-inside: avoid;
                 // /* Fix bug::list style on Edge */
                 list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
             }
 
-            #{$grandparent} {
+            .nav {
                 &-link {
                     @include set-font-family;
                     font-size: px-to-rem(18);
@@ -54,7 +56,10 @@
                 &__lv-2 {
                     padding-left: 1rem;
 
-                    #{$grandparent} {
+                    .nav {
+                        &-item {
+                            width: 100%;
+                        }
                         &-link {
                             font-size: px-to-rem(16);
                             font-weight: 500;
@@ -71,7 +76,7 @@
                 &__lv-3 {
                     padding-left: 1rem;
 
-                    #{$grandparent} {
+                    .nav {
                         &-link {
                             font-size: px-to-rem(14);
                             font-weight: 400;
