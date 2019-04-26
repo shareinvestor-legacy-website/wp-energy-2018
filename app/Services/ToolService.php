@@ -119,9 +119,9 @@ class ToolService
 
 
                 //audit activity
-                DB::statement("UPDATE audits SET  old = replace(old, '$old_url', '$new_url')");
-                DB::statement("UPDATE audits SET  new = replace(new, '$old_url', '$new_url')");
-                DB::statement("UPDATE audits SET  route = replace(route, '$old_url', '$new_url')");
+                DB::statement("UPDATE audits SET  old_values = replace(old_values, '$old_url', '$new_url')");
+                DB::statement("UPDATE audits SET  new_values = replace(new_values, '$old_url', '$new_url')");
+                DB::statement("UPDATE audits SET  url = replace(url, '$old_url', '$new_url')");
 
             });
         }
