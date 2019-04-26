@@ -49,9 +49,9 @@ class NewsPresenter extends \BlazeCMS\IR\Presenter
 
     public function image($default = null)
     {
-        if ($this->entity->image != '') {
+        if ($this->entity->thumbnail != '') {
 
-            return $this->entity->image;
+            return $this->entity->thumbnail;
         } else if (isset($default)){
 
             return theme_url($default);
