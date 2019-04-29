@@ -11,7 +11,7 @@
           rel="shortcut icon"/>
 
 
-    <title>{{$post->present()->title .' | '. t('company.name')}}</title>
+    <title>{{ t('company.name') }}</title>
 
     {!! $post->present()->custom_css !!}
 
