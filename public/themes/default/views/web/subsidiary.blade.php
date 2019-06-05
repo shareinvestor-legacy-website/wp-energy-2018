@@ -11,7 +11,7 @@
 
 <section>
 
-    {!! $category->present()->body !!}
+    {!! $page->present()->body !!}
 
     <div class="container">
         <div class="row mb-5">

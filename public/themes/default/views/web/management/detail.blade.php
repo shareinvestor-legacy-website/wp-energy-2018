@@ -38,7 +38,7 @@
 
                     </div>
 
-                    <a class="btn btn-primary btn--back mb-5 d-inline-flex" href="{{action('Web\WebController@management', ['root'=>$root, 'category'=>$category->slug])}}">{{t('back')}}</a>
+                    <a class="btn btn-primary btn--back mb-5 d-inline-flex" href="{{action('Web\WebController@management', ['category'=>$category->slug])}}">{{t('back')}}</a>
 
                 </div>
             </div>

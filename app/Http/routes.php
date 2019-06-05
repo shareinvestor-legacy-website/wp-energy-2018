@@ -36,9 +36,10 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
     'middleware' => ['web', 'redirectToLocale', 'localeSessionRedirect', 'localizationRedirect', 'rebuildingThemeAssets', 'onlyThailandVisitor']], function () {
 
     Route::get('', 'WebController@index');
-    Route::get('home/{page2?}', 'WebController@home');
+    Route::get('home', 'WebController@home');
 
-    Route::group(['prefix' => '{root}'], function () {
+
+    Route::group(['prefix' => 'who-we-are'], function () {
 
         //awards-recognitions
         Route::get('awards-recognitions', 'WebController@award');
@@ -48,6 +49,14 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
         //subsidiary
         Route::get('company-subsidiary', 'WebController@subsidiary');
+
+        //management
+        Route::get('management/{category}', 'WebController@management');
+        Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
+    });
+
+
+    Route::group(['prefix' => '{root}'], function () {
 
         //download
         Route::get('download/{page2}', 'WebController@download');
@@ -60,10 +69,6 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
         //calendar
         Route::get('ir-calendar/{subCategory?}', 'WebController@calendar');
-
-        //management
-        Route::get('management/{category}', 'WebController@management');
-        Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
 
         //news update
         Route::get('update/{category}', 'WebController@update');

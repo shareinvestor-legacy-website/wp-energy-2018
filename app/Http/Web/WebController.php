@@ -116,59 +116,83 @@ class WebController extends Controller
         if (isset($post)) {
             return view('web.intropage', compact('post'));
 
-        } else {
-
-            return $this->home();
         }
+
+        return redirect('home');
     }
 
-    public function home($page2 = null)
+    public function home()
     {
-        if($page2 != null){
-            return redirect('home');
-        }
 
         $isHome = true;
         $page = $this->pageService->get('home');
-        $pages = $this->pageService->get('home')->children()->public()->get();
-
         $dialog = $this->postService->get('intro-dialog')->first();
 
-        return view('web.home', compact('isHome', 'pages', 'page', 'dialog'));
+        return view('web.home', compact('isHome', 'page', 'dialog'));
 
     }
 
     //award
-    public function award($root)
+    public function award()
     {
 
         $category = $this->categoryService->get("awards-recognitions")->first();
-        $menu = $this->menuService->get($root, $category->slug);
+        $menu = $this->menuService->get($category->slug);
         $posts = $this->postService->getCoerciveOrder($category->path);
         $highlights = $this->postService->getCoerciveOrder("{$category->path}/highlights");
 
-        return view('web.award.index', compact('root', 'menu', 'category', 'highlights', 'posts'));
+        return view('web.award.index', compact('menu', 'category', 'highlights', 'posts'));
     }
 
     //milestone
-    public function milestone($root)
+    public function milestone()
     {
         $category = $this->categoryService->get("company-milestone")->first();
-        $menu = $this->menuService->get($root, $category->slug);
+        $menu = $this->menuService->get($category->slug);
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.milestone', compact('root', 'menu', 'category', 'posts'));
+        return view('web.milestone', compact('menu', 'category', 'posts'));
     }
 
     //subsidiary
-    public function subsidiary($root)
+    public function subsidiary()
     {
 
         $category = $this->categoryService->get("company-subsidiary")->first();
-        $menu = $this->menuService->get($root, $category->slug);
+        $menu = $this->menuService->get($category->slug);
+        $page = $menu->page()->get()->first();
         $posts = $this->postService->getCoerciveOrder($category->path);
 
-        return view('web.subsidiary', compact('root', 'menu', 'category', 'posts'));
+        return view('web.subsidiary', compact('menu', 'category', 'posts', 'page'));
+    }
+
+    // management
+    public function management($category)
+    {
+
+        $category = $this->categoryService->get("management/{$category}")->first();
+        $menu = $this->menuService->get($category->slug);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get($parent->slug);
+        $posts = $this->postService->getCoerciveOrder($category->path);
+
+        return view('web.management.index', compact('menu', 'category', 'posts', 'sidebar'));
+    }
+
+    public function showManagement($category, $id, $title = null)
+    {
+
+        $post = $this->postService->find($id);
+
+        if ($post->present()->title(true) !== $title) {
+            return redirect(action('Web\WebController@showManagement', ['category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]));
+        }
+
+        $category = $this->categoryService->get("management/{$category}")->first();
+        $menu = $this->menuService->get($category->slug);
+
+        return view('web.management.detail', compact('menu', 'category', 'post'));
+
     }
 
     //download
@@ -219,35 +243,6 @@ class WebController extends Controller
         $posts = $this->postService->get($category->path);
 
         return view('web.report.index', compact('root', 'menu', 'category', 'posts', 'sidebar'));
-    }
-
-    // management
-    public function management($root, $category)
-    {
-
-        $category = $this->categoryService->get("management/{$category}")->first();
-        $menu = $this->menuService->get($root, $category->slug);
-        $parent = $menu->parent()->first();
-        $sidebar = $this->menuService->get($root, $parent->slug);
-        $posts = $this->postService->getCoerciveOrder($category->path);
-
-        return view('web.management.index', compact('root', 'menu', 'category', 'posts', 'sidebar'));
-    }
-
-    public function showManagement($root, $category, $id, $title = null)
-    {
-
-        $post = $this->postService->find($id);
-
-        if ($post->present()->title(true) !== $title) {
-            return redirect(action('Web\WebController@showManagement', ['root'=> $root, 'category' => $category, 'id' => $id, 'title' => $post->present()->title(true)]));
-        }
-
-        $category = $this->categoryService->get("management/{$category}")->first();
-        $menu = $this->menuService->get($root, $category->slug);
-
-        return view('web.management.detail', compact('root', 'menu', 'category', 'post'));
-
     }
 
     //news update
