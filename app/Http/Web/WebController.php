@@ -287,7 +287,7 @@ class WebController extends Controller
     {
 
         $category = $this->categoryService->get("video/{$category}")->first();
-        $menu = $this->menuService->get($root, $category->slug);
+        $menu = $this->menuService->get('news-media', $category->slug);
 
         $years = $this->postService->getYears(null, $category->path);
         $year = $request->year ?? $years->keys()->first();
