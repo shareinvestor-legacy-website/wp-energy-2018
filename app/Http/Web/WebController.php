@@ -255,7 +255,7 @@ class WebController extends Controller
         $sidebar = $this->menuService->get($root, $parent->slug);
 
         $years = $this->postService->getYears(null, $category->path);
-        $year = $request->year ?? get_first_array($years, true);
+        $year = $request->year ?? $years->keys()->first();
 
         $posts = $this->postService->queryByYear(null, $year, $category->path);
 
@@ -283,18 +283,18 @@ class WebController extends Controller
     }
 
     //video
-    public function video(Request $request, $root, $category)
+    public function video(Request $request, $category)
     {
 
         $category = $this->categoryService->get("video/{$category}")->first();
         $menu = $this->menuService->get($root, $category->slug);
 
         $years = $this->postService->getYears(null, $category->path);
-        $year = $request->year ?? get_first_array($years, true);
+        $year = $request->year ?? $years->keys()->first();
 
         $posts = $this->postService->queryByYear(null, $year, $category->path);
 
-        return view('web.update.video', compact('root', 'menu', 'category', 'years', 'year', 'posts'));
+        return view('web.update.video', compact('menu', 'category', 'years', 'year', 'posts'));
 
     }
 
@@ -427,7 +427,7 @@ class WebController extends Controller
     }
 
     //calendar
-    public function calendar(Request $request, $root)
+    public function calendar(Request $request)
     {
 
         $category = $this->categoryService->get("ir-calendar")->first();
@@ -440,7 +440,7 @@ class WebController extends Controller
 
         $posts = $this->postService->queryByYear(true, $year, $category->path);
 
-        return view('web.calendar.index', compact('root', 'category', 'menu', 'posts', 'sidebar', 'years', 'year'));
+        return view('web.calendar.index', compact('category', 'menu', 'posts', 'sidebar', 'years', 'year'));
 
     }
 }

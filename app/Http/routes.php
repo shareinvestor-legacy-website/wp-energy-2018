@@ -55,6 +55,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::get('management/{category}/{id}/{title?}', 'WebController@showManagement');
     });
 
+    //video
+    Route::get('news-media/video/{category}', 'WebController@video');
+
 
     Route::group(['prefix' => '{root}'], function () {
 
@@ -67,15 +70,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         //report
         Route::get('report/{category}', 'WebController@report');
 
-        //calendar
-        Route::get('ir-calendar/{subCategory?}', 'WebController@calendar');
-
         //news update
         Route::get('update/{category}', 'WebController@update');
         Route::get('update/{category}/{id}/{title?}', 'WebController@showUpdate');
-
-        //video
-        Route::get('video/{category}', 'WebController@video');
 
     });
 
@@ -100,6 +97,9 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
         //historical-price
         Route::get('stock-information/historical-price', 'WebController@historicalPrice');
+
+        //calendar
+        Route::get('ir-calendar/{subCategory?}', 'WebController@calendar');
     });
 
     //post mail
