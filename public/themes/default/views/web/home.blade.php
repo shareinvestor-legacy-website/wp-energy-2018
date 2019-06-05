@@ -9,11 +9,7 @@
 
     @component('component.dialog',['dialog' => $dialog])@endcomponent
 
-    {!! $page->present()->body !!}
-
-    @foreach($pages as $child)
-        {!! $child->present()->body !!}
-    @endforeach
+    {!! $child->present()->body !!}
 
 @stop
 
