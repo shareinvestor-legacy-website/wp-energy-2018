@@ -12,7 +12,7 @@
 <section>
 
 
-    {!! $category->present()->body !!}
+    {!! $page->present()->body !!}
 
     <div class="container mb-5">
 

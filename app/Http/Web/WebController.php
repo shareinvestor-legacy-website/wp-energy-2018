@@ -432,6 +432,8 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("ir-calendar")->first();
         $menu = $this->menuService->get($category->path);
+        $page = $menu->page()->get()->first();
+
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get($parent->slug);
 
@@ -440,7 +442,7 @@ class WebController extends Controller
 
         $posts = $this->postService->queryByYear(true, $year, $category->path);
 
-        return view('web.calendar.index', compact('category', 'menu', 'posts', 'sidebar', 'years', 'year'));
+        return view('web.calendar.index', compact('category', 'menu', 'posts', 'sidebar', 'years', 'year', 'page'));
 
     }
 }
