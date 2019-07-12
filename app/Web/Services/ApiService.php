@@ -155,16 +155,16 @@ class ApiService
                 return $this->irService->getPresentations();
                 break;
 
-            case ('annual-reports' || 'annual-report'):
-                return $this->irService->getAnnualReports();
-                break;
-
             case 'factsheet':
                 return $this->irService->getFactsheets();
                 break;
 
              case 'ir-newsletters':
                 return $this->irService->getNewsletters();
+                break;
+
+            case ('annual-reports' || 'annual-report'):
+                return $this->irService->getAnnualReports();
                 break;
         }
     }
