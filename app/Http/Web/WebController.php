@@ -116,6 +116,13 @@ class WebController extends Controller
         if (isset($post)) {
             return view('web.intropage', compact('post'));
 
+        } else {
+
+            $isHome = true;
+            $page = $this->pageService->get('home');
+            $dialog = $this->postService->get('intro-dialog')->first();
+
+            return view('web.home', compact('isHome', 'page', 'dialog'));
         }
 
         return redirect('home');
