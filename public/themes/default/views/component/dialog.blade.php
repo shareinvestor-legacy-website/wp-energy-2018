@@ -17,10 +17,12 @@
     @push('script')
         {!! $dialog->present()->custom_js !!}
         <script>
-            if($('.intro-dialog').length)
-            {
-                $('.intro-dialog').children('.modal').modal('show');
-            }
+            $(document).ready(function() {
+                if($('.intro-dialog').length)
+                {
+                    $('.intro-dialog').children('.modal').modal('show');
+                }
+            });
         </script>
     @endpush
 
