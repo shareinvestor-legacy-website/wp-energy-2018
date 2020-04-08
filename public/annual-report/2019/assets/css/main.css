@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent linear-gradient(164deg, #A9D0E6 0%, #7FCBAF 100%) 0% 0% no-repeat padding-box;
+}
+
+.font-en {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+
+.font-th {
+    font-family: 'WP Font';
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+h2 {
+    margin: 0;
+}
+
+h2.font-th {
+    font-size: 240%;
+}
+
+h2.font-en {
+    font-size: 120%;
+}
+
+.link {
+    color: #034EA2;
+    margin-top: 20px;
+}
+
+.link.font-th {
+    font-size: 130%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.image-cover img {
+    width: 550px;
+    margin-bottom: 30px;
+}
+
+.image-energy img {
+    width: 230px;
+}
+
+.text-blue {
+    color: #034EA2;
+}
+
+.btn {
+    color: #ffffff;
+    padding: 10px 20px;
+    min-width: 140px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.btn.font-en {
+    font-size: 90%;
+}
+
+.btn.font-th {
+    font-size: 120%;
+}
+
+.btn--primary {
+    background: transparent linear-gradient(180deg, #8EC13F 0%, #8EC13F 1%, #007F4D 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn--primary:hover {
+    background: transparent linear-gradient(0deg, #8EC13F 0%, #8EC13F 1%, #007F4D 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn-group {
+    margin-top: 30px;
+    display: flex;
+}
+
+.video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+}
+
+.btn--skip {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    z-index: 999;
+    background-color: #242424;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>
+        WP: Annual Report 2019
+    </title>
+
+    <link rel="shortcut icon" href="icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+
+</head>
+
+
+    <body>
+
+        <video id="video" class="video" autoplay playsinline muted src="./assets/video/intro-th.mp4"></video>
+
+        <a href="th.html" class="btn btn--skip font-th">ข้ามวิดีโอ</a>
+
+    </body>
+
+    <script>
+        var video = document.getElementById("video");
+        video.onended = function() {
+            var url= "th.html"; 
+            window.location = url;
+        };
+    </script>
+
+</html>

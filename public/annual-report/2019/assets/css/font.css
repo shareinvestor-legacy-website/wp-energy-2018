@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'WP Font';
+  src: url('../fonts/wp-fonts/wp.woff2') format('woff2'),
+  url('../fonts/wp-fonts/wp.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

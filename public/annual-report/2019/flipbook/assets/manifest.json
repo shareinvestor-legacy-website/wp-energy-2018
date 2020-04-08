@@ -1,0 +1,17 @@
+{
+  "assets/node.js": "/assets/node.0987c.js",
+  "assets/runtime.js": "/assets/runtime.6ca9d.js",
+  "assets/app.css": "/assets/app.fbff1.css",
+  "assets/app.js": "/assets/app.15f9f.js",
+  "assets/vendor.css": "/assets/vendor.2c57d.css",
+  "assets/vendor.js": "/assets/vendor.226b1.js",
+  "assets/build/pdfflip.css": "/assets/build/svg-themify-9c8.svg",
+  "assets/flipbook/background.jpg": "/assets/flipbook/background.jpg",
+  "assets/flipbook/js/libs/compatibility.js": "/assets/flipbook/js/libs/compatibility.js",
+  "assets/flipbook/js/libs/pdf.min.js": "/assets/flipbook/js/libs/pdf.min.js",
+  "assets/flipbook/js/libs/pdf.worker.js": "/assets/flipbook/js/libs/pdf.worker.js",
+  "assets/flipbook/js/libs/pdf.worker.min.js": "/assets/flipbook/js/libs/pdf.worker.min.js",
+  "assets/flipbook/js/libs/three.min.js": "/assets/flipbook/js/libs/three.min.js",
+  "assets/flipbook/js/libs/utils.min.js": "/assets/flipbook/js/libs/utils.min.js",
+  "assets/flipbook/sound/turn.mp3": "/assets/flipbook/sound/turn.mp3"
+}
