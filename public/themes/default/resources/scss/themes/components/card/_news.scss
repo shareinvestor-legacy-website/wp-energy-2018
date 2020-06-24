@@ -24,7 +24,9 @@
                 &__title {
                     height: 78px;
                     html[lang="th"] &{
+                     @include media-breakpoint-up(md){
                         height: 100px;
+                      }
                     }
                 }
             }
