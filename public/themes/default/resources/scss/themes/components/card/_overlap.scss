@@ -40,8 +40,12 @@
                 color: $blue;
                 font-size: px-to-rem(18);
                 height: 110px;
+                overflow: hidden;
                 html[lang="th"] &{
-                    height: 130px;
+
+                    @include media-breakpoint-up(xl){
+                        height: 130px;
+                     }
                 }
             }
 
