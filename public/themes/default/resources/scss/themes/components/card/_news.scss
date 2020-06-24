@@ -23,6 +23,9 @@
 
                 &__title {
                     height: 78px;
+                    html[land="th"] &{
+                        height: 100px;
+                    }
                 }
             }
 
