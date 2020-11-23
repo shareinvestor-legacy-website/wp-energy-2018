@@ -11,11 +11,12 @@ namespace BlazeCMS\Http\Web;
 
 
 use BlazeCMS\Http\Controller;
+use BlazeCMS\Web\Services\MailService;
 use BlazeCMS\Web\Mail\Request\ContactRequest;
 use BlazeCMS\Web\Mail\Request\IrContactRequest;
-use BlazeCMS\Web\Mail\Request\WhistleblowingRequest;
+use BlazeCMS\Web\Mail\Request\SiteVisitRequest;
 use BlazeCMS\Web\Mail\Request\ApplicationRequest;
-use BlazeCMS\Web\Services\MailService;
+use BlazeCMS\Web\Mail\Request\WhistleblowingRequest;
 
 
 class MailController extends Controller
@@ -95,6 +96,22 @@ class MailController extends Controller
 
         try {
             $this->mailService->sendApp($request);
+
+        } catch (\Exception $e) {
+            flash_error($e->getMessage());
+
+            return back();
+        }
+
+        flash_success('the mail is successfully sent');
+
+        return back();
+    }
+
+    public function siteVisit(SiteVisitRequest $request)
+    {
+        try {
+            $this->mailService->sendSiteVisit($request);
 
         } catch (\Exception $e) {
             flash_error($e->getMessage());

@@ -67,6 +67,16 @@ class MailService
         $emails = $contact->emails();
 
         Mail::to($emails)->send(new ContactMail('mail.online-application', $contact, $request));
+    }
+
+    public function sendSiteVisit(Request $request)
+    {
+
+        $contact = Contact::where('name', $request->name)->first();
+
+        $emails = $contact->emails();
+
+        Mail::to($emails)->send(new ContactMail('mail.site-visit', $contact, $request));
 
     }
 

@@ -30,19 +30,28 @@
 
 <main class="main content">
 
-    <article class="{{$isHome ? 'home' : ($isIrHome ? 'ir-home' : 'page')}}">
+    @if($isHome)
 
-        @if(!$isHome && !$isIrHome)
+        <article class="home">
+            @section('body')  @show
+        </article>
 
+    @elseif($isIrHome)
+
+        <article class="ir-home">
+            @section('body')  @show
+        </article>
+
+    @else
+
+        <article class="page">
             @yield('breadcrumb')
             @yield('titlepage')
             @yield('sidebar')
+            @section('body')  @show
+        </article>
 
-        @endif
-
-        @section('body')  @show
-
-    </article>
+    @endif
 
 
 </main>

@@ -37,7 +37,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
     Route::get('', 'WebController@index');
     Route::get('home', 'WebController@home');
-
+    Route::get('home-preview', 'WebController@homePreview');
 
     Route::group(['prefix' => 'who-we-are'], function () {
 
@@ -108,6 +108,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::post('ir-contact', 'MailController@irContact');
         Route::post('whistleblowing', 'MailController@whistleblowing');
         Route::post('application', 'MailController@application');
+        Route::post('site-visit', 'MailController@siteVisit');
     });
 
     //match every route except -> admin

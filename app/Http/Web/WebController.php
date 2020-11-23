@@ -130,13 +130,20 @@ class WebController extends Controller
 
     public function home()
     {
-
         $isHome = true;
         $page = $this->pageService->get('home');
-        $dialog = $this->postService->get('intro-dialog')->first();
+        $dialog = $this->postService->get('intro-dfialog')->first();
 
         return view('web.home', compact('isHome', 'page', 'dialog'));
+    }
 
+    public function homePreview()
+    {
+        $isHome = true;
+        $page = $this->pageService->get('home-preview');
+        $dialog = $this->postService->get('intro-dialog-preview')->first();
+
+        return view('web.home', compact('isHome', 'page', 'dialog'));
     }
 
     //award
