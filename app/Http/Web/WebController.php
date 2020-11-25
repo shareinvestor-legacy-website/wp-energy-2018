@@ -132,7 +132,7 @@ class WebController extends Controller
     {
         $isHome = true;
         $page = $this->pageService->get('home');
-        $dialog = $this->postService->get('intro-dfialog')->first();
+        $dialog = $this->postService->get('intro-dialog')->first();
 
         return view('web.home', compact('isHome', 'page', 'dialog'));
     }
