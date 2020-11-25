@@ -37,7 +37,6 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
 
     Route::get('', 'WebController@index');
     Route::get('home', 'WebController@home');
-    Route::get('home-preview', 'WebController@homePreview');
 
     Route::group(['prefix' => 'who-we-are'], function () {
 
