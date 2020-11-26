@@ -1,5 +1,5 @@
 <div class="item">
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col-12 col-md-7">
 
             <h3 class="h2 text-white mb-3">{{$post->present()->title}}</h3>
