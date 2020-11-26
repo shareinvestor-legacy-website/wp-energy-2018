@@ -144,10 +144,11 @@ class WebController extends Controller
 
         $category = $this->categoryService->get("awards-recognitions")->first();
         $menu = $this->menuService->get($category->slug);
+        $page = $menu->page;
         $posts = $this->postService->getCoerciveOrder($category->path);
         $highlights = $this->postService->getCoerciveOrder("{$category->path}/highlights");
 
-        return view('web.award.index', compact('menu', 'category', 'highlights', 'posts'));
+        return view('web.award.index', compact('menu', 'category', 'highlights', 'posts', 'page'));
     }
 
     //milestone

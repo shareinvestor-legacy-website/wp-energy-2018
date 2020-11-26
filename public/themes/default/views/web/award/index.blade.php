@@ -10,7 +10,7 @@
 
 
 @if($highlights->count() > 0)
-<section class="bg-gradient pt-5 mb-5">
+<section class="bg-gradient pt-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
@@ -29,7 +29,11 @@
 </section>
 @endif
 
-<section class="container">
+@isset($page)
+    {!! $page->present()->body !!}
+@endisset
+
+<section class="container pt-4">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
 
