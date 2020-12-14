@@ -30,6 +30,14 @@
                 margin-right: auto;
                 overflow: hidden;
 
+                @include media-breakpoint-up(xl) {
+                    max-height: 122px;
+                }
+                
+                @include media-breakpoint-down(lg) {
+                    max-height: 163px;
+                }
+
                 img {
                     transition: all .5s ease;
                 }
