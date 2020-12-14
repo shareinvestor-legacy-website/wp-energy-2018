@@ -62,7 +62,7 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
     {
         $root = 'news-media';
         $posts = $this->postService->get('update/csr-activities')->take(2);
-        $posts = $posts->merge($this->postService->get('update/press-releases')->take(1));
+        $posts = $posts->merge($this->postService->get('update/press-conference')->take(1));
 
         return view('shortcode.home.news', compact('posts', 'root'));
     }
