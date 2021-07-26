@@ -16,7 +16,8 @@ export default function (env) {
 
         entry: {
             'vendor': './public/themes/default/resources/vendor',
-            'theme': './public/themes/default/resources/theme'
+            'theme': './public/themes/default/resources/theme',
+            'cookie': './public/themes/default/resources/cookie'
         },
 
         output: {
