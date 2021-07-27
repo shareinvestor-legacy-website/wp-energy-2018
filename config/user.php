@@ -12,6 +12,12 @@ return [
         'connectTimeout' => env('IR_CONNECT_TIMEOUT'),
     ],
 
+    'cookies' => [
+        'unnecEnableByDefault' => env('COOKIES_UNNEC_ENABLE_BY_DEFAULT', false),
+        'acceptExpire' => env('COOKIES_ACCEPT_EXPIRE', '1d'),
+        'rejectExpire' => env('COOKIES_REJECT_EXPIRE', '1d')
+    ],
+
     //redirect url for auth
     'redirect' => [
         'authenticated' => 'admin/dashboard',
