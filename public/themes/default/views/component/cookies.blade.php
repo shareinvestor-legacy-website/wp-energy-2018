@@ -87,9 +87,9 @@
         <ga :cookie-performance="cookiePerformance" tracking="{{setting('general.analytic.google.alternative')}}"></ga>
         @endif
 
-        @if(setting('general.analytic.google.tag.manager') != null)
-        <gtm :cookie-performance="cookiePerformance" tracking="{{setting('general.analytic.google.tag.manager')}}"></gtm>
-        @endif
+        {{-- @if(setting('general.analytic.google.tag.manager') != null) --}}
+        <gtm :cookie-performance="cookiePerformance" tracking="GTM-5M77GMP"></gtm>
+        {{-- @endif --}}
 
         @if(setting('general.analytic.piwik') != null)
         <piwik :cookie-performance="cookiePerformance" tracking="{{setting('general.analytic.piwik')}}"></piwik>
