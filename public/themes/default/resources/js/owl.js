@@ -20,20 +20,23 @@ class owl {
                 items: 1,
                 animateIn: 'fadeIn',
                 animateOut: 'fadeOut',
-                autoplayTimeout: 8000,
+                autoplayTimeout: 9000,
                 onChanged: animation,
             })
         }
 
         function animation(event) {
-            $('.owl-item').children('.item').removeClass('animated animated-10s zoomNonStop');
-            $($('.owl-item')[event.item.index]).children('.item').addClass('animated animated-10s zoomNonStop');
 
             $('.owl-item .item video').each(function () {
                 // pause playing video - after sliding
                 $(this).get(0).pause();
                 $(this).get(0).currentTime = 0;
             });
+
+
+            $('.owl-item').children('.item').removeClass('animated animated-10s zoomNonStop');
+            $($('.owl-item')[event.item.index]).children('.item').addClass('animated animated-10s zoomNonStop');
+
 
             if ($('.owl-item.active').find('video').length !== 0) {
                 // play video in active slide
