@@ -48,17 +48,17 @@ class highchart {
                     y: obj.setData[3],
                     color: colors
                 },
-                {
-                    name: categoriesData[4],
-                    y: obj.setData[4],
-                    color: colors
-                }
-                ,
-                {
-                    name: categoriesData[5],
-                    y: obj.setData[5],
-                    color: colors
-                }
+                // {
+                //     name: categoriesData[4],
+                //     y: obj.setData[4],
+                //     color: colors
+                // }
+                // ,
+                // {
+                //     name: categoriesData[5],
+                //     y: obj.setData[5],
+                //     color: colors
+                // }
             ];
 
             return new Highcharts.Chart({
