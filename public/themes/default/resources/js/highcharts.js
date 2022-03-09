@@ -48,17 +48,17 @@ class highchart {
                     y: obj.setData[3],
                     color: colors
                 },
-                {
-                    name: categoriesData[4],
-                    y: obj.setData[4],
-                    color: colors
-                }
-                ,
-                {
-                    name: categoriesData[5],
-                    y: obj.setData[5],
-                    color: colors
-                }
+                // {
+                //     name: categoriesData[4],
+                //     y: obj.setData[4],
+                //     color: colors
+                // }
+                // ,
+                // {
+                //     name: categoriesData[5],
+                //     y: obj.setData[5],
+                //     color: colors
+                // }
             ];
 
             return new Highcharts.Chart({
@@ -79,12 +79,12 @@ class highchart {
                     categories: categoriesData,
                     lineColor: '#7f7f7f',
                     tickWidth: 0,
-                    plotLines: [{
-                        color: '#5d5d5d',
-                        dashStyle: 'Dash',
-                        width: 1,
-                        value: 2.5
-                    }],
+                    // plotLines: [{
+                    //     color: '#5d5d5d',
+                    //     dashStyle: 'Dash',
+                    //     width: 1,
+                    //     value: 2.5
+                    // }],
                     crosshair: true
                 },
                 yAxis: {
@@ -153,12 +153,12 @@ class highchart {
                     categories: categoriesData,
                     lineColor: '#7f7f7f',
                     tickWidth: 0,
-                    plotLines: [{
-                            color: '#5d5d5d',
-                            dashStyle: 'Dash',
-                            width: 1,
-                            value: 2.5
-                        }],
+                    // plotLines: [{
+                    //         color: '#5d5d5d',
+                    //         dashStyle: 'Dash',
+                    //         width: 1,
+                    //         value: 2.5
+                    //     }],
                         crosshair: true
                 },
 
