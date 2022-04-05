@@ -23,6 +23,7 @@ use BlazeCMS\IR\Query\DailyHistoricalPriceQuery;
 use BlazeCMS\IR\Query\FactsheetQuery;
 use BlazeCMS\IR\Query\FinancialStatementQuery;
 use BlazeCMS\IR\Query\Form561Query;
+use BlazeCMS\IR\Query\OneReportQuery;
 use BlazeCMS\IR\Query\HighlightDownloadQuery;
 use BlazeCMS\IR\Query\HighlightNewsQuery;
 use BlazeCMS\IR\Query\MdnaQuery;
@@ -333,6 +334,21 @@ class QueryService
     {
 
         $response = $this->client->query(new Form561Query());
+
+        if (isset($response)) {
+
+            return collect($response)->map(function ($item) {
+                return new Download($item);
+            });
+        }
+
+        return collect();
+    }
+
+    public function getOneReports()
+    {
+
+        $response = $this->client->query(new OneReportQuery());
 
         if (isset($response)) {
 

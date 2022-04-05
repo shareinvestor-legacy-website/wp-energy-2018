@@ -164,7 +164,8 @@ class ApiService
                 break;
 
             case ('annual-reports' || 'annual-report'):
-                return $this->irService->getAnnualReports();
+                $reports = $this->irService->getAnnualReports();
+                return $this->irService->getOneReports()->merge($reports);
                 break;
         }
     }
