@@ -58,11 +58,11 @@
 
 
 @component('layouts.component.footer') @endcomponent
-
+@component('component.cookies') @endcomponent
 
 
 @component('layouts.component.script') @endcomponent
-@component('layouts.component.analytic') @endcomponent
+{{-- @component('layouts.component.analytic') @endcomponent --}}
 
 
 @stack('script')
