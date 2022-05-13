@@ -13,6 +13,7 @@ use BlazeCMS\Models\Category;
 use BlazeCMS\Models\Post;
 use Illuminate\Http\Request;
 
+use Carbon;
 
 class PostService
 {
@@ -88,5 +89,12 @@ class PostService
         return $posts->paginate(12);
     }
 
+    public function getComingPosts(...$categoryPaths)
+    {
+
+        $posts = Post::categoryPaths(...$categoryPaths)->where('date', '>', Carbon::now(setting('general.timezone')))->public(true)->orderBy('date', 'asc')->get();
+
+        return $posts;
+    }
 
 }

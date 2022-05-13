@@ -1,6 +1,6 @@
 @isset($post)
-<p class="datetime">{{$post->present()->date}}</p>
-<h5>{{$post->present()->title}}</h5>
+    <p class="datetime">{{$post->present()->date}}</p>
+    <h5>{{$post->present()->title}}</h5>
 
-{!! $post->present()->excerpt !!}
+    {!! $post->present()->excerpt !!}
 @endisset

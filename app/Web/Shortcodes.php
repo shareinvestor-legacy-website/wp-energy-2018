@@ -181,9 +181,9 @@ class Shortcodes extends \BlazeCMS\Shortcode\Shortcodes
     {
 
         $category = $this->categoryService->get("ir-calendar")->first();
-        $post = $this->postService->queryByYear(true, null, $category->path)->first();
-
-        return view('shortcode.ir.upcomming-event', compact('post'));
+        $post = $this->postService->getComingPosts($category->path)->first();
+        
+        return view('shortcode.ir.upcomming-event', compact('post', 'category'));
     }
 
     public function ir_download()
