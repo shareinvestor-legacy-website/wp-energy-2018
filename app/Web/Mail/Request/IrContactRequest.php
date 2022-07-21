@@ -28,9 +28,10 @@ class IrContactRequest extends Request
 
             'fullname' => 'required|max:200',
             'email' => 'required|email|max:200',
-            'telephone' => 'required|max:200',
-            'company' => 'required|max:200',
-            'detail' => 'required|max:2000',
+            'telephone' => 'required|max:20',
+            'company' => 'required|max:1000',
+            'detail' => 'required|max:10000',
+            'privacyStatement' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

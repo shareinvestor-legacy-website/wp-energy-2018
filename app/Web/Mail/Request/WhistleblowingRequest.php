@@ -29,9 +29,10 @@ class WhistleblowingRequest extends Request
             'email' => 'required|email|max:200',
             'department' => 'required',
             'subject' => 'required|max:1000',
-            'detail' => 'required|max:2000',
-            'address' => 'max:1000',
+            'detail' => 'required|max:10000',
+            'address' => 'max:10000',
             'file' => 'max:2000|mimes:jpeg,jpg,png,doc,docx,pdf',
+            'privacyStatement' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

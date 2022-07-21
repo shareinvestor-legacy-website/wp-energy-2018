@@ -30,10 +30,11 @@ class ApplicationRequest extends Request
             'birthdate' => 'required',
             'nationality' => 'required|max:200',
             'email' => 'required|email|max:200',
-            'mobile' => 'required|max:200',
-            'address' => 'required|max:1000',
+            'mobile' => 'required|max:20',
+            'address' => 'required|max:10000',
             'picture' => 'max:2000|mimes:jpeg,jpg,png',
             'resume' => 'max:2000|mimes:doc,docx,pdf',
+            'privacyStatement' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

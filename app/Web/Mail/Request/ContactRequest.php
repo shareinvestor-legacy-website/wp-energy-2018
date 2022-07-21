@@ -29,7 +29,8 @@ class ContactRequest extends Request
             'email' => 'required|email|max:200',
             'address' => 'max:1000',
             'subject' => 'required|max:1000',
-            'detail' => 'required|max:2000',
+            'detail' => 'required|max:10000',
+            'privacyStatement' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

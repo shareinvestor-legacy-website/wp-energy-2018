@@ -9,14 +9,14 @@
         <div class="form-group col-sm-12">
 
             <label for="fullname">{{t('full.name')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}">
+            <input class="form-control" name="fullname" type="text" value="{{old('fullname', @$fullname)}}" maxlength="200" required>
 
             @include('component.error-message', ['field' => 'fullname'])
 
         </div>
         <div class="form-group col-sm-6">
             <label for="email">{{t('email')}}<span class="text-red">*</span></label>
-            <input class="form-control" name="email" type="email" value="{{old('email', @$email)}}" required>
+            <input class="form-control" name="email" type="email" value="{{old('email', @$email)}}" maxlength="200" required>
 
             @include('component.error-message', ['field' => 'email'])
 
@@ -31,7 +31,7 @@
     </div>
     <div class="form-group">
         <label for="address">{{t('address')}}</label>
-        <textarea class="form-control" name="address" cols="40" rows="5">{{old('address', @$address)}}</textarea>
+        <textarea class="form-control" name="address" cols="40" rows="5" maxlength="10000">{{old('address', @$address)}}</textarea>
 
         @include('component.error-message', ['field' => 'address'])
 
@@ -56,14 +56,14 @@
 
     <div class="form-group">
         <label for="subject">{{t('subject')}}<span class="text-red">*</span></label>
-        <input class="form-control" name="subject" type="text" value="{{old('subject', @$subject)}}">
+        <input class="form-control" name="subject" type="text" value="{{old('subject', @$subject)}}" maxlength="1000" required>
 
         @include('component.error-message', ['field' => 'subject'])
 
     </div>
     <div class="form-group">
         <label for="detail">{{t('detail')}}<span class="text-red">*</span></label>
-        <textarea class="form-control" name="detail" cols="40" rows="5">{{old('detail', @$detail)}}</textarea>
+        <textarea class="form-control" name="detail" cols="40" rows="5" maxlength="10000" required>{{old('detail', @$detail)}}</textarea>
 
         @include('component.error-message', ['field' => 'detail'])
 
@@ -84,6 +84,14 @@
             </div>
         </div>
     </div>
+
+    <div class="form-group">
+        <label class="custom-control custom-checkbox">
+            <input name="privacyStatement" type="checkbox" value="1" class="custom-control-input">
+            <span class="custom-control-label">{!! t('privacy.statement.text') !!}</span>
+        </label>
+    </div>
+
     <div class="form-row justify-content-center mb-4">
         <div class="col-lg-4">
             <div class="recaptcha text-center">
@@ -96,7 +104,7 @@
         </div>
     </div>
     <div class="col-12 text-center">
-        <button type="submit" class="btn btn-success text-uppercase">{{t('send')}}</button>
+        <button type="submit" class="btn btn-success text-uppercase" disabled>{{t('send')}}</button>
         <button type="reset" class="btn btn-outline-success text-uppercase">{{t('cancel')}}</button>
     </div>
 </form>

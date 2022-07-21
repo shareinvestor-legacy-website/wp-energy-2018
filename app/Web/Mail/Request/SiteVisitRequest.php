@@ -26,8 +26,8 @@ class SiteVisitRequest extends Request
     {
         return [
             'fullname' => 'required|max:200',
-            'email' => 'required|email|max:200',
-            'telephone1' => 'required|max:200',
+            'telephone1' => 'required|max:20',
+            'privacyStatement' => 'required',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
