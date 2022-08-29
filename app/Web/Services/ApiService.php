@@ -162,6 +162,9 @@ class ApiService
              case 'ir-newsletters':
                 return $this->irService->getNewsletters();
                 break;
+             case 'analyst-reports':
+                return $this->irService->getAnalyses();
+                break;
 
             case ('annual-reports' || 'annual-report'):
                 $reports = $this->irService->getAnnualReports();
