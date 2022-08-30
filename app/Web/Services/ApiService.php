@@ -178,7 +178,12 @@ class ApiService
         if ($slug == 'form-56-1') {
 
             return 'form561';
-        } else {
+
+        }
+        elseif(slug == 'analyst-reports'){
+            return 'analyst-report';
+        }
+        else {
 
             return 'index';
         }
