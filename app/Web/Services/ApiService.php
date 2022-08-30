@@ -180,7 +180,7 @@ class ApiService
             return 'form561';
 
         }
-        elseif(slug == 'analyst-reports'){
+        elseif($slug == 'analyst-reports'){
             return 'analyst-report';
         }
         else {
