@@ -3,6 +3,7 @@
 
     &--publication {
         border: solid 1px $gray;
+        height: 100%;
 
         .col-md-6 {
             // left
@@ -24,7 +25,7 @@
 
         #{$grandparent} {
             &-cover {
-                height: 245px;
+                height: 100%;
                 background-size: cover;
                 background-position: center right;
                 background-repeat: no-repeat;
@@ -79,6 +80,7 @@
             color: $green !important;
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             .icon-download {
                 font-size: 1.5rem;
