@@ -162,13 +162,19 @@ class ApiService
              case 'ir-newsletters':
                 return $this->irService->getNewsletters();
                 break;
+
              case 'analyst-reports':
                 return $this->irService->getAnalyses();
                 break;
 
-            case ('annual-reports' || 'annual-report'):
-                $reports = $this->irService->getAnnualReports();
-                return $this->irService->getOneReports()->merge($reports);
+            case ('annual-reports'):
+            case ('annual-report'):
+                $reports = $this->irService->getForm561();
+                return $this->irService->getAnnualReports()->merge($reports);
+                break;
+
+            case ('form-56-1-one-report'):
+                return $this->irService->getOneReports();
                 break;
         }
     }

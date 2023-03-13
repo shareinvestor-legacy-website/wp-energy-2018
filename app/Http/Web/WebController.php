@@ -350,7 +350,24 @@ class WebController extends Controller
         $parent = $menu->parent()->first();
         $sidebar = $this->menuService->get('investor-relations', $parent->slug);
 
-        return view('web.report.index', compact('menu', 'sidebar', 'posts'));
+        return view("web.report.index", compact('menu', 'sidebar', 'posts'));
+    }
+
+
+    public function oneReport($page2)
+    {
+        $category = 'form-56-1-one-report';
+
+        $menu = $this->menuService->get('investor-relations', $category);
+        $parent = $menu->parent()->first();
+        $sidebar = $this->menuService->get('investor-relations', $parent->slug);
+
+        $posts = $this->apiService->getDownloads($category);
+
+        $reports = $this->apiService->getDownloads("annual-reports");
+        $reports = $this->apiService->groupByYear($reports);
+
+        return view("web.report.one-report", compact('menu', 'sidebar', 'posts', 'reports'));
     }
 
     //presentation

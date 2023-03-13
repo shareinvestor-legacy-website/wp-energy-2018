@@ -85,6 +85,7 @@ Route::group(['namespace' => 'Web', 'prefix' => init_locale(),
         Route::get('{page2}/download/{slug}', 'WebController@irDownload');
 
         //report
+        Route::get('{page2}/report/form-56-1-one-report', 'WebController@oneReport');
         Route::get('{page2}/report/{slug}', 'WebController@irReport');
 
         //webcast & presentation

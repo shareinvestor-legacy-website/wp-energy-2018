@@ -45,11 +45,31 @@
                         color: $green;
                     }
                 }
+
+                &--small {
+                    padding: 0rem .75rem .75rem;
+
+                    .card__title {
+                        margin: 10px 0;
+                    }
+
+                    hr {
+                        margin: .5rem 0 .75rem;
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    min-height: auto;
+
+                    &--small {
+                        padding: .75rem;
+                    }
+                }
             }
             &__title {
                 @include set-font-family;
                 color: $blue;
-                font-size: px-to-rem(18);
+                font-size: px-to-rem(17);
                 margin-bottom: 20px;
                 font-weight: 500;
             }
