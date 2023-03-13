@@ -16,9 +16,9 @@
             <div class="row mb-5">
 
                 @foreach ($posts as $post)
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 ">
+                    <div class="col-12 col-md-6 col-xl-4 mb-4">
                         <div class="card card--publication">
-                            <div class="row no-gutters">
+                            <div class="row no-gutters h-100">
                                 <div class="col-md-6">
                                     <div class="card-cover"
                                         style="background-image: url('{{ $post->present()->image('assets/static/images/default/report.jpg') }}'); ">
@@ -53,7 +53,7 @@
 
                 @if ($reports)
                     @foreach ($reports as $report)
-                        <div class="col-12 col-md-6 col-xl-4 mb-4 ">
+                        <div class="col-12 col-md-6 col-xl-4 mb-4">
                             <div class="card card--publication">
                                 <div class="row no-gutters h-100">
                                     <div class="col-md-6">
