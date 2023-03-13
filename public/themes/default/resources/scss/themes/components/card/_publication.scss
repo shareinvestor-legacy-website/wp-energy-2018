@@ -31,6 +31,13 @@
                 background-repeat: no-repeat;
                 transition: all .5s ease;
 
+                &:before {
+                    content: '';
+                    padding-top: 133.33%;
+                    display: block;
+                    position: relative;
+                }
+
                 @include media-breakpoint-down(sm) {
                     min-height: 300px;
                     border-bottom: solid 1px $gray;
